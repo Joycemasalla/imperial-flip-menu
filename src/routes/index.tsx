@@ -35,10 +35,12 @@ type Category = {
 };
 type MenuPage = { category: Category; items: MenuItem[]; part: number; parts: number };
 type PageFlipApi = {
+  loadFromHTML: (items: HTMLElement[]) => void;
   flipNext: () => void;
   flipPrev: () => void;
   flip: (page: number) => void;
   getCurrentPageIndex: () => number;
+  on: (eventName: string, callback: (event: { data: number | string | boolean | object }) => void) => PageFlipApi;
   destroy: () => void;
 };
 
