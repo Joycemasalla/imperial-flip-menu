@@ -81,6 +81,7 @@ function MenuBook() {
   const [turn, setTurn] = useState<"next" | "prev" | null>(null);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const active = pages[page];
+  const rightPage = pages[page + 1];
 
   const go = (next: number) => {
     const target = Math.max(0, Math.min(pages.length - 1, next));
@@ -164,8 +165,8 @@ function MenuBook() {
           <MenuLeaf page={active} number={page + 1} onSelect={(item) => setSelected({ item, category: active.category })} />
           <div className="book-gutter hidden lg:block" aria-hidden="true" />
           <div className="hidden lg:block">
-            {pages[page + 1] ? (
-              <MenuLeaf page={pages[page + 1]} number={page + 2} onSelect={(item) => setSelected({ item, category: pages[page + 1]?.category ?? active.category })} right />
+            {rightPage ? (
+              <MenuLeaf page={rightPage} number={page + 2} onSelect={(item) => setSelected({ item, category: rightPage.category })} right />
             ) : <ClosingLeaf />}
           </div>
         </div>
