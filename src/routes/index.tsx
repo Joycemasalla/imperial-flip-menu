@@ -118,8 +118,8 @@ function MenuBook() {
 
     const onProductClick = (event: MouseEvent) => {
       const target = event.target instanceof Element ? event.target.closest<HTMLElement>("[data-menu-item]") : null;
-      const itemId = target?.dataset.menuItem;
-      const categoryId = target?.dataset.category;
+      const itemId = target?.dataset["menuItem"];
+      const categoryId = target?.dataset["category"];
       if (!itemId || !categoryId) return;
       const category = menu.find((entry) => entry.id === categoryId);
       const item = category?.items.find((entry) => entry.id === itemId);
