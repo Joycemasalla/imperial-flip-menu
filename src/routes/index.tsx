@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ChevronLeft, ChevronRight, Crown, Users, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Users, X } from "lucide-react";
 import { memo, useEffect, useMemo, useRef, useState } from "react";
 
 import artesanaisImage from "@/assets/artesanais.jpg";
@@ -11,6 +11,7 @@ import picanhaImage from "@/assets/picanha.jpg";
 import pizzasImage from "@/assets/pizzas.jpg";
 import porcoesImage from "@/assets/porcoes.jpg";
 import tradicionaisImage from "@/assets/tradicionais.jpg";
+import logoAsset from "@/assets/espaco-imperial-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
 import rawMenu from "@/data/menuData.json";
 import { cn } from "@/lib/utils";
@@ -23,7 +24,8 @@ type MenuItem = {
   price: number | null;
   options: Option[];
   desc: string;
-  serves?: string;
+  imageUrl: string;
+  serves?: string | null;
   highlight?: boolean;
 };
 type Category = {
@@ -184,8 +186,8 @@ function MenuBook() {
     <main className="menu-shell min-h-dvh overflow-hidden bg-background text-foreground">
       <header className="brand-header grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3 sm:px-7">
         <div className="flex min-w-0 items-center gap-3">
-          <div className="brand-seal grid size-10 shrink-0 place-items-center rounded-full border border-primary/60 text-primary">
-            <Crown className="size-4" aria-hidden="true" />
+          <div className="brand-seal grid size-11 shrink-0 place-items-center overflow-hidden rounded-full border border-primary/60">
+            <img src={logoAsset.url} alt="" width={559} height={447} decoding="async" className="h-full w-full scale-125 object-contain" />
           </div>
           <div className="min-w-0">
             <p className="font-display truncate text-xl leading-none text-foreground sm:text-2xl">Espaço Imperial</p>
@@ -258,9 +260,9 @@ function CoverLeaf() {
   return (
     <article data-density="hard" className="book-page cover-page flex h-full flex-col items-center justify-center overflow-hidden p-8 text-center">
       <div className="cover-frame flex h-full w-full flex-col items-center justify-center border border-primary/40 px-6">
-        <Crown className="mb-8 size-10 text-primary" aria-hidden="true" />
+        <img src={logoAsset.url} alt="Espaço Imperial" width={559} height={447} decoding="async" className="mb-6 w-48 max-w-[78%] object-contain sm:w-56" />
         <p className="mb-3 text-[10px] uppercase tracking-[0.3em] text-primary">Desde sempre, à sua mesa</p>
-        <h1 className="font-display text-5xl leading-none text-foreground sm:text-6xl">Espaço<br />Imperial</h1>
+        <h1 className="sr-only">Espaço Imperial</h1>
         <div className="my-7 h-px w-20 bg-primary/60" />
         <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Cardápio da casa</p>
         <p className="mt-auto max-w-xs text-xs leading-relaxed text-muted-foreground">Abra o cardápio e descubra nossos sabores.</p>
@@ -282,10 +284,12 @@ function MenuLeaf({ page, number }: { page: MenuPage; number: number }) {
           {page.parts > 1 && <p className="mt-1 text-[10px] text-foreground/80">Parte {page.part + 1} de {page.parts}</p>}
         </div>
       </div>
-      <div className="min-h-0 flex-1 overflow-y-auto px-4 py-3 sm:px-6 sm:py-4">
-        {page.part === 0 && page.category.subtitle && <p className="mb-3 border-l border-primary pl-3 text-[11px] leading-relaxed text-paper-foreground/80">{page.category.subtitle}</p>}
-        <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-          {page.items.map((item) => <MenuItemRow key={item.id} item={item} categoryId={page.category.id} />)}
+      <div className="menu-scroll-wrap relative min-h-0 flex-1">
+        <div className="menu-scroll-area h-full overflow-y-auto px-4 py-3 sm:px-6 sm:py-4">
+          {page.part === 0 && page.category.subtitle && <p className="mb-3 border-l border-primary pl-3 text-[11px] leading-relaxed text-paper-foreground/80">{page.category.subtitle}</p>}
+          <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+            {page.items.map((item) => <MenuItemRow key={item.id} item={item} categoryId={page.category.id} />)}
+          </div>
         </div>
       </div>
       <div className="flex shrink-0 items-center justify-between border-t border-ink/10 px-5 py-2 text-[9px] uppercase tracking-[0.18em] text-paper-muted">
@@ -309,7 +313,7 @@ function MenuItemRow({ item, categoryId }: { item: MenuItem; categoryId: string 
 }
 
 function ClosingLeaf() {
-  return <article data-density="hard" className="book-page back-cover flex h-full flex-col items-center justify-center p-10 text-center"><Crown className="mb-5 size-8 text-primary" /><p className="font-display text-4xl text-foreground">Bom apetite</p><p className="mt-3 max-w-xs text-xs leading-relaxed text-muted-foreground">Quando decidir, é só chamar um de nossos garçons.</p><p className="mt-10 text-[9px] uppercase tracking-[0.25em] text-primary">Espaço Imperial</p></article>;
+  return <article data-density="hard" className="book-page back-cover flex h-full flex-col items-center justify-center p-10 text-center"><img src={logoAsset.url} alt="Espaço Imperial" width={559} height={447} loading="lazy" decoding="async" className="mb-7 w-40 max-w-[75%] object-contain" /><p className="font-display text-4xl text-foreground">Bom apetite</p><p className="mt-3 max-w-xs text-xs leading-relaxed text-muted-foreground">Quando decidir, é só chamar um de nossos garçons.</p><p className="mt-10 text-[9px] uppercase tracking-[0.25em] text-primary">Espaço Imperial</p></article>;
 }
 
 function ProductModal({ selection, onClose }: { selection: { item: MenuItem; category: Category }; onClose: () => void }) {
@@ -320,7 +324,7 @@ function ProductModal({ selection, onClose }: { selection: { item: MenuItem; cat
       <section role="dialog" aria-modal="true" aria-labelledby="product-name" className="modal-sheet relative max-h-[92dvh] w-full max-w-lg overflow-y-auto overscroll-contain scroll-smooth rounded-t-2xl border border-border bg-card shadow-modal sm:rounded-lg" onTouchStart={(event) => { startY.current = event.touches[0]?.clientY ?? null; }} onTouchEnd={(event) => { const end = event.changedTouches[0]?.clientY; if (startY.current !== null && end !== undefined && end - startY.current > 90) onClose(); startY.current = null; }}>
         <div className="mx-auto mt-2 h-1 w-10 rounded-full bg-muted sm:hidden" />
         <Button aria-label="Fechar detalhes" title="Fechar" variant="outline" size="icon" onClick={onClose} className="absolute right-3 top-3 z-10 size-11 rounded-full bg-background/85 backdrop-blur"><X className="size-4" /></Button>
-        <div className="relative aspect-[16/10] overflow-hidden sm:rounded-t-lg"><img src={images[category.id] ?? artesanaisImage} alt={item.name} width={1200} height={800} loading="eager" decoding="async" className="h-full w-full object-cover" /><div className="image-shade-soft absolute inset-0" /><p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.25em] text-primary">{category.title}</p></div>
+        <div className="relative aspect-[16/10] overflow-hidden sm:rounded-t-lg"><img src={item.imageUrl} alt={item.name} width={1200} height={800} loading="eager" decoding="async" className="h-full w-full object-cover" /><div className="image-shade-soft absolute inset-0" /><p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.25em] text-primary">{category.title}</p></div>
         <div className="p-5 sm:p-7">
           <h2 id="product-name" className="font-display text-3xl text-card-foreground sm:text-4xl">{item.name}</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
