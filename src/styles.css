@@ -96,7 +96,7 @@
   --paper-foreground: oklch(0.22 0.018 62);
   --paper-muted: oklch(0.48 0.03 68);
   --ink: oklch(0.13 0.008 70);
-  --gold-dark: oklch(0.49 0.105 72);
+  --gold-dark: oklch(0.39 0.09 72);
   --overlay: oklch(0.06 0.005 70 / 82%);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -177,21 +177,21 @@
 .book-stage { height: calc(100dvh - 117px); padding-bottom: 64px; }
 .flipbook-mount { height: 100%; max-height: 760px; min-height: 390px; opacity: 1; transition: opacity 180ms ease; }
 .flipbook-mount.is-loading { opacity: 0; }
-.flipbook-host { height: 100%; margin-inline: auto; filter: drop-shadow(0 24px 30px color-mix(in oklab, var(--ink) 72%, transparent)); }
+.flipbook-host { height: 100%; margin-inline: auto; }
 .stf__parent { position: relative; display: block; box-sizing: border-box; transform: translateZ(0); touch-action: pan-y; }
 .stf__wrapper { position: relative; width: 100%; box-sizing: border-box; }
 .stf__parent canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 .stf__block { position: absolute; width: 100%; height: 100%; box-sizing: border-box; perspective: 2000px; }
 .stf__item { display: none; position: absolute; transform-style: preserve-3d; }
 .stf__outerShadow, .stf__innerShadow, .stf__hardShadow, .stf__hardInnerShadow { position: absolute; left: 0; top: 0; pointer-events: none; }
-.book-page { box-sizing: border-box; border-radius: 3px 8px 8px 3px; box-shadow: inset 0 0 35px color-mix(in oklab, var(--ink) 7%, transparent); }
+.book-page { box-sizing: border-box; border-radius: 3px 8px 8px 3px; box-shadow: 0 12px 24px color-mix(in oklab, var(--ink) 20%, transparent), inset 0 0 24px color-mix(in oklab, var(--ink) 6%, transparent); }
 .book-page.--left { border-radius: 8px 3px 3px 8px; }
 .menu-leaf { background-color: var(--paper); color: var(--paper-foreground); }
 .cover-page, .back-cover { color: var(--foreground); background: radial-gradient(circle at 50% 25%, color-mix(in oklab, var(--primary) 12%, transparent), transparent 38%), linear-gradient(145deg, oklch(0.2 0.014 72), var(--background)); border: 1px solid color-mix(in oklab, var(--primary) 44%, transparent); }
 .cover-page { box-shadow: inset 0 0 0 8px color-mix(in oklab, var(--primary) 8%, transparent), inset 0 0 45px color-mix(in oklab, var(--ink) 70%, transparent); }
 .cover-frame { padding-block: 3rem; }
 .back-cover { box-shadow: inset 0 0 0 8px color-mix(in oklab, var(--primary) 8%, transparent), inset 0 0 45px color-mix(in oklab, var(--ink) 70%, transparent); }
-.image-shade { background: linear-gradient(to top, color-mix(in oklab, var(--ink) 92%, transparent), transparent 72%); }
+.image-shade { background: linear-gradient(to top, color-mix(in oklab, var(--ink) 88%, transparent), color-mix(in oklab, var(--ink) 38%, transparent) 48%, transparent 78%); }
 .image-shade-soft { background: linear-gradient(to top, color-mix(in oklab, var(--ink) 75%, transparent), transparent 50%); }
 .menu-item { transition: background-color 160ms ease, padding 160ms ease; }
 .menu-item > * { pointer-events: none; }
@@ -199,6 +199,14 @@
 .book-arrow { background: color-mix(in oklab, var(--background) 88%, transparent); border: 1px solid var(--border); color: var(--primary); backdrop-filter: blur(8px); }
 .modal-backdrop { animation: fade-in 180ms ease-out; }
 .modal-sheet { animation: sheet-up 260ms cubic-bezier(.2,.8,.2,1); }
+
+@media (max-width: 374px) {
+  .book-stage { padding-inline: 0.25rem; padding-top: 0.5rem; }
+  .flipbook-mount { min-height: 360px; }
+  .cover-frame { padding-block: 2rem; }
+  .menu-leaf > div:first-child { height: 7rem; }
+  .menu-item { padding-block: 0.45rem; }
+}
 
 @media (min-width: 1024px) {
   .book-stage { height: calc(100dvh - 119px); padding-bottom: 20px; }

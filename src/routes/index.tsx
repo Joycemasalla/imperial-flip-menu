@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight, Crown, Users, X } from "lucide-react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { memo, useEffect, useMemo, useRef, useState } from "react";
 
 import artesanaisImage from "@/assets/artesanais.jpg";
 import bagueteImage from "@/assets/baguete.jpg";
@@ -139,21 +139,23 @@ function MenuBook() {
         minHeight: 390,
         maxHeight: 760,
         drawShadow: true,
-        flippingTime: 850,
+        flippingTime: 525,
         usePortrait: true,
         autoSize: true,
-        maxShadowOpacity: 0.65,
+        maxShadowOpacity: 0.35,
         showCover: true,
         mobileScrollSupport: true,
         clickEventForward: true,
         useMouseEvents: true,
-        swipeDistance: 24,
+        swipeDistance: 18,
         showPageCorners: true,
         disableFlipByClick: true,
       });
       instance.loadFromHTML(pageElements);
       instance.on("flip", (event: { data: number | string | boolean | object }) => {
-        if (typeof event.data === "number") setPage(event.data);
+        if (typeof event.data === "number") {
+          setPage((current) => current === event.data ? current : event.data as number);
+        }
       });
       pageFlipRef.current = instance;
       setBookReady(true);
@@ -176,7 +178,7 @@ function MenuBook() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [page, selected]);
+  }, [selected]);
 
   return (
     <main className="menu-shell min-h-dvh overflow-hidden bg-background text-foreground">
@@ -203,7 +205,7 @@ function MenuBook() {
               variant={active?.category.id === category.id ? "default" : "ghost"}
               size="sm"
               onClick={() => goCategory(category.id)}
-              className={cn("rounded-full px-4", active?.category.id === category.id && "shadow-gold")}
+              className={cn("min-h-11 shrink-0 rounded-full px-4", active?.category.id === category.id && "shadow-gold")}
             >
               {category.id === "pizzas-doces" ? "Doces" : category.navLabel}
             </Button>
@@ -214,35 +216,43 @@ function MenuBook() {
       <section
         className="book-stage relative mx-auto flex w-full max-w-6xl items-center px-2 py-3 sm:px-12 sm:py-5"
       >
-        <Button aria-label="Página anterior" title="Página anterior" variant="ghost" size="icon" onClick={() => pageFlipRef.current?.flipPrev()} disabled={!bookReady || page === 0} className="book-arrow absolute left-2 z-20 hidden rounded-full sm:inline-flex">
+        <Button aria-label="Página anterior" title="Página anterior" variant="ghost" size="icon" onClick={() => pageFlipRef.current?.flipPrev()} disabled={!bookReady || page === 0} className="book-arrow absolute left-2 z-20 hidden size-11 rounded-full sm:inline-flex">
           <ChevronLeft className="size-5" />
         </Button>
 
         <div ref={mountRef} className={cn("flipbook-mount mx-auto w-full", !bookReady && "is-loading")} aria-label="Cardápio em formato de livro" />
         <div ref={sourceRef} hidden aria-hidden="true">
-          <CoverLeaf />
-          {pages.map((menuPage, index) => <MenuLeaf key={`${menuPage.category.id}-${menuPage.part}`} page={menuPage} number={index + 1} />)}
-          <ClosingLeaf />
+          <BookSource pages={pages} />
         </div>
 
-        <Button aria-label="Próxima página" title="Próxima página" variant="ghost" size="icon" onClick={() => pageFlipRef.current?.flipNext()} disabled={!bookReady || page === lastPage} className="book-arrow absolute right-2 z-20 hidden rounded-full sm:inline-flex">
+        <Button aria-label="Próxima página" title="Próxima página" variant="ghost" size="icon" onClick={() => pageFlipRef.current?.flipNext()} disabled={!bookReady || page === lastPage} className="book-arrow absolute right-2 z-20 hidden size-11 rounded-full sm:inline-flex">
           <ChevronRight className="size-5" />
         </Button>
       </section>
 
       <footer className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-[auto_1fr_auto] items-center gap-3 border-t border-border bg-background/95 px-4 py-2 backdrop-blur sm:hidden">
-        <Button aria-label="Página anterior" variant="ghost" size="icon" onClick={() => pageFlipRef.current?.flipPrev()} disabled={!bookReady || page === 0}><ChevronLeft className="size-5" /></Button>
+        <Button aria-label="Página anterior" variant="ghost" size="icon" onClick={() => pageFlipRef.current?.flipPrev()} disabled={!bookReady || page === 0} className="size-11"><ChevronLeft className="size-5" /></Button>
         <div className="min-w-0 text-center">
           <p className="truncate text-xs font-semibold text-foreground">{page === 0 ? "Capa" : page === lastPage ? "Fim" : active?.category.navLabel}</p>
           <div className="mx-auto mt-1 h-0.5 w-full max-w-36 overflow-hidden rounded-full bg-muted"><div className="h-full bg-primary transition-all" style={{ width: `${((page + 1) / (lastPage + 1)) * 100}%` }} /></div>
         </div>
-        <Button aria-label="Próxima página" variant="ghost" size="icon" onClick={() => pageFlipRef.current?.flipNext()} disabled={!bookReady || page === lastPage}><ChevronRight className="size-5" /></Button>
+        <Button aria-label="Próxima página" variant="ghost" size="icon" onClick={() => pageFlipRef.current?.flipNext()} disabled={!bookReady || page === lastPage} className="size-11"><ChevronRight className="size-5" /></Button>
       </footer>
 
       {selected && <ProductModal selection={selected} onClose={() => setSelected(null)} />}
     </main>
   );
 }
+
+const BookSource = memo(function BookSource({ pages }: { pages: MenuPage[] }) {
+  return (
+    <>
+      <CoverLeaf />
+      {pages.map((menuPage, index) => <MenuLeaf key={`${menuPage.category.id}-${menuPage.part}`} page={menuPage} number={index + 1} />)}
+      <ClosingLeaf />
+    </>
+  );
+});
 
 function CoverLeaf() {
   return (
@@ -264,16 +274,16 @@ function MenuLeaf({ page, number }: { page: MenuPage; number: number }) {
   return (
     <article className="book-page menu-leaf relative flex h-full min-h-0 flex-col overflow-hidden">
       <div className="relative h-32 shrink-0 overflow-hidden sm:h-40 lg:h-44">
-        <img src={image} alt={`Seleção de ${page.category.title}`} width={1200} height={800} loading={number <= 2 ? "eager" : "lazy"} className="h-full w-full object-cover" />
+        <img src={image} alt={`Seleção de ${page.category.title}`} width={1200} height={800} loading={number === 1 ? "eager" : "lazy"} decoding="async" fetchPriority={number === 1 ? "high" : "auto"} className="h-full w-full object-cover" />
         <div className="image-shade absolute inset-0" />
         <div className="absolute inset-x-0 bottom-0 px-5 pb-4 sm:px-7">
           <p className="mb-1 text-[9px] uppercase tracking-[0.3em] text-primary">Seleção imperial</p>
-          <h1 className="font-display text-3xl leading-none text-paper-foreground sm:text-4xl">{page.category.title}</h1>
-          {page.parts > 1 && <p className="mt-1 text-[10px] text-paper-muted">Parte {page.part + 1} de {page.parts}</p>}
+          <h1 className="font-display text-3xl leading-none text-foreground sm:text-4xl">{page.category.title}</h1>
+          {page.parts > 1 && <p className="mt-1 text-[10px] text-foreground/80">Parte {page.part + 1} de {page.parts}</p>}
         </div>
       </div>
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-3 sm:px-6 sm:py-4">
-        {page.part === 0 && page.category.subtitle && <p className="mb-3 border-l border-primary pl-3 text-[10px] leading-relaxed text-paper-muted">{page.category.subtitle}</p>}
+        {page.part === 0 && page.category.subtitle && <p className="mb-3 border-l border-primary pl-3 text-[11px] leading-relaxed text-paper-foreground/80">{page.category.subtitle}</p>}
         <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
           {page.items.map((item) => <MenuItemRow key={item.id} item={item} categoryId={page.category.id} />)}
         </div>
@@ -291,7 +301,7 @@ function MenuItemRow({ item, categoryId }: { item: MenuItem; categoryId: string 
     <button type="button" data-menu-item={item.id} data-category={categoryId} className="menu-item group grid w-full grid-cols-[minmax(0,1fr)_auto] gap-3 border-b border-ink/10 py-2.5 text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary">
       <div className="min-w-0">
         <div className="flex min-w-0 items-center gap-2"><h2 className="truncate font-display text-base text-paper-foreground sm:text-lg">{item.name}</h2>{item.highlight && <span className="shrink-0 text-[8px] uppercase tracking-[0.15em] text-gold-dark">Destaque</span>}</div>
-        <p className="mt-0.5 line-clamp-2 text-[10px] leading-relaxed text-paper-muted sm:text-[11px]">{item.desc}</p>
+        <p className="mt-0.5 line-clamp-2 text-[11px] leading-relaxed text-paper-foreground/80 sm:text-xs">{item.desc}</p>
       </div>
       <span className="pt-0.5 text-xs font-bold tabular-nums text-gold-dark sm:text-sm">{basePrice}</span>
     </button>
@@ -307,10 +317,10 @@ function ProductModal({ selection, onClose }: { selection: { item: MenuItem; cat
   const { item, category } = selection;
   return (
     <div className="modal-backdrop fixed inset-0 z-50 flex items-end justify-center bg-overlay p-0 sm:items-center sm:p-6" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
-      <section role="dialog" aria-modal="true" aria-labelledby="product-name" className="modal-sheet relative max-h-[92dvh] w-full max-w-lg overflow-y-auto rounded-t-2xl border border-border bg-card shadow-modal sm:rounded-lg" onTouchStart={(event) => { startY.current = event.touches[0]?.clientY ?? null; }} onTouchEnd={(event) => { const end = event.changedTouches[0]?.clientY; if (startY.current !== null && end !== undefined && end - startY.current > 90) onClose(); startY.current = null; }}>
+      <section role="dialog" aria-modal="true" aria-labelledby="product-name" className="modal-sheet relative max-h-[92dvh] w-full max-w-lg overflow-y-auto overscroll-contain scroll-smooth rounded-t-2xl border border-border bg-card shadow-modal sm:rounded-lg" onTouchStart={(event) => { startY.current = event.touches[0]?.clientY ?? null; }} onTouchEnd={(event) => { const end = event.changedTouches[0]?.clientY; if (startY.current !== null && end !== undefined && end - startY.current > 90) onClose(); startY.current = null; }}>
         <div className="mx-auto mt-2 h-1 w-10 rounded-full bg-muted sm:hidden" />
-        <Button aria-label="Fechar detalhes" title="Fechar" variant="outline" size="icon" onClick={onClose} className="absolute right-3 top-3 z-10 rounded-full bg-background/85 backdrop-blur"><X className="size-4" /></Button>
-        <div className="relative aspect-[16/10] overflow-hidden sm:rounded-t-lg"><img src={images[category.id] ?? artesanaisImage} alt={item.name} width={1200} height={800} loading="eager" className="h-full w-full object-cover" /><div className="image-shade-soft absolute inset-0" /><p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.25em] text-primary">{category.title}</p></div>
+        <Button aria-label="Fechar detalhes" title="Fechar" variant="outline" size="icon" onClick={onClose} className="absolute right-3 top-3 z-10 size-11 rounded-full bg-background/85 backdrop-blur"><X className="size-4" /></Button>
+        <div className="relative aspect-[16/10] overflow-hidden sm:rounded-t-lg"><img src={images[category.id] ?? artesanaisImage} alt={item.name} width={1200} height={800} loading="eager" decoding="async" className="h-full w-full object-cover" /><div className="image-shade-soft absolute inset-0" /><p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.25em] text-primary">{category.title}</p></div>
         <div className="p-5 sm:p-7">
           <h2 id="product-name" className="font-display text-3xl text-card-foreground sm:text-4xl">{item.name}</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
