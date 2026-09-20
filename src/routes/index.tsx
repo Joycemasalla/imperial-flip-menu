@@ -272,9 +272,9 @@ function MenuBook() {
         </Button>
 
         <div ref={mountRef} className="flipbook-mount mx-auto w-full" aria-label="Cardápio em formato de livro" onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={finishDrag} onPointerCancel={finishDrag}>
-          {page > 0 && <div ref={previousLeafRef} className="virtual-leaf virtual-leaf-previous" aria-hidden="true">{renderLeaf(page - 1, true)}</div>}
-          <div ref={currentLeafRef} className="virtual-leaf virtual-leaf-current">{renderLeaf(page, true)}</div>
-          {page < lastPage && <div className="virtual-leaf virtual-leaf-next" aria-hidden="true">{renderLeaf(page + 1, false)}</div>}
+          {page > 0 && <div key={`previous-${page}`} ref={previousLeafRef} className="virtual-leaf virtual-leaf-previous" aria-hidden="true">{renderLeaf(page - 1, true)}</div>}
+          <div key={`current-${page}`} ref={currentLeafRef} className="virtual-leaf virtual-leaf-current">{renderLeaf(page, true)}</div>
+          {page < lastPage && <div key={`next-${page}`} className="virtual-leaf virtual-leaf-next" aria-hidden="true">{renderLeaf(page + 1, false)}</div>}
         </div>
 
         <Button aria-label="Próxima página" title="Próxima página" variant="ghost" size="icon" onClick={() => go(page + 1)} disabled={page === lastPage} className="book-arrow absolute right-2 z-20 hidden size-11 rounded-full sm:inline-flex">
