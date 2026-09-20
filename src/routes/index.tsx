@@ -146,6 +146,7 @@ function MenuBook() {
       touchStart = null;
       if (Math.abs(dx) <= 40 || Math.abs(dx) <= Math.abs(dy) * 1.2) return;
 
+      event.stopPropagation();
       lastSwipeAt = performance.now();
       if (dx > 40) pageFlipRef.current?.flipPrev();
       else if (dx < -40) pageFlipRef.current?.flipNext();
@@ -155,7 +156,7 @@ function MenuBook() {
     };
     mount.addEventListener("click", onProductClick);
     mount.addEventListener("touchstart", onTouchStart, { passive: true });
-    mount.addEventListener("touchend", onTouchEnd, { passive: true });
+    mount.addEventListener("touchend", onTouchEnd, { passive: true, capture: true });
     mount.addEventListener("touchcancel", onTouchCancel, { passive: true });
 
     void import("page-flip").then(({ PageFlip }) => {
@@ -196,7 +197,7 @@ function MenuBook() {
       disposed = true;
       mount.removeEventListener("click", onProductClick);
       mount.removeEventListener("touchstart", onTouchStart);
-      mount.removeEventListener("touchend", onTouchEnd);
+      mount.removeEventListener("touchend", onTouchEnd, true);
       mount.removeEventListener("touchcancel", onTouchCancel);
       pageFlipRef.current = null;
       if (instance) instance.destroy();
