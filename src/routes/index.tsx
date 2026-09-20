@@ -59,7 +59,7 @@ const images: Record<string, string> = {
 };
 
 const menu = rawMenu as Category[];
-const PAGE_SIZE = 7;
+const PAGE_SIZE = 4;
 const money = (value: number) =>
   new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(value);
 
@@ -114,11 +114,14 @@ function MenuBook() {
 
     let disposed = false;
     let instance: PageFlipApi | null = null;
+    let touchStart: { x: number; y: number } | null = null;
+    let lastSwipeAt = 0;
     const host = document.createElement("div");
     host.className = "flipbook-host";
     mount.appendChild(host);
 
     const onProductClick = (event: MouseEvent) => {
+      if (performance.now() - lastSwipeAt < 350) return;
       const target = event.target instanceof Element ? event.target.closest<HTMLElement>("[data-menu-item]") : null;
       const itemId = target?.dataset["menuItem"];
       const categoryId = target?.dataset["category"];
@@ -127,7 +130,33 @@ function MenuBook() {
       const item = category?.items.find((entry) => entry.id === itemId);
       if (category && item) setSelected({ item, category });
     };
+    const onTouchStart = (event: TouchEvent) => {
+      const touch = event.touches[0];
+      touchStart = touch ? { x: touch.clientX, y: touch.clientY } : null;
+    };
+    const onTouchEnd = (event: TouchEvent) => {
+      const touch = event.changedTouches[0];
+      if (!touchStart || !touch) {
+        touchStart = null;
+        return;
+      }
+
+      const dx = touch.clientX - touchStart.x;
+      const dy = touch.clientY - touchStart.y;
+      touchStart = null;
+      if (Math.abs(dx) <= 40 || Math.abs(dx) <= Math.abs(dy) * 1.2) return;
+
+      lastSwipeAt = performance.now();
+      if (dx > 40) pageFlipRef.current?.flipPrev();
+      else if (dx < -40) pageFlipRef.current?.flipNext();
+    };
+    const onTouchCancel = () => {
+      touchStart = null;
+    };
     mount.addEventListener("click", onProductClick);
+    mount.addEventListener("touchstart", onTouchStart, { passive: true });
+    mount.addEventListener("touchend", onTouchEnd, { passive: true });
+    mount.addEventListener("touchcancel", onTouchCancel, { passive: true });
 
     void import("page-flip").then(({ PageFlip }) => {
       if (disposed) return;
@@ -166,6 +195,9 @@ function MenuBook() {
     return () => {
       disposed = true;
       mount.removeEventListener("click", onProductClick);
+      mount.removeEventListener("touchstart", onTouchStart);
+      mount.removeEventListener("touchend", onTouchEnd);
+      mount.removeEventListener("touchcancel", onTouchCancel);
       pageFlipRef.current = null;
       if (instance) instance.destroy();
       else host.remove();
@@ -186,8 +218,8 @@ function MenuBook() {
     <main className="menu-shell min-h-dvh overflow-hidden bg-background text-foreground">
       <header className="brand-header grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3 sm:px-7">
         <div className="flex min-w-0 items-center gap-3">
-          <div className="brand-seal grid size-11 shrink-0 place-items-center overflow-hidden rounded-full border border-primary/60">
-            <img src={logoAsset.url} alt="" width={559} height={447} decoding="async" className="h-full w-full scale-125 object-contain" />
+          <div className="brand-seal grid size-11 shrink-0 place-items-center overflow-hidden rounded-full border border-primary/60 p-1">
+            <img src={logoAsset.url} alt="" width={559} height={447} decoding="async" className="h-full w-full object-contain" />
           </div>
           <div className="min-w-0">
             <p className="font-display truncate text-xl leading-none text-foreground sm:text-2xl">Espaço Imperial</p>
@@ -285,7 +317,7 @@ function MenuLeaf({ page, number }: { page: MenuPage; number: number }) {
         </div>
       </div>
       <div className="menu-scroll-wrap relative min-h-0 flex-1">
-        <div className="menu-scroll-area h-full overflow-y-auto px-4 py-3 sm:px-6 sm:py-4">
+        <div className="menu-scroll-area h-full overflow-y-auto px-4 pb-10 pt-3 sm:px-6 sm:pb-10 sm:pt-4">
           {page.part === 0 && page.category.subtitle && <p className="mb-3 border-l border-primary pl-3 text-[11px] leading-relaxed text-paper-foreground/80">{page.category.subtitle}</p>}
           <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
             {page.items.map((item) => <MenuItemRow key={item.id} item={item} categoryId={page.category.id} />)}
