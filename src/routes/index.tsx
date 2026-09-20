@@ -133,6 +133,7 @@ function MenuBook() {
     const onTouchStart = (event: TouchEvent) => {
       const touch = event.touches[0];
       touchStart = touch ? { x: touch.clientX, y: touch.clientY } : null;
+      event.stopPropagation();
     };
     const onTouchEnd = (event: TouchEvent) => {
       const touch = event.changedTouches[0];
@@ -158,7 +159,7 @@ function MenuBook() {
       touchStart = null;
     };
     mount.addEventListener("click", onProductClick);
-    mount.addEventListener("touchstart", onTouchStart, { passive: true });
+    mount.addEventListener("touchstart", onTouchStart, { passive: true, capture: true });
     mount.addEventListener("touchend", onTouchEnd, { passive: true, capture: true });
     mount.addEventListener("touchcancel", onTouchCancel, { passive: true });
 
@@ -199,7 +200,7 @@ function MenuBook() {
     return () => {
       disposed = true;
       mount.removeEventListener("click", onProductClick);
-      mount.removeEventListener("touchstart", onTouchStart);
+      mount.removeEventListener("touchstart", onTouchStart, true);
       mount.removeEventListener("touchend", onTouchEnd, true);
       mount.removeEventListener("touchcancel", onTouchCancel);
       pageFlipRef.current = null;
