@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight, Users, X } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import type { PointerEvent as ReactPointerEvent } from "react";
 
 import artesanaisImage from "@/assets/artesanais.jpg";
 import bagueteImage from "@/assets/baguete.jpg";
@@ -117,8 +118,9 @@ function MenuBook() {
       lockedRef.current = false;
       return;
     }
+    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
     leaf.style.transition = "transform 280ms cubic-bezier(.22,.72,.2,1), box-shadow 280ms ease";
-    leaf.style.transform = direction === "next" ? "rotateY(-180deg)" : "rotateY(0deg)";
+    leaf.style.transform = direction === "next" ? "rotateY(-180deg)" : isDesktop ? "rotateY(180deg)" : "rotateY(0deg)";
     leaf.style.setProperty("--fold-shadow", "0.82");
     settleTimerRef.current = window.setTimeout(() => {
       setPage(target);
@@ -154,19 +156,20 @@ function MenuBook() {
       const progress = Math.min(1, Math.abs(dx) / width);
       const leaf = direction === "next" ? currentLeafRef.current : previousLeafRef.current;
       if (!leaf) return;
-      const angle = direction === "next" ? -progress * 180 : -180 + progress * 180;
+      const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+      const angle = direction === "next" ? -progress * 180 : isDesktop ? progress * 180 : -180 + progress * 180;
       leaf.style.transition = "none";
       leaf.style.transform = `rotateY(${angle}deg)`;
       leaf.style.setProperty("--fold-shadow", String(Math.sin(progress * Math.PI) * 0.78));
     });
   };
 
-  const onPointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
+  const onPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
     if (lockedRef.current || event.pointerType === "mouse" && event.button !== 0) return;
     dragRef.current = { pointerId: event.pointerId, startX: event.clientX, startY: event.clientY, lastX: event.clientX, startedAt: performance.now(), axis: "pending", direction: null };
   };
 
-  const onPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
+  const onPointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
     const drag = dragRef.current;
     if (!drag || drag.pointerId !== event.pointerId || drag.axis === "vertical") return;
     const dx = event.clientX - drag.startX;
@@ -193,7 +196,7 @@ function MenuBook() {
     }
   };
 
-  const finishDrag = (event: React.PointerEvent<HTMLDivElement>) => {
+  const finishDrag = (event: ReactPointerEvent<HTMLDivElement>) => {
     const drag = dragRef.current;
     dragRef.current = null;
     if (!drag || drag.pointerId !== event.pointerId || drag.axis !== "horizontal" || !drag.direction) return;
@@ -203,10 +206,11 @@ function MenuBook() {
     const leaf = drag.direction === "next" ? currentLeafRef.current : previousLeafRef.current;
     if (!leaf) return;
     lockedRef.current = true;
+    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
     leaf.style.transition = "transform 260ms cubic-bezier(.22,.72,.2,1), box-shadow 260ms ease";
     leaf.style.transform = complete
-      ? drag.direction === "next" ? "rotateY(-180deg)" : "rotateY(0deg)"
-      : drag.direction === "next" ? "rotateY(0deg)" : "rotateY(-180deg)";
+      ? drag.direction === "next" ? "rotateY(-180deg)" : isDesktop ? "rotateY(180deg)" : "rotateY(0deg)"
+      : drag.direction === "next" ? "rotateY(0deg)" : isDesktop ? "rotateY(0deg)" : "rotateY(-180deg)";
     leaf.style.setProperty("--fold-shadow", complete ? "0.82" : "0");
     settleTimerRef.current = window.setTimeout(() => {
       if (complete) setPage((current) => Math.max(0, Math.min(lastPage, current + (drag.direction === "next" ? 1 : -1))));
