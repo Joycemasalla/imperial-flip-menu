@@ -119,12 +119,12 @@ function MenuBook() {
       return;
     }
     const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+    if (direction === "prev") leaf.style.zIndex = "5";
     leaf.style.transition = "transform 280ms cubic-bezier(.22,.72,.2,1), box-shadow 280ms ease";
     leaf.style.transform = direction === "next" ? "rotateY(-180deg)" : isDesktop ? "rotateY(180deg)" : "rotateY(0deg)";
     leaf.style.setProperty("--fold-shadow", "0.82");
     settleTimerRef.current = window.setTimeout(() => {
       setPage(target);
-      resetLeaf(leaf);
       lockedRef.current = false;
     }, 285);
   }, [lastPage, page, resetLeaf]);
@@ -187,6 +187,7 @@ function MenuBook() {
         drag.axis = "vertical";
         return;
       }
+      if (drag.direction === "prev" && previousLeafRef.current) previousLeafRef.current.style.zIndex = "5";
       event.currentTarget.setPointerCapture(event.pointerId);
     }
     if (drag.axis === "horizontal" && drag.direction) {
@@ -213,8 +214,12 @@ function MenuBook() {
       : drag.direction === "next" ? "rotateY(0deg)" : isDesktop ? "rotateY(0deg)" : "rotateY(-180deg)";
     leaf.style.setProperty("--fold-shadow", complete ? "0.82" : "0");
     settleTimerRef.current = window.setTimeout(() => {
-      if (complete) setPage((current) => Math.max(0, Math.min(lastPage, current + (drag.direction === "next" ? 1 : -1))));
-      resetLeaf(leaf);
+      if (complete) {
+        setPage((current) => Math.max(0, Math.min(lastPage, current + (drag.direction === "next" ? 1 : -1))));
+      } else {
+        resetLeaf(leaf);
+        leaf.style.removeProperty("z-index");
+      }
       lockedRef.current = false;
     }, 265);
   };
@@ -223,7 +228,7 @@ function MenuBook() {
     if (index === 0) return <CoverLeaf />;
     if (index === lastPage) return <ClosingLeaf />;
     const menuPage = pages[index - 1];
-    return menuPage ? <MenuLeaf page={menuPage} number={index} eager={eager} /> : null;
+    return menuPage ? <MenuLeaf page={menuPage} number={index} eager={eager} onSelect={(item) => setSelected({ item, category: menuPage.category })} /> : null;
   };
 
   return (
@@ -306,7 +311,7 @@ function CoverLeaf() {
   );
 }
 
-function MenuLeaf({ page, number, eager }: { page: MenuPage; number: number; eager: boolean }) {
+function MenuLeaf({ page, number, eager, onSelect }: { page: MenuPage; number: number; eager: boolean; onSelect: (item: MenuItem) => void }) {
   const image = images[page.category.id] ?? artesanaisImage;
   return (
     <article className="book-page menu-leaf relative flex h-full min-h-0 flex-col overflow-hidden">
@@ -323,7 +328,7 @@ function MenuLeaf({ page, number, eager }: { page: MenuPage; number: number; eag
         <div className="menu-scroll-area h-full overflow-y-auto px-4 pb-20 pt-3 sm:px-6 sm:pb-16 sm:pt-4">
           {page.part === 0 && page.category.subtitle && <p className="mb-3 border-l border-primary pl-3 text-[11px] leading-relaxed text-paper-foreground/80">{page.category.subtitle}</p>}
           <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-            {page.items.map((item) => <MenuItemRow key={item.id} item={item} categoryId={page.category.id} />)}
+            {page.items.map((item) => <MenuItemRow key={item.id} item={item} categoryId={page.category.id} onSelect={onSelect} />)}
           </div>
         </div>
       </div>
@@ -334,10 +339,10 @@ function MenuLeaf({ page, number, eager }: { page: MenuPage; number: number; eag
   );
 }
 
-function MenuItemRow({ item, categoryId }: { item: MenuItem; categoryId: string }) {
+function MenuItemRow({ item, categoryId, onSelect }: { item: MenuItem; categoryId: string; onSelect: (item: MenuItem) => void }) {
   const basePrice = item.price !== null ? money(item.price) : item.options.length ? `a partir de ${money(Math.min(...item.options.map((option) => option.price)))}` : "Consulte";
   return (
-    <button type="button" data-menu-item={item.id} data-category={categoryId} className="menu-item group grid w-full grid-cols-[minmax(0,1fr)_auto] gap-3 border-b border-ink/10 py-2.5 text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary">
+    <button type="button" data-menu-item={item.id} data-category={categoryId} onClick={() => onSelect(item)} className="menu-item group grid w-full grid-cols-[minmax(0,1fr)_auto] gap-3 border-b border-ink/10 py-2.5 text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary">
       <div className="min-w-0">
         <div className="flex min-w-0 items-center gap-2"><h2 className="truncate font-display text-base text-paper-foreground sm:text-lg">{item.name}</h2>{item.highlight && <span className="shrink-0 text-[8px] uppercase tracking-[0.15em] text-gold-dark">Destaque</span>}</div>
         <p className="mt-0.5 line-clamp-2 text-[11px] leading-relaxed text-paper-foreground/80 sm:text-xs">{item.desc}</p>
