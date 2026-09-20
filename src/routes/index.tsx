@@ -148,8 +148,11 @@ function MenuBook() {
 
       event.stopPropagation();
       lastSwipeAt = performance.now();
-      if (dx > 40) pageFlipRef.current?.flipPrev();
-      else if (dx < -40) pageFlipRef.current?.flipNext();
+      const direction = dx > 40 ? "prev" : "next";
+      window.setTimeout(() => {
+        if (direction === "prev") pageFlipRef.current?.flipPrev();
+        else pageFlipRef.current?.flipNext();
+      }, 0);
     };
     const onTouchCancel = () => {
       touchStart = null;
