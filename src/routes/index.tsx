@@ -303,12 +303,12 @@ function CoverLeaf() {
 
 const updateScrollHint = (el: HTMLDivElement | null) => {
   if (!el) return;
-  el.dataset.hint = el.scrollHeight > el.clientHeight + 4 ? "more" : "none";
+  el.dataset["hint"] = el.scrollHeight > el.clientHeight + 4 ? "more" : "none";
 };
 
 const trackScrollHint = (event: ReactUIEvent<HTMLDivElement>) => {
   const el = event.currentTarget;
-  el.dataset.hint = el.scrollTop + el.clientHeight >= el.scrollHeight - 4 ? "end" : "more";
+  el.dataset["hint"] = el.scrollTop + el.clientHeight >= el.scrollHeight - 4 ? "end" : "more";
 };
 
 function MenuLeaf({ category, number, eager, onSelect }: { category: Category; number: number; eager: boolean; onSelect: (item: MenuItem) => void }) {
