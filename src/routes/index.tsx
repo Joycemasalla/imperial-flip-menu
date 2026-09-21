@@ -301,24 +301,36 @@ function CoverLeaf() {
   );
 }
 
-function MenuLeaf({ page, number, eager, onSelect }: { page: MenuPage; number: number; eager: boolean; onSelect: (item: MenuItem) => void }) {
-  const image = images[page.category.id] ?? artesanaisImage;
+const updateScrollHint = (el: HTMLDivElement | null) => {
+  if (!el) return;
+  el.dataset.hint = el.scrollHeight > el.clientHeight + 4 ? "more" : "none";
+};
+
+const trackScrollHint = (event: ReactUIEvent<HTMLDivElement>) => {
+  const el = event.currentTarget;
+  el.dataset.hint = el.scrollTop + el.clientHeight >= el.scrollHeight - 4 ? "end" : "more";
+};
+
+function MenuLeaf({ category, number, eager, onSelect }: { category: Category; number: number; eager: boolean; onSelect: (item: MenuItem) => void }) {
+  const image = images[category.id] ?? artesanaisImage;
   return (
     <article className="book-page menu-leaf relative flex h-full min-h-0 flex-col overflow-hidden">
-      <div className="relative h-32 shrink-0 overflow-hidden sm:h-40 lg:h-44">
-        <img src={image} alt={`Seleção de ${page.category.title}`} width={1200} height={800} loading={eager ? "eager" : "lazy"} decoding="async" fetchPriority={number === 1 ? "high" : "auto"} className="h-full w-full object-cover" />
+      <div className="relative h-24 shrink-0 overflow-hidden sm:h-32 lg:h-36">
+        <img src={image} alt={`Seleção de ${category.title}`} width={1200} height={800} loading={eager ? "eager" : "lazy"} decoding="async" fetchPriority={number === 1 ? "high" : "auto"} className="h-full w-full object-cover" />
         <div className="image-shade absolute inset-0" />
-        <div className="absolute inset-x-0 bottom-0 px-5 pb-4 sm:px-7">
-          <p className="mb-1 text-[9px] uppercase tracking-[0.3em] text-primary">Seleção imperial</p>
-          <h1 className="font-display text-3xl leading-none text-foreground sm:text-4xl">{page.category.title}</h1>
-          {page.parts > 1 && <p className="mt-1 text-[10px] text-foreground/80">Parte {page.part + 1} de {page.parts}</p>}
+        <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 px-5 pb-3 sm:px-7 sm:pb-4">
+          <div className="min-w-0">
+            <p className="mb-1 text-[9px] uppercase tracking-[0.3em] text-primary">Seleção imperial</p>
+            <h1 className="font-display truncate text-3xl leading-none text-foreground sm:text-4xl">{category.title}</h1>
+          </div>
+          <p className="shrink-0 pb-1 text-[10px] uppercase tracking-[0.18em] text-foreground/75">{category.items.length} opções</p>
         </div>
       </div>
       <div className="menu-scroll-wrap relative min-h-0 flex-1">
-        <div className="menu-scroll-area h-full overflow-y-auto px-4 pb-20 pt-3 sm:px-6 sm:pb-16 sm:pt-4">
-          {page.part === 0 && page.category.subtitle && <p className="mb-3 border-l border-primary pl-3 text-[11px] leading-relaxed text-paper-foreground/80">{page.category.subtitle}</p>}
+        <div ref={updateScrollHint} onScroll={trackScrollHint} className="menu-scroll-area h-full overflow-y-auto px-4 pb-16 pt-3 sm:px-6 sm:pb-14 sm:pt-4">
+          {category.subtitle && <p className="mb-3 border-l border-primary pl-3 text-[11px] leading-relaxed text-paper-foreground/80">{category.subtitle}</p>}
           <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-            {page.items.map((item) => <MenuItemRow key={item.id} item={item} categoryId={page.category.id} onSelect={onSelect} />)}
+            {category.items.map((item) => <MenuItemRow key={item.id} item={item} categoryId={category.id} onSelect={onSelect} />)}
           </div>
         </div>
       </div>
