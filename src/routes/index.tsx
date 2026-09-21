@@ -315,7 +315,7 @@ function MenuLeaf({ category, number, eager, onSelect }: { category: Category; n
   const image = images[category.id] ?? artesanaisImage;
   return (
     <article className="book-page menu-leaf relative flex h-full min-h-0 flex-col overflow-hidden">
-      <div className="relative h-24 shrink-0 overflow-hidden sm:h-32 lg:h-36">
+      <div className="relative h-36 shrink-0 overflow-hidden sm:h-36 lg:h-40">
         <img src={image} alt={`Seleção de ${category.title}`} width={1200} height={800} loading={eager ? "eager" : "lazy"} decoding="async" fetchPriority={number === 1 ? "high" : "auto"} className="h-full w-full object-cover" />
         <div className="image-shade absolute inset-0" />
         <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 px-5 pb-3 sm:px-7 sm:pb-4">
