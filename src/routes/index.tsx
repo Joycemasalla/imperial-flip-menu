@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight, Users, X } from "lucide-react";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import type { PointerEvent as ReactPointerEvent } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import type { PointerEvent as ReactPointerEvent, UIEvent as ReactUIEvent } from "react";
 
 import artesanaisImage from "@/assets/artesanais.jpg";
 import bagueteImage from "@/assets/baguete.jpg";
@@ -36,7 +36,6 @@ type Category = {
   subtitle?: string;
   items: MenuItem[];
 };
-type MenuPage = { category: Category; items: MenuItem[]; part: number; parts: number };
 type DragState = {
   pointerId: number;
   startX: number;
@@ -60,7 +59,6 @@ const images: Record<string, string> = {
 };
 
 const menu = rawMenu as Category[];
-const PAGE_SIZE = 4;
 const money = (value: number) =>
   new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(value);
 
@@ -79,15 +77,7 @@ export const Route = createFileRoute("/")({
 });
 
 function MenuBook() {
-  const pages = useMemo<MenuPage[]>(() => menu.flatMap((category) => {
-    const parts = Math.ceil(category.items.length / PAGE_SIZE);
-    return Array.from({ length: parts }, (_, part) => ({
-      category,
-      items: category.items.slice(part * PAGE_SIZE, (part + 1) * PAGE_SIZE),
-      part,
-      parts,
-    }));
-  }), []);
+  const pages = menu;
   const [page, setPage] = useState(0);
   const [selected, setSelected] = useState<{ item: MenuItem; category: Category } | null>(null);
   const mountRef = useRef<HTMLDivElement>(null);
