@@ -343,13 +343,29 @@ function MenuLeaf({ category, number, eager, onSelect }: { category: Category; n
 
 function MenuItemRow({ item, categoryId, onSelect }: { item: MenuItem; categoryId: string; onSelect: (item: MenuItem) => void }) {
   const basePrice = item.price !== null ? money(item.price) : item.options.length ? `a partir de ${money(Math.min(...item.options.map((option) => option.price)))}` : "Consulte";
+  const thumbnail = item.imageUrl || images[categoryId] || artesanaisImage;
   return (
-    <button type="button" data-menu-item={item.id} data-category={categoryId} onClick={() => onSelect(item)} className="menu-item group grid w-full grid-cols-[minmax(0,1fr)_auto] gap-3 border-b border-ink/10 py-2.5 text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary">
+    <button type="button" data-menu-item={item.id} data-category={categoryId} onClick={() => onSelect(item)} className="menu-item group grid min-h-20 w-full grid-cols-[4rem_minmax(0,1fr)] items-center gap-3 border-b border-ink/10 py-2.5 text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary sm:grid-cols-[4.5rem_minmax(0,1fr)]">
+      <img
+        src={thumbnail}
+        alt=""
+        width={144}
+        height={144}
+        loading="lazy"
+        decoding="async"
+        draggable={false}
+        className="size-16 shrink-0 rounded-md object-cover sm:size-18"
+      />
       <div className="min-w-0">
-        <div className="flex min-w-0 items-center gap-2"><h2 className="truncate font-display text-base text-paper-foreground sm:text-lg">{item.name}</h2>{item.highlight && <span className="shrink-0 text-[8px] uppercase tracking-[0.15em] text-gold-dark">Destaque</span>}</div>
+        <div className="grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-start gap-2">
+          <div className="min-w-0">
+            <h2 className="line-clamp-2 font-display text-base leading-tight text-paper-foreground sm:text-lg">{item.name}</h2>
+            {item.highlight && <span className="mt-0.5 block text-[8px] uppercase tracking-[0.15em] text-gold-dark">Destaque</span>}
+          </div>
+          <span className="max-w-24 text-right text-[11px] font-bold leading-tight tabular-nums text-gold-dark sm:max-w-28 sm:text-sm">{basePrice}</span>
+        </div>
         <p className="mt-0.5 line-clamp-2 text-[11px] leading-relaxed text-paper-foreground/80 sm:text-xs">{item.desc}</p>
       </div>
-      <span className="pt-0.5 text-xs font-bold tabular-nums text-gold-dark sm:text-sm">{basePrice}</span>
     </button>
   );
 }
