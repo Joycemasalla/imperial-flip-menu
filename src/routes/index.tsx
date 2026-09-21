@@ -243,10 +243,10 @@ function MenuBook() {
           {menu.map((category) => (
             <Button
               key={category.id}
-              variant={active?.category.id === category.id ? "default" : "ghost"}
+              variant={active?.id === category.id ? "default" : "ghost"}
               size="sm"
               onClick={() => goCategory(category.id)}
-              className={cn("min-h-11 shrink-0 rounded-full px-4", active?.category.id === category.id && "shadow-gold")}
+              className={cn("min-h-11 shrink-0 rounded-full px-4", active?.id === category.id && "shadow-gold")}
             >
               {category.id === "pizzas-doces" ? "Doces" : category.navLabel}
             </Button>
@@ -275,7 +275,7 @@ function MenuBook() {
       <footer className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-[auto_1fr_auto] items-center gap-3 border-t border-border bg-background/95 px-4 py-2 backdrop-blur sm:hidden">
         <Button aria-label="Página anterior" variant="ghost" size="icon" onClick={() => go(page - 1)} disabled={page === 0} className="size-11"><ChevronLeft className="size-5" /></Button>
         <div className="min-w-0 text-center">
-          <p className="truncate text-xs font-semibold text-foreground">{page === 0 ? "Capa" : page === lastPage ? "Fim" : active?.category.navLabel}</p>
+          <p className="truncate text-xs font-semibold text-foreground">{page === 0 ? "Capa" : page === lastPage ? "Fim" : active?.navLabel}</p>
           <div className="mx-auto mt-1 h-0.5 w-full max-w-36 overflow-hidden rounded-full bg-muted"><div className="h-full bg-primary transition-all" style={{ width: `${((page + 1) / (lastPage + 1)) * 100}%` }} /></div>
         </div>
         <Button aria-label="Próxima página" variant="ghost" size="icon" onClick={() => go(page + 1)} disabled={page === lastPage} className="size-11"><ChevronRight className="size-5" /></Button>
