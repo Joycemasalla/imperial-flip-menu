@@ -120,7 +120,7 @@ function MenuBook() {
   }, [lastPage, page, resetLeaf]);
 
   const goCategory = (id: string) => {
-    const target = pages.findIndex((entry) => entry.category.id === id);
+    const target = pages.findIndex((entry) => entry.id === id);
     if (target >= 0) go(target + 1);
   };
 
@@ -217,8 +217,8 @@ function MenuBook() {
   const renderLeaf = (index: number, eager: boolean) => {
     if (index === 0) return <CoverLeaf />;
     if (index === lastPage) return <ClosingLeaf />;
-    const menuPage = pages[index - 1];
-    return menuPage ? <MenuLeaf page={menuPage} number={index} eager={eager} onSelect={(item) => setSelected({ item, category: menuPage.category })} /> : null;
+    const category = pages[index - 1];
+    return category ? <MenuLeaf category={category} number={index} eager={eager} onSelect={(item) => setSelected({ item, category })} /> : null;
   };
 
   return (
