@@ -321,7 +321,7 @@ function MenuLeaf({ category, number, eager, onSelect }: { category: Category; n
         <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 px-5 pb-3 sm:px-7 sm:pb-4">
           <div className="min-w-0">
             <p className="mb-1 text-[9px] uppercase tracking-[0.3em] text-primary">Seleção imperial</p>
-            <h1 className="font-display truncate text-3xl leading-none text-foreground sm:text-4xl">{category.title}</h1>
+            <h1 className="font-display text-[1.65rem] leading-[0.95] text-foreground sm:text-4xl">{category.title}</h1>
           </div>
           <p className="shrink-0 pb-1 text-[10px] uppercase tracking-[0.18em] text-foreground/75">{category.items.length} opções</p>
         </div>
