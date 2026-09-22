@@ -175,12 +175,15 @@
 
 .brand-seal { box-shadow: inset 0 0 0 3px var(--background), 0 0 0 1px color-mix(in oklab, var(--primary) 25%, transparent); }
 .book-stage { height: calc(100dvh - 117px); padding-bottom: 64px; }
-.flipbook-mount { position: relative; height: 100%; max-width: 560px; max-height: 760px; min-height: 390px; perspective: 1600px; transform-style: preserve-3d; touch-action: pan-y; user-select: none; }
-.virtual-leaf { --fold-shadow: 0; position: absolute; inset: 0; overflow: hidden; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform; }
-.virtual-leaf::after { content: ""; position: absolute; z-index: 10; pointer-events: none; inset: 0; opacity: var(--fold-shadow); background: linear-gradient(90deg, color-mix(in oklab, var(--ink) 42%, transparent), transparent 34%, color-mix(in oklab, var(--foreground) 13%, transparent) 68%, color-mix(in oklab, var(--ink) 32%, transparent)); }
+.flipbook-mount { position: relative; height: 100%; max-width: 560px; max-height: 760px; min-height: 390px; overflow: hidden; perspective: 1600px; touch-action: pan-y; user-select: none; }
+.virtual-leaf { --fold-shadow: 0; position: absolute; inset: 0; transform-style: preserve-3d; }
+.leaf-face { position: absolute; inset: 0; overflow: hidden; backface-visibility: hidden; }
+.leaf-face::after { content: ""; position: absolute; z-index: 10; pointer-events: none; inset: 0; opacity: var(--fold-shadow); background: linear-gradient(90deg, rgb(0 0 0 / 0.42), rgb(0 0 0 / 0) 34%, rgb(255 255 255 / 0.1) 68%, rgb(0 0 0 / 0.3)); }
+.leaf-face-back { transform: rotateY(180deg); background: linear-gradient(110deg, color-mix(in oklab, var(--paper) 94%, var(--ink)), var(--paper)); border-radius: 8px 3px 3px 8px; box-shadow: inset 0 0 40px color-mix(in oklab, var(--ink) 10%, transparent); }
 .virtual-leaf-previous { z-index: 3; transform-origin: left center; transform: rotateY(-180deg); }
 .virtual-leaf-current { z-index: 4; transform-origin: left center; transform: rotateY(0deg); }
 .virtual-leaf-next { z-index: 2; }
+.virtual-leaf-dragging { will-change: transform; }
 .book-page { box-sizing: border-box; border-radius: 3px 8px 8px 3px; box-shadow: 0 12px 24px color-mix(in oklab, var(--ink) 20%, transparent), inset 0 0 24px color-mix(in oklab, var(--ink) 6%, transparent); }
 .book-page.--left { border-radius: 8px 3px 3px 8px; }
 .menu-leaf { background-color: var(--paper); color: var(--paper-foreground); }
