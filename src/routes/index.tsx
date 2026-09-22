@@ -90,11 +90,30 @@ function MenuBook() {
   const active = page > 0 && page <= pages.length ? pages[page - 1] : null;
   const lastPage = pages.length + 1;
 
+  const desktopRef = useRef(false);
+  const widthRef = useRef(1);
+
+  useEffect(() => {
+    const query = window.matchMedia("(min-width: 1024px)");
+    const sync = () => {
+      desktopRef.current = query.matches;
+      widthRef.current = mountRef.current?.clientWidth || 1;
+    };
+    sync();
+    query.addEventListener("change", sync);
+    window.addEventListener("resize", sync, { passive: true });
+    return () => {
+      query.removeEventListener("change", sync);
+      window.removeEventListener("resize", sync);
+    };
+  }, []);
+
   const resetLeaf = useCallback((leaf: HTMLDivElement | null) => {
     if (!leaf) return;
     leaf.style.transition = "none";
     leaf.style.transform = "rotateY(0deg)";
     leaf.style.removeProperty("--fold-shadow");
+    leaf.classList.remove("virtual-leaf-dragging");
   }, []);
 
   const go = useCallback((next: number) => {
@@ -108,16 +127,17 @@ function MenuBook() {
       lockedRef.current = false;
       return;
     }
-    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+    const isDesktop = desktopRef.current;
     if (direction === "prev") leaf.style.zIndex = "5";
-    leaf.style.transition = "transform 280ms cubic-bezier(.22,.72,.2,1), box-shadow 280ms ease";
+    leaf.classList.add("virtual-leaf-dragging");
+    leaf.style.transition = "transform 260ms cubic-bezier(.22,.72,.2,1)";
     leaf.style.transform = direction === "next" ? "rotateY(-180deg)" : isDesktop ? "rotateY(180deg)" : "rotateY(0deg)";
-    leaf.style.setProperty("--fold-shadow", "0.82");
+    leaf.style.setProperty("--fold-shadow", "0.6");
     settleTimerRef.current = window.setTimeout(() => {
       setPage(target);
       lockedRef.current = false;
-    }, 285);
-  }, [lastPage, page, resetLeaf]);
+    }, 265);
+  }, [lastPage, page]);
 
   const goCategory = (id: string) => {
     const target = pages.findIndex((entry) => entry.id === id);
@@ -139,23 +159,29 @@ function MenuBook() {
     return () => window.removeEventListener("keydown", onKey);
   }, [go, page, selected]);
 
-  const updateDrag = (dx: number, direction: "next" | "prev") => {
-    if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
-    frameRef.current = requestAnimationFrame(() => {
-      const width = mountRef.current?.clientWidth ?? 1;
-      const progress = Math.min(1, Math.abs(dx) / width);
-      const leaf = direction === "next" ? currentLeafRef.current : previousLeafRef.current;
-      if (!leaf) return;
-      const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
-      const angle = direction === "next" ? -progress * 180 : isDesktop ? progress * 180 : -180 + progress * 180;
-      leaf.style.transition = "none";
-      leaf.style.transform = `rotateY(${angle}deg)`;
-      leaf.style.setProperty("--fold-shadow", String(Math.sin(progress * Math.PI) * 0.78));
-    });
+  const pendingDxRef = useRef(0);
+
+  const paint = () => {
+    frameRef.current = null;
+    const drag = dragRef.current;
+    if (!drag || !drag.direction) return;
+    const leaf = drag.direction === "next" ? currentLeafRef.current : previousLeafRef.current;
+    if (!leaf) return;
+    const progress = Math.min(1, Math.abs(pendingDxRef.current) / widthRef.current);
+    const angle =
+      drag.direction === "next" ? -progress * 180 : desktopRef.current ? progress * 180 : -180 + progress * 180;
+    leaf.style.transform = `rotateY(${angle}deg)`;
+    leaf.style.setProperty("--fold-shadow", (Math.sin(progress * Math.PI) * 0.6).toFixed(2));
+  };
+
+  const updateDrag = (dx: number) => {
+    pendingDxRef.current = dx;
+    if (frameRef.current === null) frameRef.current = requestAnimationFrame(paint);
   };
 
   const onPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
-    if (lockedRef.current || event.pointerType === "mouse" && event.button !== 0) return;
+    if (lockedRef.current || (event.pointerType === "mouse" && event.button !== 0)) return;
+    widthRef.current = mountRef.current?.clientWidth || 1;
     dragRef.current = { pointerId: event.pointerId, startX: event.clientX, startY: event.clientY, lastX: event.clientX, startedAt: performance.now(), axis: "pending", direction: null };
   };
 
@@ -175,43 +201,54 @@ function MenuBook() {
       drag.direction = dx < 0 ? "next" : "prev";
       if ((drag.direction === "next" && page === lastPage) || (drag.direction === "prev" && page === 0)) {
         drag.axis = "vertical";
+        drag.direction = null;
         return;
       }
-      if (drag.direction === "prev" && previousLeafRef.current) previousLeafRef.current.style.zIndex = "5";
+      const leaf = drag.direction === "next" ? currentLeafRef.current : previousLeafRef.current;
+      if (leaf) {
+        if (drag.direction === "prev") leaf.style.zIndex = "5";
+        leaf.classList.add("virtual-leaf-dragging");
+        leaf.style.transition = "none";
+      }
       event.currentTarget.setPointerCapture(event.pointerId);
     }
     if (drag.axis === "horizontal" && drag.direction) {
-      event.preventDefault();
       const directionalDx = drag.direction === "next" ? Math.min(0, dx) : Math.max(0, dx);
-      updateDrag(directionalDx, drag.direction);
+      updateDrag(directionalDx);
     }
   };
 
   const finishDrag = (event: ReactPointerEvent<HTMLDivElement>) => {
     const drag = dragRef.current;
     dragRef.current = null;
+    if (frameRef.current !== null) {
+      cancelAnimationFrame(frameRef.current);
+      frameRef.current = null;
+    }
     if (!drag || drag.pointerId !== event.pointerId || drag.axis !== "horizontal" || !drag.direction) return;
     const dx = drag.lastX - drag.startX;
     const velocity = Math.abs(dx) / Math.max(1, performance.now() - drag.startedAt);
     const complete = Math.abs(dx) > 40 || velocity > 0.45;
     const leaf = drag.direction === "next" ? currentLeafRef.current : previousLeafRef.current;
     if (!leaf) return;
+    const direction = drag.direction;
     lockedRef.current = true;
-    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
-    leaf.style.transition = "transform 260ms cubic-bezier(.22,.72,.2,1), box-shadow 260ms ease";
+    const isDesktop = desktopRef.current;
+    leaf.style.transition = "transform 240ms cubic-bezier(.22,.72,.2,1)";
     leaf.style.transform = complete
-      ? drag.direction === "next" ? "rotateY(-180deg)" : isDesktop ? "rotateY(180deg)" : "rotateY(0deg)"
-      : drag.direction === "next" ? "rotateY(0deg)" : isDesktop ? "rotateY(0deg)" : "rotateY(-180deg)";
-    leaf.style.setProperty("--fold-shadow", complete ? "0.82" : "0");
+      ? direction === "next" ? "rotateY(-180deg)" : isDesktop ? "rotateY(180deg)" : "rotateY(0deg)"
+      : direction === "next" ? "rotateY(0deg)" : isDesktop ? "rotateY(0deg)" : "rotateY(-180deg)";
+    leaf.style.setProperty("--fold-shadow", complete ? "0.6" : "0");
     settleTimerRef.current = window.setTimeout(() => {
       if (complete) {
-        setPage((current) => Math.max(0, Math.min(lastPage, current + (drag.direction === "next" ? 1 : -1))));
+        setPage((current) => Math.max(0, Math.min(lastPage, current + (direction === "next" ? 1 : -1))));
       } else {
         resetLeaf(leaf);
         leaf.style.removeProperty("z-index");
       }
+      leaf.classList.remove("virtual-leaf-dragging");
       lockedRef.current = false;
-    }, 265);
+    }, 245);
   };
 
   const renderLeaf = (index: number, eager: boolean) => {
