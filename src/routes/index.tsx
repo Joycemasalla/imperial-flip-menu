@@ -12,7 +12,7 @@ import picanhaImage from "@/assets/picanha.jpg";
 import pizzasImage from "@/assets/pizzas.jpg";
 import porcoesImage from "@/assets/porcoes.jpg";
 import tradicionaisImage from "@/assets/tradicionais.jpg";
-import logoAsset from "@/assets/espaco-imperial-logo.png.asset.json";
+import logoAsset from "@/assets/logoespaco-removebg.png";
 import { Button } from "@/components/ui/button";
 import rawMenu from "@/data/menuData.json";
 import { cn } from "@/lib/utils";
@@ -263,7 +263,7 @@ function MenuBook() {
       <header className="brand-header grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3 sm:px-7">
         <div className="flex min-w-0 items-center gap-3">
           <div className="brand-seal grid size-11 shrink-0 place-items-center overflow-hidden rounded-full border border-primary/60 p-1">
-            <img src={logoAsset.url} alt="" width={559} height={447} decoding="async" className="h-full w-full object-contain" />
+            <img src={logoAsset} alt="" width={559} height={447} decoding="async" className="h-full w-full object-contain" />
           </div>
           <div className="min-w-0">
             <p className="font-display truncate text-xl leading-none text-foreground sm:text-2xl">Espaço Imperial</p>
@@ -339,7 +339,7 @@ function CoverLeaf() {
   return (
     <article data-density="hard" className="book-page cover-page flex h-full flex-col items-center justify-center overflow-hidden p-8 text-center">
       <div className="cover-frame flex h-full w-full flex-col items-center justify-center border border-primary/40 px-6">
-        <img src={logoAsset.url} alt="Espaço Imperial" width={559} height={447} decoding="async" className="mb-6 w-48 max-w-[78%] object-contain sm:w-56" />
+        <img src={logoAsset} alt="Espaço Imperial" width={559} height={447} decoding="async" className="mb-6 w-48 max-w-[78%] object-contain sm:w-56" />
         <p className="mb-3 text-[10px] uppercase tracking-[0.3em] text-primary">Desde sempre, à sua mesa</p>
         <h1 className="sr-only">Espaço Imperial</h1>
         <div className="my-7 h-px w-20 bg-primary/60" />
@@ -420,7 +420,7 @@ function MenuItemRow({ item, categoryId, onSelect }: { item: MenuItem; categoryI
 }
 
 function ClosingLeaf() {
-  return <article data-density="hard" className="book-page back-cover flex h-full flex-col items-center justify-center p-10 text-center"><img src={logoAsset.url} alt="Espaço Imperial" width={559} height={447} loading="lazy" decoding="async" className="mb-7 w-40 max-w-[75%] object-contain" /><p className="font-display text-4xl text-foreground">Bom apetite</p><p className="mt-3 max-w-xs text-xs leading-relaxed text-muted-foreground">Quando decidir, é só chamar um de nossos garçons.</p><p className="mt-10 text-[9px] uppercase tracking-[0.25em] text-primary">Espaço Imperial</p></article>;
+  return <article data-density="hard" className="book-page back-cover flex h-full flex-col items-center justify-center p-10 text-center"><img src={logoAsset} alt="Espaço Imperial" width={559} height={447} loading="lazy" decoding="async" className="mb-7 w-40 max-w-[75%] object-contain" /><p className="font-display text-4xl text-foreground">Bom apetite</p><p className="mt-3 max-w-xs text-xs leading-relaxed text-muted-foreground">Quando decidir, é só chamar um de nossos garçons.</p><p className="mt-10 text-[9px] uppercase tracking-[0.25em] text-primary">Espaço Imperial</p></article>;
 }
 
 function ProductModal({ selection, onClose }: { selection: { item: MenuItem; category: Category }; onClose: () => void }) {
