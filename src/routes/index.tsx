@@ -282,7 +282,7 @@ function MenuBook() {
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <p className="hidden max-w-52 text-right text-xs leading-relaxed text-muted-foreground sm:block">
+          <p className="hidden text-right text-sm text-muted-foreground md:block">
             Escolha com calma e chame o garçom para pedir.
           </p>
           <Button aria-label="Buscar" variant="outline" size="icon" className="rounded-full" onClick={() => setSearchOpen(true)}>
