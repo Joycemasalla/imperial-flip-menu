@@ -342,10 +342,15 @@ function MenuBook() {
         <Button aria-label="Página anterior" variant="ghost" size="icon" onClick={() => go(page - 1)} disabled={page === 0} className="size-9"><ChevronLeft className="size-4" /></Button>
         <div className="min-w-0 text-center">
           <p className="truncate text-[11px] font-semibold text-foreground">{page === 0 ? "Capa" : page === lastPage ? "Fim" : active?.navLabel}</p>
-          <div className="mx-auto mt-1.5 h-0.5 w-full max-w-32 overflow-hidden rounded-full bg-muted"><div className="h-full bg-primary transition-all" style={{ width: `${((page + 1) / (lastPage + 1)) * 100}%` }} /></div>
+          <div className="mx-auto mt-1 h-0.5 w-full max-w-32 overflow-hidden rounded-full bg-muted"><div className="h-full bg-primary transition-all" style={{ width: `${((page + 1) / (lastPage + 1)) * 100}%` }} /></div>
+          <p className="mt-0.5 text-[8px] text-muted-foreground/70">Desenvolvido por <span className="font-medium">Joyce Masalla</span></p>
         </div>
         <Button aria-label="Próxima página" variant="ghost" size="icon" onClick={() => go(page + 1)} disabled={page === lastPage} className="size-9"><ChevronRight className="size-4" /></Button>
       </footer>
+
+      <div className="hidden sm:block fixed bottom-2 right-4 z-40 text-[10px] text-muted-foreground/50 hover:text-muted-foreground transition-colors">
+        Desenvolvido por <span className="font-semibold">Joyce Masalla</span>
+      </div>
 
       {selected && <ProductModal selection={selected} onClose={() => setSelected(null)} />}
       {searchOpen && (
