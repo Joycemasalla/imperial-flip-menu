@@ -282,11 +282,12 @@ function MenuBook() {
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <p className="hidden text-right text-sm text-muted-foreground md:block">
+          <p className="hidden text-right text-sm text-muted-foreground lg:block">
             Escolha com calma e chame o garçom para pedir.
           </p>
-          <Button aria-label="Buscar" variant="outline" size="icon" className="rounded-full" onClick={() => setSearchOpen(true)}>
+          <Button aria-label="Buscar" variant="outline" className="rounded-full px-3 sm:px-4 flex items-center gap-2" onClick={() => setSearchOpen(true)}>
             <Search className="size-4" />
+            <span className="hidden sm:inline">Buscar no cardápio</span>
           </Button>
         </div>
       </header>
