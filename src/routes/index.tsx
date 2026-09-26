@@ -410,7 +410,7 @@ function MenuLeaf({ category, number, eager, onSelect }: { category: Category; n
       <div className="menu-scroll-wrap relative min-h-0 flex-1">
         <div ref={updateScrollHint} onScroll={trackScrollHint} className="menu-scroll-area h-full overflow-y-auto px-4 pb-16 pt-3 sm:px-6 sm:pb-14 sm:pt-4">
           {category.subtitle && <p className="mb-3 border-l border-primary pl-3 text-[11px] leading-relaxed text-paper-foreground/80">{category.subtitle}</p>}
-          <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-1">
             {category.items.map((item) => <MenuItemRow key={item.id} item={item} categoryId={category.id} onSelect={onSelect} />)}
           </div>
         </div>
