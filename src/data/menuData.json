@@ -8,9 +8,9 @@
         "id": "americano",
         "name": "Americano",
         "avatar": "A",
-        "price": 18.0,
+        "price": 18,
         "options": [],
-        "desc": "Pão brioche, bife caseiro, ovo, queijo, bacon. Acompanha alface, milho, tomate e batata.",
+        "desc": "Pão brioche, bife de boi, queijo, bacon, ovo",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756576165/cardapio-digital-images/va7pk7w4oj0xvvu2a2vq.jpg",
         "serves": null,
         "highlight": false
@@ -19,9 +19,9 @@
         "id": "x-calabresa",
         "name": "X Calabresa",
         "avatar": "XC",
-        "price": 17.0,
+        "price": 17,
         "options": [],
-        "desc": "Pão brioche, bife caseiro, calabresa, queijo. Acompanha alface, milho, tomate e batata.",
+        "desc": "Pão brioche, bife de boi, calabresa, queijo",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756815064/cardapio-digital-images/mgpuedmnwopo0lrn1xea.jpg",
         "serves": null,
         "highlight": false
@@ -30,9 +30,9 @@
         "id": "x-bacon",
         "name": "X Bacon",
         "avatar": "XB",
-        "price": 17.0,
+        "price": 17,
         "options": [],
-        "desc": "Pão brioche, bife caseiro, queijo, bacon. Acompanha alface, milho, tomate e batata.",
+        "desc": "Pão brioche, bife de boi, queijo, bacon",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756576451/cardapio-digital-images/jyaaptdlgjffkj5aeevn.jpg",
         "serves": null,
         "highlight": false
@@ -41,9 +41,9 @@
         "id": "x-egg",
         "name": "X Egg",
         "avatar": "XE",
-        "price": 17.0,
+        "price": 17,
         "options": [],
-        "desc": "Pão brioche, bife caseiro, ovo, queijo. Acompanha alface, milho, tomate e batata.",
+        "desc": "Pão brioche, bife de boi, queijo, ovo",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756815086/cardapio-digital-images/retgmoehsuqqplh3pb7n.jpg",
         "serves": null,
         "highlight": false
@@ -52,9 +52,9 @@
         "id": "bacon-burguer",
         "name": "Bacon Burguer",
         "avatar": "BB",
-        "price": 15.0,
+        "price": 15,
         "options": [],
-        "desc": "Pão brioche, bife caseiro, bacon. Acompanha alface, milho, tomate e batata.",
+        "desc": "Pão brioche, bife de boi, bacon",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756577257/cardapio-digital-images/vsfsq2gngpgsev5sk7od.jpg",
         "serves": null,
         "highlight": false
@@ -63,9 +63,9 @@
         "id": "x-burguer",
         "name": "X Burguer",
         "avatar": "XB",
-        "price": 14.0,
+        "price": 14,
         "options": [],
-        "desc": "Pão brioche, bife caseiro, queijo. Acompanha alface, milho, tomate e batata.",
+        "desc": "Pão brioche, bife de boi, muçarela",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756815024/cardapio-digital-images/kulvvw1acthblyrazw3t.jpg",
         "serves": null,
         "highlight": false
@@ -74,9 +74,9 @@
         "id": "hamb-rguer",
         "name": "Hambúrguer",
         "avatar": "H",
-        "price": 13.0,
+        "price": 13,
         "options": [],
-        "desc": "Pão brioche, bife caseiro. Acompanha alface, milho, tomate e batata.",
+        "desc": "Pão brioche, bife de boi",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756577019/cardapio-digital-images/puhgbhh84jffoa1zyj49.jpg",
         "serves": null,
         "highlight": false
@@ -85,9 +85,9 @@
         "id": "misto",
         "name": "Misto",
         "avatar": "M",
-        "price": 11.0,
+        "price": 11,
         "options": [],
-        "desc": "Pão de forma, presunto e muçarela.",
+        "desc": "Pão de forma, queijo e presunto",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752062349/cardapio-digital-images/pwywlu6udipraobxxryz.jpg",
         "serves": null,
         "highlight": false
@@ -96,9 +96,9 @@
         "id": "x-burguesunto",
         "name": "X Burguesunto",
         "avatar": "XB",
-        "price": 17.0,
+        "price": 17,
         "options": [],
-        "desc": "Pão brioche, bife caseiro, presunto, queijo. Acompanha alface, milho, tomate e batata.",
+        "desc": "Pão brioche, bife de boi, queijo, presunto",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756815044/cardapio-digital-images/bfh03xbjzi4nhm5p6pxy.jpg",
         "serves": null,
         "highlight": false
@@ -107,9 +107,9 @@
         "id": "x-tudo",
         "name": "X Tudo",
         "avatar": "XT",
-        "price": 21.0,
+        "price": 21,
         "options": [],
-        "desc": "Pão brioche, bife caseiro, ovo, presunto, queijo, bacon. Acompanha alface, milho, tomate e batata.",
+        "desc": "Pão brioche, bife de boi, bacon, queijo, presunto, ovo",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883446/cardapio-digital-images/gnmxariy70iqhek01jlq.jpg",
         "serves": null,
         "highlight": false
@@ -118,9 +118,9 @@
         "id": "franbacon",
         "name": "FranBacon",
         "avatar": "F",
-        "price": 18.0,
+        "price": 18,
         "options": [],
-        "desc": "Pão brioche, bife de frango caseiro, bacon, queijo e catupiry. Acompanha alface, milho, tomate e batata.",
+        "desc": "Pão brioche, bife de frango, bacon, queijo, catupiry",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756576239/cardapio-digital-images/d07f9jc5vsz3trqlxcjx.jpg",
         "serves": null,
         "highlight": true
@@ -136,9 +136,9 @@
         "id": "super-rei-bacon",
         "name": "Super Rei Bacon",
         "avatar": "SR",
-        "price": 27.0,
+        "price": 27,
         "options": [],
-        "desc": "Pão brioche, 2 bife artesanal de boi (120g), 2 fatias de cheddar, bacon, tomate, cebola caramelizada e molho especial.",
+        "desc": "Pão brioche, 2 bife de boi (120g), 2 fatias de cheddar, bacon, tomate, cebola caramelizada, molho especial",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883340/cardapio-digital-images/u2h1yxwnzjroekhvaatc.jpg",
         "serves": null,
         "highlight": false
@@ -147,9 +147,9 @@
         "id": "rei-bacon",
         "name": "Rei Bacon",
         "avatar": "RB",
-        "price": 22.0,
+        "price": 22,
         "options": [],
-        "desc": "Pão brioche, bife artesanal de boi (120g), cheddar, bacon, muçarela, cebola caramelizada e barbecue.",
+        "desc": "Pão brioche, bife de boi (120g), cheddar, muçarela, bacon, cebola caramelizada e barbecue",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753539518/cardapio-digital-images/wysxhcttujmcdrjxch6f.jpg",
         "serves": null,
         "highlight": false
@@ -158,9 +158,9 @@
         "id": "chicken-especial",
         "name": "Chicken Especial",
         "avatar": "CE",
-        "price": 23.0,
+        "price": 23,
         "options": [],
-        "desc": "Pão brioche, bife frango empanado, cheddar, alface, tomate, anel de cebola e barbecue.",
+        "desc": "Pão brioche, bife de frango empanado, cheddar, alface, tomate, anéis de cebola e barbecue",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883400/cardapio-digital-images/lizkyrftbpb7rguso4m8.jpg",
         "serves": null,
         "highlight": false
@@ -169,9 +169,9 @@
         "id": "chicken-burguer",
         "name": "Chicken Burguer",
         "avatar": "CB",
-        "price": 18.0,
+        "price": 18,
         "options": [],
-        "desc": "Pão brioche, bife artesanal de frango (120g), queijo prato, alface, tomate e molho especial.",
+        "desc": "Pão brioche, bife de frango (120g), queijo prato, alface, tomate e molho especial",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756576823/cardapio-digital-images/edral2fahbs3crwpsgjk.jpg",
         "serves": null,
         "highlight": false
@@ -180,9 +180,9 @@
         "id": "cheddar-mc-melt",
         "name": "Cheddar MC Melt",
         "avatar": "CM",
-        "price": 17.0,
+        "price": 17,
         "options": [],
-        "desc": "Pão brioche, bife artesanal de boi (120g), cheddar, cebola caramelizada.",
+        "desc": "Pão brioche, bife de boi (120g), cheddar, cebola caramelizada",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751990068/cardapio-digital-images/kbukfzahedlithi28vdq.jpg",
         "serves": null,
         "highlight": false
@@ -191,9 +191,9 @@
         "id": "costela-burguer",
         "name": "Costela Burguer",
         "avatar": "CB",
-        "price": 24.0,
+        "price": 24,
         "options": [],
-        "desc": "Pão brioche, costela desfiada, bife artesanal de boi (120g), muçarela, alface, anel de cebola, barbecue.",
+        "desc": "Pão brioche, bife de boi (120g) costela desfiada, muçarela, anéis de cebola e barbecue",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751899058/cardapio-digital-images/oc86btev0yx9gerewzbh.jpg",
         "serves": null,
         "highlight": false
@@ -202,9 +202,9 @@
         "id": "cheddar-melt-duplo",
         "name": "Cheddar Melt Duplo",
         "avatar": "CM",
-        "price": 24.0,
+        "price": 24,
         "options": [],
-        "desc": "Pão brioche, 2 bifes artesanais boi (120g), 2 fatias cheddar e cebola caramelizada.",
+        "desc": "Pão brioche, 2 bife de boi (120g), 2 fatias de cheddar e cebola caramelizada",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756576117/cardapio-digital-images/t3maxgnprjyzqsfmjy5z.jpg",
         "serves": null,
         "highlight": false
@@ -213,9 +213,9 @@
         "id": "pig-melt",
         "name": "Pig Melt",
         "avatar": "PM",
-        "price": 28.0,
+        "price": 28,
         "options": [],
-        "desc": "Pão de brioche, bife artesanal de lombo (150g), catupiry empanado, cheddar, tomate, alface, cebola caramelizada e barbecue.",
+        "desc": "Pão brioche, bife de lombo (150g), catupiry empanado, cheddar, tomate, alface, cebola caramelizada, barbecue",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751990046/cardapio-digital-images/ybpsjjskqyaxzpq1sdf9.jpg",
         "serves": null,
         "highlight": false
@@ -224,9 +224,9 @@
         "id": "crispy-bacon",
         "name": "Crispy Bacon",
         "avatar": "CB",
-        "price": 21.0,
+        "price": 21,
         "options": [],
-        "desc": "Pão brioche, bife artesanal de boi (120g), mussarela, bacon caramelizado, cebola crispy e molho especial.",
+        "desc": "Pão brioche, bife de boi (120g), muçarela, bacon caramelizado, cebola crispy",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1772215328/cardapio-digital-images/products/hpe9nflhs8konjuwzi8j.jpg",
         "serves": null,
         "highlight": false
@@ -235,7 +235,7 @@
         "id": "san-melt",
         "name": "San Melt",
         "avatar": "SM",
-        "price": 26.0,
+        "price": 26,
         "options": [],
         "desc": "Pão brioche, bife de boi (120g), catupiry empanado, bacon, geleia de pimenta",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1785009277/cardapio-digital-images/products/n15a3i3ctxrx67hdszzj.png",
@@ -246,7 +246,7 @@
         "id": "rib-burguer",
         "name": "Rib Burguer",
         "avatar": "RB",
-        "price": 27.0,
+        "price": 27,
         "options": [],
         "desc": "Pão brioche, 1 bife de boi (120g), 1 bife de costela empanada, muçarela, geleia de pimenta, barbecue",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1785595235/cardapio-digital-images/products/zwka5sdrddnatdgo7hyi.jpg",
@@ -264,7 +264,7 @@
         "id": "baguete-de-churrasco",
         "name": "Baguete de Churrasco",
         "avatar": "BD",
-        "price": 16.0,
+        "price": 16,
         "options": [],
         "desc": "Pão francês, maionese de alho, churrasco e muçarela.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756577643/cardapio-digital-images/iannzafzzi353t947wxx.jpg",
@@ -275,10 +275,41 @@
         "id": "baguete-de-costela",
         "name": "Baguete de Costela",
         "avatar": "BD",
-        "price": 18.0,
+        "price": 18,
         "options": [],
         "desc": "Pão francês, costela desfiada, cebola, catupiry e muçarela.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753881894/cardapio-digital-images/tdi5n8hlmvpqoswbgdpi.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "churrasco",
+        "name": "Churrasco",
+        "avatar": "CH",
+        "price": null,
+        "options": [
+          {
+            "label": "1 Espetinho",
+            "price": 16
+          },
+          {
+            "label": "2 Espetinhos",
+            "price": 23
+          }
+        ],
+        "desc": "Pão francês, maionese de alho, churrasco, muçarela. Adicionais (R$ 2,00 cada): Vinagrete | Batata palha",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756577643/cardapio-digital-images/iannzafzzi353t947wxx.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "costela",
+        "name": "Costela",
+        "avatar": "CO",
+        "price": 18,
+        "options": [],
+        "desc": "Pão francês, costela, cebola, catupiry, muçarela. Adicionais (R$ 2,00 cada): Vinagrete | Batata palha | Salada | Cheddar | Barbecue",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756577643/cardapio-digital-images/iannzafzzi353t947wxx.jpg",
         "serves": null,
         "highlight": false
       }
@@ -293,9 +324,22 @@
         "id": "pizza-lombo",
         "name": "Pizza Lombo",
         "avatar": "PL",
-        "price": 42.0,
-        "options": [],
-        "desc": "Muçarela, lombo canadense, catupiry azeitona e orégano.",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, lombo canadense, catupiry, azeitona e orégano",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381793/cardapio-digital-images/kc1ohablbqsivxeo9kyw.jpg",
         "serves": null,
         "highlight": false
@@ -304,9 +348,22 @@
         "id": "pizza-quatro-queijos",
         "name": "Pizza Quatro Queijos",
         "avatar": "PQ",
-        "price": 42.0,
-        "options": [],
-        "desc": "Muçarela, Cheddar, catupiry, parmesão, azeitona e orégano.",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, cheddar, catupiry, parmesão, azeitona e orégano",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753193853/cardapio-digital-images/tj2r9vtk3xapu5da0m5s.jpg",
         "serves": null,
         "highlight": false
@@ -315,9 +372,22 @@
         "id": "pizza-da-ro-a",
         "name": "Pizza Da Roça",
         "avatar": "PD",
-        "price": 42.0,
-        "options": [],
-        "desc": "Muçarela, frango desfiado, milho Bacon, azeitona e orégano.",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, frango desfiado, milho, bacon, azeitona e orégano",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381719/cardapio-digital-images/bgwz4czc7vlzynaxmbzu.jpg",
         "serves": null,
         "highlight": false
@@ -326,9 +396,22 @@
         "id": "pizza-americana",
         "name": "Pizza Americana",
         "avatar": "PA",
-        "price": 42.0,
-        "options": [],
-        "desc": "Muçarela, cheddar, tomate, pimentão, cream cheese, azeitona e orégano.",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, cheddar, tomate, pimentão, catupiry, azeitona e orégano",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381422/cardapio-digital-images/aor1ki9pjxdmmbxqoz2o.jpg",
         "serves": null,
         "highlight": false
@@ -337,7 +420,7 @@
         "id": "pizza-frango-com-catupiry",
         "name": "Pizza Frango com Catupiry",
         "avatar": "PF",
-        "price": 42.0,
+        "price": 42,
         "options": [],
         "desc": "Muçarela, frango desfiado, catupiry, azeitona e orégano.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753538337/cardapio-digital-images/etiykagvzhq4mcd87aub.jpg",
@@ -348,7 +431,7 @@
         "id": "pizza-margherita",
         "name": "Pizza Margherita",
         "avatar": "PM",
-        "price": 42.0,
+        "price": 42,
         "options": [],
         "desc": "Muçarela, tomate, parmesão, manjericão, azeitona e orégano.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753214129/cardapio-digital-images/d5nqwzfnfleeapi3zmzy.jpg",
@@ -359,7 +442,7 @@
         "id": "pizza-a-moda",
         "name": "Pizza A Moda",
         "avatar": "PA",
-        "price": 42.0,
+        "price": 42,
         "options": [],
         "desc": "Muçarela, presunto, calabresa, palmito, azeitona, milho, cebola, catupiry e orégano.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381321/cardapio-digital-images/wr5j7mtyj6b9qjmuxtlc.jpg",
@@ -370,9 +453,22 @@
         "id": "pizza-italiana",
         "name": "Pizza Italiana",
         "avatar": "PI",
-        "price": 42.0,
-        "options": [],
-        "desc": "Muçarela, salaminho, azeitona, cebola e orégano.",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, salaminho, cebola, azeitona e orégano",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753538129/cardapio-digital-images/alipg2ejtddwas7dzg08.jpg",
         "serves": null,
         "highlight": false
@@ -381,9 +477,22 @@
         "id": "pizza-bacon",
         "name": "Pizza Bacon",
         "avatar": "PB",
-        "price": 42.0,
-        "options": [],
-        "desc": "Bacon, muçarela, tomate azeitona e orégano.",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, bacon, tomate, azeitona e orégano",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381509/cardapio-digital-images/bzeewqoz4giu1w006g9t.jpg",
         "serves": null,
         "highlight": false
@@ -392,9 +501,22 @@
         "id": "pizza-palmito",
         "name": "Pizza Palmito",
         "avatar": "PP",
-        "price": 42.0,
-        "options": [],
-        "desc": "Muçarela, palmito, catupiry azeitona e orégano.",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, palmito, catupiry, azeitona e orégano",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753214077/cardapio-digital-images/yw3mqyqtcdmevqcgzxuo.jpg",
         "serves": null,
         "highlight": false
@@ -403,9 +525,22 @@
         "id": "pizza-calabresa",
         "name": "Pizza Calabresa",
         "avatar": "PC",
-        "price": 42.0,
-        "options": [],
-        "desc": "Calabresa, muçarela, cebola, azeitona e orégano.",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, calabresa, cebola, azeitona e orégano",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883504/cardapio-digital-images/st4bgqj41fhwa23t25o8.jpg",
         "serves": null,
         "highlight": false
@@ -414,9 +549,22 @@
         "id": "pizza-camar-o",
         "name": "Pizza Camarão",
         "avatar": "PC",
-        "price": 42.0,
-        "options": [],
-        "desc": "Muçarela, camarão, catupiry alho frito, azeitona e orégano.",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, camarão, catupiry, alho frito, cebola, azeitona e orégano",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751899100/cardapio-digital-images/nqsziumwawfzvr9wczxi.jpg",
         "serves": null,
         "highlight": false
@@ -425,9 +573,22 @@
         "id": "pizza-carne-seca",
         "name": "Pizza Carne Seca",
         "avatar": "PC",
-        "price": 42.0,
-        "options": [],
-        "desc": "Muçarela, carne seca, catupiry cebola, azeitona e orégano.",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, carne seca, catupiry, cebola, azeitona e orégano",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883540/cardapio-digital-images/evgagksdzyjfq0he2evk.jpg",
         "serves": null,
         "highlight": false
@@ -436,9 +597,22 @@
         "id": "pizza-costela",
         "name": "Pizza Costela",
         "avatar": "PC",
-        "price": 42.0,
-        "options": [],
-        "desc": "Muçarela, costela, catupiry cebola, azeitona e orégano.",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, costela, catupiry, cebola, azeitona e orégano",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381581/cardapio-digital-images/fth1oejkwavmk8segpvw.jpg",
         "serves": null,
         "highlight": false
@@ -447,9 +621,22 @@
         "id": "pizza-portuguesa",
         "name": "Pizza Portuguesa",
         "avatar": "PP",
-        "price": 42.0,
-        "options": [],
-        "desc": "Muçarela, calabresa, tomate, pimentão, presunto, ovo, cebola, azeitona e orégano.",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, calabresa, presunto, tomate, pimentão, ovo, cebola, azeitona e orégano",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751990097/cardapio-digital-images/tfpgmmehimkbuz9kv0tb.jpg",
         "serves": null,
         "highlight": false
@@ -458,9 +645,22 @@
         "id": "pizza-presunto",
         "name": "Pizza Presunto",
         "avatar": "PP",
-        "price": 42.0,
-        "options": [],
-        "desc": "Presunto, Muçarela, azeitona e orégano.",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, presunto, azeitona e orégano",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753538157/cardapio-digital-images/y0ahb4ijm3vpfa6peall.jpg",
         "serves": null,
         "highlight": false
@@ -469,10 +669,87 @@
         "id": "pizza-fil-com-fritas",
         "name": "Pizza Filé com Fritas",
         "avatar": "PF",
-        "price": 100.0,
-        "options": [],
+        "price": null,
+        "options": [
+          {
+            "label": "G",
+            "price": 100
+          }
+        ],
         "desc": "Muçarela, contra filé, fritas, cebola, azeitona e orégano",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1785009390/cardapio-digital-images/products/fmpdsmf4dxd85uqlog89.png",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-frango-c-catupiry",
+        "name": "Pizza Frango c/ Catupiry",
+        "avatar": "PI",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, frango desfiado, catupiry, azeitona e orégano",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381793/cardapio-digital-images/kc1ohablbqsivxeo9kyw.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-marguerita",
+        "name": "Pizza Marguerita",
+        "avatar": "PI",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, manjericão, parmesão, tomate, azeitona e orégano",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381793/cardapio-digital-images/kc1ohablbqsivxeo9kyw.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-moda",
+        "name": "Pizza À Moda",
+        "avatar": "PI",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, presunto, calabresa, palmito, milho, catupiry, cebola, azeitona e orégano",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381793/cardapio-digital-images/kc1ohablbqsivxeo9kyw.jpg",
         "serves": null,
         "highlight": false
       }
@@ -487,9 +764,22 @@
         "id": "pizza-prest-gio",
         "name": "Pizza Prestígio",
         "avatar": "PP",
-        "price": 42.0,
-        "options": [],
-        "desc": "Muçarela, brigadeiro e coco.",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, brigadeiro e coco",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883176/cardapio-digital-images/umhbmlanibq16s995gsm.jpg",
         "serves": null,
         "highlight": false
@@ -498,9 +788,22 @@
         "id": "pizza-romeu-e-julieta",
         "name": "Pizza Romeu e Julieta",
         "avatar": "PR",
-        "price": 42.0,
-        "options": [],
-        "desc": "Muçarela, requeijão cremoso e goiabada.",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, requeijão cremoso e goiabada",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883286/cardapio-digital-images/vhiimsowmkgifpdjiai6.jpg",
         "serves": null,
         "highlight": false
@@ -509,7 +812,7 @@
         "id": "pizza-creme-de-avel-com-confete",
         "name": "Pizza Creme de Avelã com Confete",
         "avatar": "PC",
-        "price": 42.0,
+        "price": 42,
         "options": [],
         "desc": "Muçarela, creme de avelã e confete.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753538214/cardapio-digital-images/mckntj8dfoj3wjlmzlfd.jpg",
@@ -520,10 +823,58 @@
         "id": "pizza-banana-com-doce-de-leite",
         "name": "Pizza Banana com Doce de Leite",
         "avatar": "PB",
-        "price": 42.0,
+        "price": 42,
         "options": [],
         "desc": "Muçarela, banana, doce de leite e canela.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753538179/cardapio-digital-images/sewpurnqhyvqja8vegxn.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-banana-c-doce-de-leite",
+        "name": "Pizza Banana c/ Doce de leite",
+        "avatar": "PI",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, banana, doce de leite e canela",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883176/cardapio-digital-images/umhbmlanibq16s995gsm.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-creme-de-avel-c-confete",
+        "name": "Pizza Creme de Avelã c/ Confete",
+        "avatar": "PI",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, creme de avelã e confete",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883176/cardapio-digital-images/umhbmlanibq16s995gsm.jpg",
         "serves": null,
         "highlight": false
       }
@@ -538,7 +889,7 @@
         "id": "gua-c-g-s",
         "name": "Água c/ Gás",
         "avatar": "ÁC",
-        "price": 3.0,
+        "price": null,
         "options": [],
         "desc": "Água mineral com gás.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193897/cardapio-digital-images/lcttcrbbte7li50kwqle.jpg",
@@ -549,7 +900,7 @@
         "id": "gua-s-g-s",
         "name": "Água s/ Gás",
         "avatar": "ÁS",
-        "price": 3.0,
+        "price": null,
         "options": [],
         "desc": "Água mineral sem gás.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193396/cardapio-digital-images/w55c16xm8ip1woyqevdb.jpg",
@@ -560,7 +911,7 @@
         "id": "coca-cola-1l",
         "name": "Coca-cola 1L",
         "avatar": "C1",
-        "price": 12.0,
+        "price": null,
         "options": [],
         "desc": "Refrigerante Coca-Cola 1 litro.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752062653/cardapio-digital-images/kdtktuzrlsv64trojsft.jpg",
@@ -571,7 +922,7 @@
         "id": "guaran-1l",
         "name": "Guaraná 1L",
         "avatar": "G1",
-        "price": 12.0,
+        "price": null,
         "options": [],
         "desc": "Refrigerante Guaraná 1 litro.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752062926/cardapio-digital-images/lhq2kmbvdrwretx8rs4a.jpg",
@@ -582,7 +933,7 @@
         "id": "imp-rio-long-neck",
         "name": "Império Long Neck",
         "avatar": "IL",
-        "price": 12.0,
+        "price": null,
         "options": [],
         "desc": "Cerveja Império long neck.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193772/cardapio-digital-images/lf4jfycf9i2aj3mp5twq.jpg",
@@ -593,7 +944,7 @@
         "id": "corona-long-neck",
         "name": "Corona Long Neck",
         "avatar": "CL",
-        "price": 12.0,
+        "price": null,
         "options": [],
         "desc": "Cerveja Corona long neck.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752062860/cardapio-digital-images/kz4cnurdh1tco1projwk.jpg",
@@ -604,7 +955,7 @@
         "id": "skol-beats-long-neck",
         "name": "Skol Beats Long Neck",
         "avatar": "SB",
-        "price": 11.0,
+        "price": null,
         "options": [],
         "desc": "Bebida mista Skol Beats long neck",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193512/cardapio-digital-images/tvgjnhr1h0ucdmmdrs8u.jpg",
@@ -615,7 +966,7 @@
         "id": "chopp-de-vinho-stempel",
         "name": "Chopp de Vinho Stempel",
         "avatar": "CD",
-        "price": 15.0,
+        "price": null,
         "options": [],
         "desc": "Chopp De Vinho Stempel Red 600ml",
         "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_nI1C49xYVwJ3JsS_kbA-G9pnk0GJcTtE5A&s",
@@ -626,7 +977,7 @@
         "id": "heineken-long-neck",
         "name": "Heineken Long Neck",
         "avatar": "HL",
-        "price": 12.0,
+        "price": null,
         "options": [],
         "desc": "Cerveja Heineken long neck.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752063172/cardapio-digital-images/bayy7lkn1oguqgmmt8va.png",
@@ -637,7 +988,7 @@
         "id": "guaran-2l",
         "name": "Guaraná 2L",
         "avatar": "G2",
-        "price": 15.0,
+        "price": null,
         "options": [],
         "desc": "Refrigerante Guaraná 2 litros.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752063000/cardapio-digital-images/ynvtzconecaumhddnc2p.jpg",
@@ -648,7 +999,7 @@
         "id": "coca-cola-2l",
         "name": "Coca-cola 2L",
         "avatar": "C2",
-        "price": 15.0,
+        "price": null,
         "options": [],
         "desc": "Refrigerante Coca-Cola 2 litros.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752062702/cardapio-digital-images/oytmhfmpwlqxeryhauza.jpg",
@@ -659,7 +1010,7 @@
         "id": "suco-natural",
         "name": "Suco Natural",
         "avatar": "SN",
-        "price": 10.0,
+        "price": null,
         "options": [],
         "desc": "Sabores: Laranja, Limão 300ml",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752063372/cardapio-digital-images/vowjrenk7zxotstwl2b9.jpg",
@@ -670,7 +1021,7 @@
         "id": "h2o-limoneto",
         "name": "H2O / Limoneto",
         "avatar": "H/",
-        "price": 8.0,
+        "price": null,
         "options": [],
         "desc": "Bebida mista H2O sabor Limoneto.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752063082/cardapio-digital-images/lvfzmuasywmjc9gago92.jpg",
@@ -681,7 +1032,7 @@
         "id": "guaran-lata",
         "name": "Guaraná Lata",
         "avatar": "GL",
-        "price": 8.0,
+        "price": null,
         "options": [],
         "desc": "Lata 350ml de Guaraná.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752063037/cardapio-digital-images/au8nah9hvkhzarcvztb2.jpg",
@@ -692,7 +1043,7 @@
         "id": "coca-cola-lata",
         "name": "Coca-cola Lata",
         "avatar": "CL",
-        "price": 8.0,
+        "price": null,
         "options": [],
         "desc": "Lata 350ml de Coca-Cola.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752062795/cardapio-digital-images/fxnbfimyzankrj3uuda3.jpg",
@@ -703,7 +1054,7 @@
         "id": "coca-cola-lata-zero",
         "name": "Coca Cola Lata Zero",
         "avatar": "CC",
-        "price": 8.0,
+        "price": null,
         "options": [],
         "desc": "Coca Cola zero lata 350ml",
         "imageUrl": "https://io.convertiez.com.br/m/drogaven/shop/products/images/393/medium/refrigerante-coca-cola-zero-lata-350ml_10884.jpg",
@@ -714,7 +1065,7 @@
         "id": "guaran-ant-rtica-zero",
         "name": "Guaraná Antártica Zero",
         "avatar": "GA",
-        "price": 8.0,
+        "price": null,
         "options": [],
         "desc": "Guaraná Antártica Zero 350ml",
         "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_yLYgZUipLQnHBSKRMM23MP7agjuaAiP-Sw&s",
@@ -725,10 +1076,142 @@
         "id": "coca-cola-zero-2l",
         "name": "Coca-Cola Zero 2L",
         "avatar": "CZ",
-        "price": 15.0,
+        "price": null,
         "options": [],
         "desc": "Refrigerante Zero Açúcar Coca-Cola Pet 2L",
         "imageUrl": "https://www.sondadelivery.com.br/img.aspx/sku/868957/530/7894900701517_0.png",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "guarana-2l",
+        "name": "Guarana 2L",
+        "avatar": "GU",
+        "price": null,
+        "options": [],
+        "desc": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193897/cardapio-digital-images/lcttcrbbte7li50kwqle.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "guarana-1l",
+        "name": "Guarana 1L",
+        "avatar": "GU",
+        "price": null,
+        "options": [],
+        "desc": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193897/cardapio-digital-images/lcttcrbbte7li50kwqle.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "guarana-lata",
+        "name": "Guarana Lata",
+        "avatar": "GU",
+        "price": null,
+        "options": [],
+        "desc": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193897/cardapio-digital-images/lcttcrbbte7li50kwqle.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "suco-natural-laranja-lim-o",
+        "name": "Suco Natural (Laranja, Limão)",
+        "avatar": "SU",
+        "price": null,
+        "options": [],
+        "desc": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193897/cardapio-digital-images/lcttcrbbte7li50kwqle.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "suco-de-polpa-abacaxi-abacaxi-c-hortel-morango-graviola-acerola",
+        "name": "Suco de Polpa (Abacaxi, Abacaxi c/ Hortelã, Morango, Graviola, Acerola)",
+        "avatar": "SU",
+        "price": null,
+        "options": [],
+        "desc": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193897/cardapio-digital-images/lcttcrbbte7li50kwqle.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "brahma-600ml",
+        "name": "Brahma 600ml",
+        "avatar": "BR",
+        "price": null,
+        "options": [],
+        "desc": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193897/cardapio-digital-images/lcttcrbbte7li50kwqle.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "skol-600ml",
+        "name": "Skol 600ml",
+        "avatar": "SK",
+        "price": null,
+        "options": [],
+        "desc": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193897/cardapio-digital-images/lcttcrbbte7li50kwqle.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "heineken-600ml",
+        "name": "Heineken 600ml",
+        "avatar": "HE",
+        "price": null,
+        "options": [],
+        "desc": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193897/cardapio-digital-images/lcttcrbbte7li50kwqle.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "original-600ml",
+        "name": "Original 600ml",
+        "avatar": "OR",
+        "price": null,
+        "options": [],
+        "desc": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193897/cardapio-digital-images/lcttcrbbte7li50kwqle.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "amstel-600ml",
+        "name": "Amstel 600ml",
+        "avatar": "AM",
+        "price": null,
+        "options": [],
+        "desc": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193897/cardapio-digital-images/lcttcrbbte7li50kwqle.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "sparten-600ml",
+        "name": "Sparten 600ml",
+        "avatar": "SP",
+        "price": null,
+        "options": [],
+        "desc": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193897/cardapio-digital-images/lcttcrbbte7li50kwqle.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "estela-long-neck",
+        "name": "Estela long neck",
+        "avatar": "ES",
+        "price": null,
+        "options": [],
+        "desc": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193897/cardapio-digital-images/lcttcrbbte7li50kwqle.jpg",
         "serves": null,
         "highlight": false
       }
@@ -743,7 +1226,7 @@
         "id": "batata-c-queijo",
         "name": "Batata c/ Queijo",
         "avatar": "BC",
-        "price": 25.0,
+        "price": 25,
         "options": [],
         "desc": "Batatas fritas cobertas com delicioso queijo derretido.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751986998/cardapio-digital-images/yca7asxds4vefscii1wm.jpg",
@@ -754,7 +1237,7 @@
         "id": "batata-c-queijo-e-bacon",
         "name": "Batata c/ Queijo e Bacon",
         "avatar": "BC",
-        "price": 30.0,
+        "price": 30,
         "options": [],
         "desc": "Batatas fritas com queijo derretido e crocante bacon.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752194210/cardapio-digital-images/pdwpzkyzpgud6hnwly2z.jpg",
@@ -765,7 +1248,7 @@
         "id": "bucho-milanesa",
         "name": "Bucho à Milanesa",
         "avatar": "BÀ",
-        "price": 25.0,
+        "price": 25,
         "options": [],
         "desc": "Bucho preparado à milanesa, crocante e saboroso.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752194268/cardapio-digital-images/flyqau0ot1eolbslznsa.jpg",
@@ -776,7 +1259,7 @@
         "id": "mandioca-frita",
         "name": "Mandioca Frita",
         "avatar": "MF",
-        "price": 20.0,
+        "price": 20,
         "options": [],
         "desc": "Porção de mandioca frita, crocante por fora e macia por dentro.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752194672/cardapio-digital-images/w0ekein6bmgaizlncxdn.jpg",
@@ -787,7 +1270,7 @@
         "id": "escondidinho-de-carne-seca",
         "name": "Escondidinho de Carne Seca",
         "avatar": "ED",
-        "price": 55.0,
+        "price": 55,
         "options": [],
         "desc": "Delicioso escondidinho cremoso com carne seca desfiada.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752194407/cardapio-digital-images/iewobv2o7qacqys1vp7l.jpg",
@@ -798,7 +1281,7 @@
         "id": "salaminho",
         "name": "Salaminho",
         "avatar": "S",
-        "price": 20.0,
+        "price": 20,
         "options": [],
         "desc": "Porção de salaminho fatiado.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752194779/cardapio-digital-images/ivd2cjzxaboa4xvyvetj.jpg",
@@ -809,7 +1292,7 @@
         "id": "batata-c-cheddar-bacon-e-calabresa",
         "name": "Batata c/ Cheddar, Bacon e Calabresa",
         "avatar": "BC",
-        "price": 35.0,
+        "price": 35,
         "options": [],
         "desc": "Batatas fritas com cheddar cremoso, bacon e calabresa.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752071843/cardapio-digital-images/keowhvysha9p9f8sirko.jpg",
@@ -820,7 +1303,7 @@
         "id": "batata-c-queijo-e-calabresa",
         "name": "Batata c/ Queijo e Calabresa",
         "avatar": "BC",
-        "price": 30.0,
+        "price": 30,
         "options": [],
         "desc": "Batatas fritas com queijo e calabresa fatiada.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755385648/cardapio-digital-images/mxl0ae528qvr7wltpfkt.jpg",
@@ -831,7 +1314,7 @@
         "id": "isca-de-frango",
         "name": "Isca de Frango",
         "avatar": "ID",
-        "price": 35.0,
+        "price": 35,
         "options": [],
         "desc": "Suculentas iscas de peito de frango empanadas e fritas.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1772393035/cardapio-digital-images/products/oybodixmx9sxilhbcyep.jpg",
@@ -842,7 +1325,7 @@
         "id": "frango-a-passarinho",
         "name": "Frango a passarinho",
         "avatar": "FA",
-        "price": 30.0,
+        "price": 30,
         "options": [],
         "desc": "Frango frito a passarinho, temperado e crocante.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752194473/cardapio-digital-images/w3vlls9gsq9qddhoazv7.jpg",
@@ -853,7 +1336,7 @@
         "id": "batata",
         "name": "Batata",
         "avatar": "B",
-        "price": 20.0,
+        "price": 20,
         "options": [],
         "desc": "Porção generosa de batatas fritas crocantes.",
         "imageUrl": "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -864,7 +1347,7 @@
         "id": "fil-de-til-pia-c-fritas",
         "name": "Filé de Tilápia c/ Fritas",
         "avatar": "FD",
-        "price": 80.0,
+        "price": 80,
         "options": [],
         "desc": "Delicioso filé de tilápia empanado acompanhado de uma porção de batatas fritas.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755382203/cardapio-digital-images/zzrk1ijyhktl5b4vkbiu.jpg",
@@ -875,7 +1358,7 @@
         "id": "por-o-de-salgadinho",
         "name": "Porção de Salgadinho",
         "avatar": "PD",
-        "price": 20.0,
+        "price": 20,
         "options": [],
         "desc": "Variedade de salgadinhos fritos.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751990252/cardapio-digital-images/vpvdypzsp8en2vonlork.jpg",
@@ -886,7 +1369,7 @@
         "id": "jil-frito-especial",
         "name": "Jiló Frito Especial",
         "avatar": "JF",
-        "price": 25.0,
+        "price": 25,
         "options": [],
         "desc": "Jiló frito crocante e temperado.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752194519/cardapio-digital-images/nm0lfcbplxrhf43gcfp5.jpg",
@@ -897,7 +1380,7 @@
         "id": "trio-mineiro",
         "name": "Trio Mineiro",
         "avatar": "TM",
-        "price": 55.0,
+        "price": 55,
         "options": [],
         "desc": "Delicioso trio com o melhor da culinária mineira.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751990274/cardapio-digital-images/avvmvvkxefxrxxua3ppm.jpg",
@@ -908,7 +1391,7 @@
         "id": "calabresa-acebolada",
         "name": "Calabresa Acebolada",
         "avatar": "CA",
-        "price": 30.0,
+        "price": 30,
         "options": [],
         "desc": "Calabresa fatiada e refogada com cebola.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752194318/cardapio-digital-images/ukumpb7vhafiszf3xqoa.jpg",
@@ -919,7 +1402,7 @@
         "id": "lingui-a-com-mandioca",
         "name": "Linguiça com Mandioca",
         "avatar": "LC",
-        "price": 35.0,
+        "price": 35,
         "options": [],
         "desc": "Linguiça grelhada acompanhada de mandioca cozida.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756577167/cardapio-digital-images/aopxsoxybwjl6i0exocb.jpg",
@@ -930,7 +1413,7 @@
         "id": "torresmo",
         "name": "Torresmo",
         "avatar": "T",
-        "price": 20.0,
+        "price": 20,
         "options": [],
         "desc": "Torresmo crocante e saboroso.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752194793/cardapio-digital-images/icsrnhid61e3dxthgzmd.jpg",
@@ -941,7 +1424,7 @@
         "id": "torresmo-com-mandioca",
         "name": "Torresmo com Mandioca",
         "avatar": "TC",
-        "price": 35.0,
+        "price": 35,
         "options": [],
         "desc": "Torresmo crocante servido com mandioca cozida.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752194825/cardapio-digital-images/ifmkb4fspxrppp1mewkw.jpg",
@@ -952,7 +1435,7 @@
         "id": "torresmo-de-rolo-c-geleia-de-abacaxi",
         "name": "Torresmo de Rolo c/ Geleia de Abacaxi",
         "avatar": "TD",
-        "price": 35.0,
+        "price": 35,
         "options": [],
         "desc": "Torresmo de rolo crocante servido com geleia agridoce de abacaxi.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753881601/cardapio-digital-images/abzk9hwdxeushanwa1iv.jpg",
@@ -963,7 +1446,7 @@
         "id": "fil-de-til-pia",
         "name": "Filé de Tilápia",
         "avatar": "FD",
-        "price": 55.0,
+        "price": 55,
         "options": [],
         "desc": "Delicioso filé de tilápia empanado.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751986784/cardapio-digital-images/k1yc8ywgpvk3laeln67n.jpg",
@@ -974,7 +1457,7 @@
         "id": "picanha-por-o",
         "name": "Picanha (Porção)",
         "avatar": "P(",
-        "price": 80.0,
+        "price": 80,
         "options": [],
         "desc": "Generosa porção de picanha grelhada.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752194714/cardapio-digital-images/wmzquc5gnsfsvtzwg091.jpg",
@@ -985,7 +1468,7 @@
         "id": "contra-fil-com-fritas",
         "name": "Contra Filé com Fritas",
         "avatar": "CF",
-        "price": 75.0,
+        "price": 75,
         "options": [],
         "desc": "Suculento contra filé com porção de batatas fritas.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751989998/cardapio-digital-images/gcppvlte1jvyrsmblfbd.jpg",
@@ -996,7 +1479,7 @@
         "id": "bolinho-de-costela",
         "name": "Bolinho de Costela",
         "avatar": "BD",
-        "price": 45.0,
+        "price": 45,
         "options": [],
         "desc": "Costela desfiada e catupiry",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1772216385/cardapio-digital-images/products/dxdpfzaois7bypybpljd.jpg",
@@ -1007,7 +1490,7 @@
         "id": "batata-c-costela",
         "name": "Batata c/ Costela",
         "avatar": "BC",
-        "price": 45.0,
+        "price": 45,
         "options": [],
         "desc": "Batata Frita, Costela e Catupiry",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1772216491/cardapio-digital-images/products/npqn4xoc61cowakpkps3.jpg",
@@ -1018,7 +1501,7 @@
         "id": "bolinho-de-frango",
         "name": "Bolinho de Frango",
         "avatar": "BD",
-        "price": 40.0,
+        "price": 40,
         "options": [],
         "desc": "Frango catupiry tempero especiais farinha Panko",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1785010065/cardapio-digital-images/products/ccek6dzucwacyxg2k3nd.png",
@@ -1029,7 +1512,7 @@
         "id": "escondidinho-de-camar-o",
         "name": "Escondidinho de Camarão",
         "avatar": "ED",
-        "price": 60.0,
+        "price": 60,
         "options": [],
         "desc": "Mandioca cremosa, camarão e muçarela",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1785010159/cardapio-digital-images/products/f75k9j4ecwflpeqzmv6s.png",
@@ -1040,7 +1523,7 @@
         "id": "picanha",
         "name": "Picanha",
         "avatar": "P",
-        "price": 80.0,
+        "price": 80,
         "options": [],
         "desc": "500g de picanha com farofa",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1785010215/cardapio-digital-images/products/xq8modknxodwho6aojnz.png",
@@ -1051,10 +1534,43 @@
         "id": "camar-o-empanado",
         "name": "Camarão Empanado",
         "avatar": "CE",
-        "price": 85.0,
+        "price": 85,
         "options": [],
         "desc": "400g Camarão empanado em farinha panko",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1785010276/cardapio-digital-images/products/jwdep1ptf5bzqwfdf4wr.png",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "lingui-a-c-mandioca",
+        "name": "Linguiça c/ Mandioca",
+        "avatar": "LI",
+        "price": 35,
+        "options": [],
+        "desc": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751986998/cardapio-digital-images/yca7asxds4vefscii1wm.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "torresmo-c-mandioca",
+        "name": "Torresmo c/ Mandioca",
+        "avatar": "TO",
+        "price": 35,
+        "options": [],
+        "desc": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751986998/cardapio-digital-images/yca7asxds4vefscii1wm.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "contra-fil-c-fritas",
+        "name": "Contra Filé c/ Fritas",
+        "avatar": "CO",
+        "price": 75,
+        "options": [],
+        "desc": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751986998/cardapio-digital-images/yca7asxds4vefscii1wm.jpg",
         "serves": null,
         "highlight": false
       }
@@ -1069,7 +1585,7 @@
         "id": "especial-da-casa-2-pessoas",
         "name": "Especial da Casa [2 pessoas]",
         "avatar": "ED",
-        "price": 120.0,
+        "price": 120,
         "options": [],
         "desc": "300g de picanha, 200g mandioca na manteiga, 200g de batata frita.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883064/cardapio-digital-images/swjafvlbjowve2ltm4nd.jpg",
@@ -1080,7 +1596,7 @@
         "id": "especial-da-casa-3-pessoas",
         "name": "Especial da Casa [3 pessoas]",
         "avatar": "ED",
-        "price": 150.0,
+        "price": 150,
         "options": [],
         "desc": "500g de picanha, 200g mandioca na manteiga, 200g de batata frita.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883086/cardapio-digital-images/fprti847mkxxih86mo1g.jpg",
@@ -1091,11 +1607,44 @@
         "id": "chapa-mista-2-a-3-pessoas",
         "name": "Chapa Mista [2 a 3 pessoas]",
         "avatar": "CM",
-        "price": 95.0,
+        "price": 95,
         "options": [],
         "desc": "Frango grelhado, contra filé, calabresa e batata frita.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883112/cardapio-digital-images/nlgbiibolxwims7vjxzd.jpg",
         "serves": "2 a 3 pessoas",
+        "highlight": false
+      },
+      {
+        "id": "chapa-mista",
+        "name": "Chapa Mista",
+        "avatar": "CH",
+        "price": 95,
+        "options": [],
+        "desc": "Frango grelhado, contrafilé, calabresa e batata frita (2 a 3 Pessoas)",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883064/cardapio-digital-images/swjafvlbjowve2ltm4nd.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "especial-da-casa-2",
+        "name": "Especial da casa (2 pessoas)",
+        "avatar": "ES",
+        "price": 120,
+        "options": [],
+        "desc": "300g de picanha, 200g mandioca na manteiga, 200g de batata frita",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883064/cardapio-digital-images/swjafvlbjowve2ltm4nd.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "especial-da-casa-3",
+        "name": "Especial da casa (3 pessoas)",
+        "avatar": "ES",
+        "price": 150,
+        "options": [],
+        "desc": "500g de picanha, 200g mandioca na manteiga, 200g de batata frita",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883064/cardapio-digital-images/swjafvlbjowve2ltm4nd.jpg",
+        "serves": null,
         "highlight": false
       }
     ]
@@ -1109,7 +1658,7 @@
         "id": "picanha-simples-2-pessoas",
         "name": "Picanha Simples [2 pessoas]",
         "avatar": "PS",
-        "price": 120.0,
+        "price": 120,
         "options": [],
         "desc": "Picanha (500g) + Farofa + Vinagrete",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1770426273/cardapio-digital-images/products/gszyot28eledil5aqdrw.jpg",
@@ -1120,7 +1669,7 @@
         "id": "picanha-completa-3-pessoas",
         "name": "Picanha Completa [3 pessoas]",
         "avatar": "PC",
-        "price": 180.0,
+        "price": 180,
         "options": [],
         "desc": "Picanha (750g) + Farofa + Vinagrete + Arroz + Batata frita",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1770426313/cardapio-digital-images/products/jszepi9iofgynby0njdu.jpg",
@@ -1131,7 +1680,7 @@
         "id": "picanha-simples-3-pessoas",
         "name": "Picanha Simples [3 pessoas]",
         "avatar": "PS",
-        "price": 150.0,
+        "price": 150,
         "options": [],
         "desc": "Picanha (750g) + Farofa + Vinagrete",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1770426286/cardapio-digital-images/products/hsqonqqse3rprelzkbnu.jpg",
@@ -1142,11 +1691,486 @@
         "id": "picanha-completa-2-pessoas",
         "name": "Picanha Completa [2 pessoas]",
         "avatar": "PC",
-        "price": 130.0,
+        "price": 130,
         "options": [],
         "desc": "Picanha (500g) + Farofa + Vinagrete + Arroz + Batata frita",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1770426296/cardapio-digital-images/products/loxbsl9dkfepwk74mlgv.jpg",
         "serves": "2 pessoas",
+        "highlight": false
+      },
+      {
+        "id": "picanha-simples",
+        "name": "Picanha Simples",
+        "avatar": "PI",
+        "price": null,
+        "options": [
+          {
+            "label": "2 pessoas (500g)",
+            "price": 120
+          },
+          {
+            "label": "3 pessoas (750g)",
+            "price": 150
+          }
+        ],
+        "desc": "Picanha + Farofa + Vinagrete",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1770426273/cardapio-digital-images/products/gszyot28eledil5aqdrw.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "picanha-completa",
+        "name": "Picanha Completa",
+        "avatar": "PI",
+        "price": null,
+        "options": [
+          {
+            "label": "2 pessoas (500g)",
+            "price": 130
+          },
+          {
+            "label": "3 pessoas (750g)",
+            "price": 180
+          }
+        ],
+        "desc": "Picanha + Farofa + Vinagrete + Arroz + Batata frita",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1770426273/cardapio-digital-images/products/gszyot28eledil5aqdrw.jpg",
+        "serves": null,
+        "highlight": false
+      }
+    ]
+  },
+  {
+    "id": "drinks",
+    "title": "Drinks",
+    "navLabel": "Drinks",
+    "items": [
+      {
+        "id": "pink-lemonade",
+        "name": "Pink Lemonade",
+        "avatar": "PI",
+        "price": null,
+        "options": [],
+        "desc": "Suco de limão com groselha - R$ 15,00",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "campari-orange",
+        "name": "Campari Orange",
+        "avatar": "CA",
+        "price": null,
+        "options": [],
+        "desc": "Campari e Laranja - R$ 20,00",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "caip",
+        "name": "Caip...",
+        "avatar": "CA",
+        "price": null,
+        "options": [],
+        "desc": "Limão, cachaça ou vodka - R$ 27,00",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "caipvodka",
+        "name": "Caipvodka",
+        "avatar": "CA",
+        "price": null,
+        "options": [],
+        "desc": "Morango, leite condensado e vodka - R$ 27,00",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "campari-tonico",
+        "name": "Campari Tônico",
+        "avatar": "CA",
+        "price": null,
+        "options": [],
+        "desc": "Campari e água tônica - R$ 27,00",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      }
+    ]
+  },
+  {
+    "id": "sobremesas",
+    "title": "Sobremesas",
+    "navLabel": "Sobremesas",
+    "items": [
+      {
+        "id": "brownie",
+        "name": "Brownie",
+        "avatar": "BR",
+        "price": 12,
+        "options": [],
+        "desc": "Escolha seu sabor favorito: Doce de Leite, Brigadeiro, Creme ou Creme com Avelã",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "brownie-com-sorvete",
+        "name": "Brownie com Sorvete",
+        "avatar": "BR",
+        "price": 25,
+        "options": [],
+        "desc": "Brownie quentinho com uma bola de sorvete e calda de chocolate",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      }
+    ]
+  },
+  {
+    "id": "prato-feito",
+    "title": "Prato Feito",
+    "navLabel": "Prato Feito",
+    "items": [
+      {
+        "id": "fil-de-til-pia",
+        "name": "Filé de Tilápia",
+        "avatar": "FI",
+        "price": 30,
+        "options": [],
+        "desc": "Arroz, Feijão, Batata Frita, Salada",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "picadinho-de-porco",
+        "name": "Picadinho de Porco",
+        "avatar": "PI",
+        "price": 27,
+        "options": [],
+        "desc": "Arroz, Feijão, Farofa, Batata Frita, Salada",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "contra-fil",
+        "name": "Contra Filé",
+        "avatar": "CO",
+        "price": 30,
+        "options": [],
+        "desc": "Arroz, Feijão, Farofa, Batata Frita, Salada, Vinagrete",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "picanha",
+        "name": "Picanha",
+        "avatar": "PI",
+        "price": 35,
+        "options": [],
+        "desc": "Arroz, Feijão, Farofa, Batata Frita, Salada, Vinagrete",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "mineirinho",
+        "name": "Mineirinho",
+        "avatar": "MI",
+        "price": 27,
+        "options": [],
+        "desc": "Arroz, Feijão, Couve Refogada, Ovo Frito, Farofa, Linguiça Suína",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "strogonoff",
+        "name": "Strogonoff",
+        "avatar": "ST",
+        "price": 27,
+        "options": [],
+        "desc": "Arroz, Batata Palha ou Batata Frita",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      }
+    ]
+  },
+  {
+    "id": "churrasco",
+    "title": "Churrasco",
+    "navLabel": "Churrasco",
+    "items": [
+      {
+        "id": "p-o-de-alho",
+        "name": "Pão de Alho",
+        "avatar": "PÃ",
+        "price": 7,
+        "options": [],
+        "desc": "A cada 100g",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "picanha",
+        "name": "Picanha",
+        "avatar": "PI",
+        "price": 17,
+        "options": [],
+        "desc": "A cada 100g",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "contra-fil",
+        "name": "Contra Filé",
+        "avatar": "CO",
+        "price": 12,
+        "options": [],
+        "desc": "A cada 100g",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "alcatra",
+        "name": "Alcatra",
+        "avatar": "AL",
+        "price": 12,
+        "options": [],
+        "desc": "A cada 100g",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pernil",
+        "name": "Pernil",
+        "avatar": "PE",
+        "price": 7,
+        "options": [],
+        "desc": "A cada 100g",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "lingui-a",
+        "name": "Linguiça",
+        "avatar": "LI",
+        "price": 5,
+        "options": [],
+        "desc": "A cada 100g",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "churrasco-misto",
+        "name": "Churrasco Misto",
+        "avatar": "CH",
+        "price": 12,
+        "options": [],
+        "desc": "A cada 100g",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      }
+    ]
+  },
+  {
+    "id": "refeicoes",
+    "title": "Refeições",
+    "navLabel": "Refeições",
+    "items": [
+      {
+        "id": "isca-de-frango",
+        "name": "Isca de Frango",
+        "avatar": "IS",
+        "price": null,
+        "options": [
+          {
+            "label": "2 pessoas",
+            "price": 70
+          },
+          {
+            "label": "4 pessoas",
+            "price": 130
+          }
+        ],
+        "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "frango-passarinho",
+        "name": "Frango Passarinho",
+        "avatar": "FR",
+        "price": null,
+        "options": [
+          {
+            "label": "2 pessoas",
+            "price": 75
+          },
+          {
+            "label": "4 pessoas",
+            "price": 120
+          }
+        ],
+        "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "fil-de-tilapia",
+        "name": "Filé de Tilapia",
+        "avatar": "FI",
+        "price": null,
+        "options": [
+          {
+            "label": "2 pessoas",
+            "price": 90
+          },
+          {
+            "label": "4 pessoas",
+            "price": 170
+          }
+        ],
+        "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "fil-de-tilapia-c-fritas",
+        "name": "Filé de Tilapia c/ Fritas",
+        "avatar": "FI",
+        "price": null,
+        "options": [
+          {
+            "label": "2 pessoas",
+            "price": 115
+          },
+          {
+            "label": "4 pessoas",
+            "price": 200
+          }
+        ],
+        "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "contra-fil-c-fritas",
+        "name": "Contra Filé c/ Fritas",
+        "avatar": "CO",
+        "price": null,
+        "options": [
+          {
+            "label": "2 pessoas",
+            "price": 110
+          },
+          {
+            "label": "4 pessoas",
+            "price": 200
+          }
+        ],
+        "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "picanha",
+        "name": "Picanha",
+        "avatar": "PI",
+        "price": null,
+        "options": [
+          {
+            "label": "2 pessoas",
+            "price": 120
+          },
+          {
+            "label": "4 pessoas",
+            "price": 220
+          }
+        ],
+        "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "churrasco-misto",
+        "name": "Churrasco Misto",
+        "avatar": "CH",
+        "price": null,
+        "options": [
+          {
+            "label": "2 pessoas",
+            "price": 95
+          },
+          {
+            "label": "4 pessoas",
+            "price": 170
+          }
+        ],
+        "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "contra-fil-ou-alcatra",
+        "name": "Contra Filé ou Alcatra",
+        "avatar": "CO",
+        "price": null,
+        "options": [
+          {
+            "label": "2 pessoas",
+            "price": 95
+          },
+          {
+            "label": "4 pessoas",
+            "price": 170
+          }
+        ],
+        "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pernil",
+        "name": "Pernil",
+        "avatar": "PE",
+        "price": null,
+        "options": [
+          {
+            "label": "2 pessoas",
+            "price": 70
+          },
+          {
+            "label": "4 pessoas",
+            "price": 120
+          }
+        ],
+        "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
+        "imageUrl": "",
+        "serves": null,
         "highlight": false
       }
     ]
