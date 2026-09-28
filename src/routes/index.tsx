@@ -16,6 +16,7 @@ import logoAsset from "@/assets/logoespaco-removebg.png";
 import { Button } from "@/components/ui/button";
 import rawMenu from "@/data/menuData.json";
 import { cn } from "@/lib/utils";
+import { getProductImageUrl } from "@/lib/imageResolver";
 
 type Option = { label: string; price: number };
 type MenuItem = {
@@ -425,7 +426,8 @@ function MenuLeaf({ category, number, eager, onSelect }: { category: Category; n
 
 function MenuItemRow({ item, categoryId, onSelect }: { item: MenuItem; categoryId: string; onSelect: (item: MenuItem) => void }) {
   const basePrice = item.price !== null ? money(item.price) : item.options.length ? `a partir de ${money(Math.min(...item.options.map((option) => option.price)))}` : "Consulte";
-  const thumbnail = item.imageUrl || images[categoryId] || artesanaisImage;
+  const categoryDefault = images[categoryId] || artesanaisImage;
+  const thumbnail = getProductImageUrl(item.imageUrl, categoryDefault);
   return (
     <button type="button" data-menu-item={item.id} data-category={categoryId} onClick={() => onSelect(item)} className="menu-item group grid min-h-20 w-full grid-cols-[4rem_minmax(0,1fr)] items-center gap-3 border-b border-ink/10 py-2.5 text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary sm:grid-cols-[4.5rem_minmax(0,1fr)]">
       <img
@@ -459,12 +461,14 @@ function ClosingLeaf() {
 function ProductModal({ selection, onClose }: { selection: { item: MenuItem; category: Category }; onClose: () => void }) {
   const startY = useRef<number | null>(null);
   const { item, category } = selection;
+  const categoryDefault = images[category.id] || artesanaisImage;
+  const modalImage = getProductImageUrl(item.imageUrl, categoryDefault);
   return (
     <div className="modal-backdrop fixed inset-0 z-50 flex items-end justify-center bg-overlay p-0 sm:items-center sm:p-6" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
       <section role="dialog" aria-modal="true" aria-labelledby="product-name" className="modal-sheet relative max-h-[92dvh] w-full max-w-lg overflow-y-auto overscroll-contain scroll-smooth rounded-t-2xl border border-border bg-card shadow-modal sm:rounded-lg" onTouchStart={(event) => { startY.current = event.touches[0]?.clientY ?? null; }} onTouchEnd={(event) => { const end = event.changedTouches[0]?.clientY; if (startY.current !== null && end !== undefined && end - startY.current > 90) onClose(); startY.current = null; }}>
         <div className="mx-auto mt-2 h-1 w-10 rounded-full bg-muted sm:hidden" />
         <Button aria-label="Fechar detalhes" title="Fechar" variant="outline" size="icon" onClick={onClose} className="absolute right-3 top-3 z-10 size-11 rounded-full bg-background/85 backdrop-blur"><X className="size-4" /></Button>
-        <div className="relative aspect-[16/10] overflow-hidden sm:rounded-t-lg"><img src={item.imageUrl || images[category.id] || artesanaisImage} alt={item.name} width={1200} height={800} loading="eager" decoding="async" className="h-full w-full object-cover" /><div className="image-shade-soft absolute inset-0" /><p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.25em] text-primary">{category.title}</p></div>
+        <div className="relative aspect-[16/10] overflow-hidden sm:rounded-t-lg"><img src={modalImage} alt={item.name} width={1200} height={800} loading="eager" decoding="async" className="h-full w-full object-cover" /><div className="image-shade-soft absolute inset-0" /><p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.25em] text-primary">{category.title}</p></div>
         <div className="p-5 sm:p-7">
           <h2 id="product-name" className="font-display text-3xl text-card-foreground sm:text-4xl">{item.name}</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>

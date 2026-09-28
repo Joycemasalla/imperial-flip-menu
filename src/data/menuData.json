@@ -1814,7 +1814,7 @@
         "price": 12,
         "options": [],
         "desc": "Escolha seu sabor favorito: Doce de Leite, Brigadeiro, Creme ou Creme com Avelã",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Brownie.jpeg",
         "serves": null,
         "highlight": false
       },
@@ -1825,7 +1825,7 @@
         "price": 25,
         "options": [],
         "desc": "Brownie quentinho com uma bola de sorvete e calda de chocolate",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Brownie.jpeg",
         "serves": null,
         "highlight": false
       }
@@ -1843,7 +1843,7 @@
         "price": 30,
         "options": [],
         "desc": "Arroz, Feijão, Batata Frita, Salada",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Filé de Tilápia.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1854,7 +1854,7 @@
         "price": 27,
         "options": [],
         "desc": "Arroz, Feijão, Farofa, Batata Frita, Salada",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Picadinho de Porco.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1865,7 +1865,7 @@
         "price": 30,
         "options": [],
         "desc": "Arroz, Feijão, Farofa, Batata Frita, Salada, Vinagrete",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Contra Filé.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1876,7 +1876,7 @@
         "price": 35,
         "options": [],
         "desc": "Arroz, Feijão, Farofa, Batata Frita, Salada, Vinagrete",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Picanha na Pedra.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1887,7 +1887,7 @@
         "price": 27,
         "options": [],
         "desc": "Arroz, Feijão, Couve Refogada, Ovo Frito, Farofa, Linguiça Suína",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Almoço com Churrasco.jpeg",
         "serves": null,
         "highlight": false
       },
@@ -1898,7 +1898,7 @@
         "price": 27,
         "options": [],
         "desc": "Arroz, Batata Palha ou Batata Frita",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Strogonoff.jpeg",
         "serves": null,
         "highlight": false
       }
@@ -1916,7 +1916,7 @@
         "price": 7,
         "options": [],
         "desc": "A cada 100g",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Churrasco.jpeg",
         "serves": null,
         "highlight": false
       },
@@ -1927,7 +1927,7 @@
         "price": 17,
         "options": [],
         "desc": "A cada 100g",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Picanha na Pedra.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1938,7 +1938,7 @@
         "price": 12,
         "options": [],
         "desc": "A cada 100g",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Contra Filé.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1949,7 +1949,7 @@
         "price": 12,
         "options": [],
         "desc": "A cada 100g",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Churrasco.jpeg",
         "serves": null,
         "highlight": false
       },
@@ -1960,7 +1960,7 @@
         "price": 7,
         "options": [],
         "desc": "A cada 100g",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Churrasco.jpeg",
         "serves": null,
         "highlight": false
       },
@@ -1971,7 +1971,7 @@
         "price": 5,
         "options": [],
         "desc": "A cada 100g",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Churrasco.jpeg",
         "serves": null,
         "highlight": false
       },
@@ -1982,7 +1982,7 @@
         "price": 12,
         "options": [],
         "desc": "A cada 100g",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Churrasco.jpeg",
         "serves": null,
         "highlight": false
       }
@@ -2009,7 +2009,7 @@
           }
         ],
         "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1772393035/cardapio-digital-images/products/oybodixmx9sxilhbcyep.jpg",
         "serves": null,
         "highlight": false
       },
@@ -2029,7 +2029,7 @@
           }
         ],
         "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752194473/cardapio-digital-images/w3vlls9gsq9qddhoazv7.jpg",
         "serves": null,
         "highlight": false
       },
@@ -2049,7 +2049,7 @@
           }
         ],
         "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Filé de Tilápia.jpg",
         "serves": null,
         "highlight": false
       },
@@ -2069,7 +2069,7 @@
           }
         ],
         "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Filé de Tilápia.jpg",
         "serves": null,
         "highlight": false
       },
@@ -2089,7 +2089,7 @@
           }
         ],
         "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Contra Filé.jpg",
         "serves": null,
         "highlight": false
       },
@@ -2109,7 +2109,7 @@
           }
         ],
         "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Picanha na Pedra.jpg",
         "serves": null,
         "highlight": false
       },
@@ -2129,7 +2129,7 @@
           }
         ],
         "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Almoço com Churrasco.jpeg",
         "serves": null,
         "highlight": false
       },
@@ -2149,7 +2149,7 @@
           }
         ],
         "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Contra Filé.jpg",
         "serves": null,
         "highlight": false
       },
@@ -2169,7 +2169,7 @@
           }
         ],
         "desc": "Acompanhamentos: Arroz, Feijão, Farofa, Salpicão, Vinagrete",
-        "imageUrl": "",
+        "imageUrl": "/src/assets/Churrasco.jpeg",
         "serves": null,
         "highlight": false
       }
