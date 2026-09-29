@@ -48,7 +48,7 @@ type DragState = {
 };
 
 const images: Record<string, string> = {
-  artesanais: artesanaisImage,
+  artesanais: "https://res.cloudinary.com/dbes24whl/image/upload/v1751899058/cardapio-digital-images/oc86btev0yx9gerewzbh.jpg",
   tradicionais: tradicionaisImage,
   pizzas: pizzasImage,
   "pizzas-doces": docesImage,
