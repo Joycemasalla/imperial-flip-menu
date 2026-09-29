@@ -11,6 +11,7 @@ import docesImage from "@/assets/doces.jpg";
 import picanhaImage from "@/assets/picanha.jpg";
 import pizzasImage from "@/assets/pizzas.jpg";
 import porcoesImage from "@/assets/porcoes.jpg";
+import tradicionaisImage from "@/assets/tradicionais.jpg";
 import logoAsset from "@/assets/logoespaco-removebg.png";
 import { Button } from "@/components/ui/button";
 import rawMenu from "@/data/menuData.json";
@@ -48,7 +49,7 @@ type DragState = {
 
 const images: Record<string, string> = {
   artesanais: artesanaisImage,
-  tradicionais: "https://res.cloudinary.com/dbes24whl/image/upload/v1756576451/cardapio-digital-images/jyaaptdlgjffkj5aeevn.jpg",
+  tradicionais: tradicionaisImage,
   pizzas: pizzasImage,
   "pizzas-doces": docesImage,
   porcoes: porcoesImage,
