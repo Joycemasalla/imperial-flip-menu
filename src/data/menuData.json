@@ -898,6 +898,61 @@
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193512/cardapio-digital-images/tvgjnhr1h0ucdmmdrs8u.jpg",
         "serves": null,
         "highlight": false
+      },
+      {
+        "id": "império-long-neck",
+        "name": "Império Long Neck",
+        "avatar": "IL",
+        "price": null,
+        "options": [],
+        "desc": "Cerveja Império long neck.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752193772/cardapio-digital-images/lf4jfycf9i2aj3mp5twq.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "chopp-de-vinho-stempel",
+        "name": "Chopp de Vinho Stempel",
+        "avatar": "CD",
+        "price": null,
+        "options": [],
+        "desc": "Chopp de vinho Stempel Red 600ml.",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_nI1C49xYVwJ3JsS_kbA-G9pnk0GJcTtE5A&s",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "coca-cola-lata-zero",
+        "name": "Coca-Cola Lata Zero",
+        "avatar": "CL",
+        "price": null,
+        "options": [],
+        "desc": "Coca-Cola Zero em lata.",
+        "imageUrl": "https://io.convertiez.com.br/m/drogaven/shop/products/images/393/medium/refrigerante-coca-cola-zero-lata-350ml_10884.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "guaraná-antártica-zero",
+        "name": "Guaraná Antártica Zero",
+        "avatar": "GA",
+        "price": null,
+        "options": [],
+        "desc": "Guaraná Antártica Zero em lata.",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_yLYgZUipLQnHBSKRMM23MP7agjuaAiP-Sw&s",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "coca-cola-zero-2l",
+        "name": "Coca-Cola Zero 2L",
+        "avatar": "CZ",
+        "price": null,
+        "options": [],
+        "desc": "Refrigerante Coca-Cola Zero 2 litros.",
+        "imageUrl": "https://www.sondadelivery.com.br/img.aspx/sku/868957/530/7894900701517_0.png",
+        "serves": null,
+        "highlight": false
       }
     ]
   },
