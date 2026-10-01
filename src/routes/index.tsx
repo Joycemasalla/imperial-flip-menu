@@ -5,11 +5,11 @@ import type { PointerEvent as ReactPointerEvent, UIEvent as ReactUIEvent } from 
 
 import artesanaisImage from "@/assets/artesanais.jpg";
 import bagueteImage from "@/assets/baguete.jpg";
-import bannerArtesanaisHdAsset from "@/assets/banner-artesanais-hd.jpg.asset.json";
+import bannerArtesanais from "@/assets/Banner Hamburgues Artesanais.png";
 import bannerChurrascoHdAsset from "@/assets/banner-churrasco-hd.jpg.asset.json";
-import bannerPizzasDocesHdAsset from "@/assets/banner-pizzas-doces-hd.jpg.asset.json";
-import bannerPizzasHdAsset from "@/assets/banner-pizzas-hd.jpg.asset.json";
-import bannerTradicionaisHdAsset from "@/assets/banner-tradicionais-hd.jpg.asset.json";
+import bannerPizzasDoces from "@/assets/Banner Pizzas Doces.png";
+import bannerPizzasSalgadas from "@/assets/Banner Pizzas Salgadas.png";
+import bannerTradicionais from "@/assets/Banner Hamburgues Tradicionais.png";
 import drinksImageAsset from "@/assets/banner-drinks.jpg.asset.json";
 import pratoFeitoImageAsset from "@/assets/banner-prato-feito.jpg.asset.json";
 import refeicoesImageAsset from "@/assets/banner-refeicoes.jpg.asset.json";
@@ -53,10 +53,10 @@ type DragState = {
 };
 
 const images: Record<string, string> = {
-  tradicionais: bannerTradicionaisHdAsset.url,
-  artesanais: bannerArtesanaisHdAsset.url,
-  pizzas: bannerPizzasHdAsset.url,
-  "pizzas-doces": bannerPizzasDocesHdAsset.url,
+  tradicionais: bannerTradicionais,
+  artesanais: bannerArtesanais,
+  pizzas: bannerPizzasSalgadas,
+  "pizzas-doces": bannerPizzasDoces,
   drinks: drinksImageAsset.url,
   sobremesas: sobremesasImageAsset.url,
   "prato-feito": pratoFeitoImageAsset.url,
