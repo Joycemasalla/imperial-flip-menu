@@ -53,14 +53,14 @@ type DragState = {
 };
 
 const images: Record<string, string> = {
-  tradicionais: "https://res.cloudinary.com/dbes24whl/image/upload/v1756576165/cardapio-digital-images/va7pk7w4oj0xvvu2a2vq.jpg",
-  artesanais: hamburguerArtesanalAsset.url,
-  pizzas: "https://res.cloudinary.com/dbes24whl/image/upload/v1753538290/cardapio-digital-images/hhipxaeezouginxrahjp.jpg",
-  "pizzas-doces": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883176/cardapio-digital-images/umhbmlanibq16s995gsm.jpg",
+  tradicionais: bannerTradicionaisHdAsset.url,
+  artesanais: bannerArtesanaisHdAsset.url,
+  pizzas: bannerPizzasHdAsset.url,
+  "pizzas-doces": bannerPizzasDocesHdAsset.url,
   drinks: drinksImageAsset.url,
   sobremesas: sobremesasImageAsset.url,
   "prato-feito": pratoFeitoImageAsset.url,
-  churrasco: "https://res.cloudinary.com/dbes24whl/image/upload/v1751898924/cardapio-digital-images/zgfvutvswyvjtvhke43n.jpg",
+  churrasco: bannerChurrascoHdAsset.url,
   refeicoes: refeicoesImageAsset.url,
   porcoes: porcoesImage,
   baguete: bagueteImage,
