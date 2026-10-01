@@ -1,22 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ChevronLeft, ChevronRight, Users, X, Search } from "lucide-react";
+import { ChevronLeft, ChevronRight, Users, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { PointerEvent as ReactPointerEvent, UIEvent as ReactUIEvent } from "react";
 
 import artesanaisImage from "@/assets/artesanais.jpg";
 import bagueteImage from "@/assets/baguete.jpg";
+import drinksImageAsset from "@/assets/banner-drinks.jpg.asset.json";
+import pratoFeitoImageAsset from "@/assets/banner-prato-feito.jpg.asset.json";
+import refeicoesImageAsset from "@/assets/banner-refeicoes.jpg.asset.json";
+import sobremesasImageAsset from "@/assets/banner-sobremesas.jpg.asset.json";
 import bebidasImage from "@/assets/bebidas.jpg";
 import chapasImage from "@/assets/chapas.jpg";
-import docesImage from "@/assets/doces.jpg";
+import hamburguerArtesanalAsset from "@/assets/hamburguer-artesanal.png.asset.json";
 import picanhaImage from "@/assets/picanha.jpg";
-import pizzasImage from "@/assets/pizzas.jpg";
 import porcoesImage from "@/assets/porcoes.jpg";
-import tradicionaisImage from "@/assets/tradicionais.jpg";
 import logoAsset from "@/assets/logoespaco-removebg.png";
 import { Button } from "@/components/ui/button";
 import rawMenu from "@/data/menuData.json";
 import { cn } from "@/lib/utils";
-import { getProductImageUrl } from "@/lib/imageResolver";
 
 type Option = { label: string; price: number };
 type MenuItem = {
@@ -48,10 +49,15 @@ type DragState = {
 };
 
 const images: Record<string, string> = {
-  artesanais: "https://res.cloudinary.com/dbes24whl/image/upload/v1751899058/cardapio-digital-images/oc86btev0yx9gerewzbh.jpg",
-  tradicionais: tradicionaisImage,
-  pizzas: pizzasImage,
-  "pizzas-doces": docesImage,
+  tradicionais: "https://res.cloudinary.com/dbes24whl/image/upload/v1756576165/cardapio-digital-images/va7pk7w4oj0xvvu2a2vq.jpg",
+  artesanais: hamburguerArtesanalAsset.url,
+  pizzas: "https://res.cloudinary.com/dbes24whl/image/upload/v1753538290/cardapio-digital-images/hhipxaeezouginxrahjp.jpg",
+  "pizzas-doces": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883176/cardapio-digital-images/umhbmlanibq16s995gsm.jpg",
+  drinks: drinksImageAsset.url,
+  sobremesas: sobremesasImageAsset.url,
+  "prato-feito": pratoFeitoImageAsset.url,
+  churrasco: "https://res.cloudinary.com/dbes24whl/image/upload/v1751898924/cardapio-digital-images/zgfvutvswyvjtvhke43n.jpg",
+  refeicoes: refeicoesImageAsset.url,
   porcoes: porcoesImage,
   baguete: bagueteImage,
   chapas: chapasImage,
@@ -81,7 +87,6 @@ function MenuBook() {
   const pages = menu;
   const [page, setPage] = useState(0);
   const [selected, setSelected] = useState<{ item: MenuItem; category: Category } | null>(null);
-  const [searchOpen, setSearchOpen] = useState(false);
   const mountRef = useRef<HTMLDivElement>(null);
   const currentLeafRef = useRef<HTMLDivElement>(null);
   const previousLeafRef = useRef<HTMLDivElement>(null);
@@ -154,22 +159,12 @@ function MenuBook() {
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (selected && event.key === "Escape") setSelected(null);
-      else if (searchOpen && event.key === "Escape") setSearchOpen(false);
-      else if (!selected && !searchOpen && event.key === "ArrowRight") go(page + 1);
-      else if (!selected && !searchOpen && event.key === "ArrowLeft") go(page - 1);
+      else if (!selected && event.key === "ArrowRight") go(page + 1);
+      else if (!selected && event.key === "ArrowLeft") go(page - 1);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [go, page, selected, searchOpen]);
-
-  useEffect(() => {
-    if (active?.id) {
-      const el = document.getElementById(`nav-cat-${active.id}`);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-      }
-    }
-  }, [active?.id]);
+  }, [go, page, selected]);
 
   const pendingDxRef = useRef(0);
 
@@ -282,15 +277,9 @@ function MenuBook() {
             <p className="mt-1 text-[9px] uppercase tracking-[0.28em] text-primary">Cardápio da casa</p>
           </div>
         </div>
-        <div className="flex items-center gap-3">
-          <p className="hidden text-right text-sm text-muted-foreground lg:block">
-            Escolha com calma e chame o garçom para pedir.
-          </p>
-          <Button aria-label="Buscar" variant="outline" className="rounded-full px-3 sm:px-4 flex items-center gap-2" onClick={() => setSearchOpen(true)}>
-            <Search className="size-4" />
-            <span className="hidden sm:inline">Buscar no cardápio</span>
-          </Button>
-        </div>
+        <p className="hidden max-w-52 text-right text-xs leading-relaxed text-muted-foreground sm:block">
+          Escolha com calma e chame o garçom para pedir.
+        </p>
       </header>
 
       <nav aria-label="Categorias do cardápio" className="category-rail border-y border-border bg-secondary/70 px-3 py-2 sm:px-6">
@@ -298,11 +287,10 @@ function MenuBook() {
           {menu.map((category) => (
             <Button
               key={category.id}
-              id={`nav-cat-${category.id}`}
               variant={active?.id === category.id ? "default" : "ghost"}
               size="sm"
               onClick={() => goCategory(category.id)}
-              className={cn("min-h-11 shrink-0 rounded-full px-4 transition-colors", active?.id === category.id && "shadow-gold")}
+              className={cn("min-h-11 shrink-0 rounded-full px-4", active?.id === category.id && "shadow-gold")}
             >
               {category.id === "pizzas-doces" ? "Doces" : category.navLabel}
             </Button>
@@ -344,27 +332,12 @@ function MenuBook() {
         <Button aria-label="Página anterior" variant="ghost" size="icon" onClick={() => go(page - 1)} disabled={page === 0} className="size-9"><ChevronLeft className="size-4" /></Button>
         <div className="min-w-0 text-center">
           <p className="truncate text-[11px] font-semibold text-foreground">{page === 0 ? "Capa" : page === lastPage ? "Fim" : active?.navLabel}</p>
-          <div className="mx-auto mt-1 h-0.5 w-full max-w-32 overflow-hidden rounded-full bg-muted"><div className="h-full bg-primary transition-all" style={{ width: `${((page + 1) / (lastPage + 1)) * 100}%` }} /></div>
-          <p className="mt-0.5 text-[8px] text-muted-foreground/70">Desenvolvido por <span className="font-medium">Joyce Masalla</span></p>
+          <div className="mx-auto mt-1.5 h-0.5 w-full max-w-32 overflow-hidden rounded-full bg-muted"><div className="h-full bg-primary transition-all" style={{ width: `${((page + 1) / (lastPage + 1)) * 100}%` }} /></div>
         </div>
         <Button aria-label="Próxima página" variant="ghost" size="icon" onClick={() => go(page + 1)} disabled={page === lastPage} className="size-9"><ChevronRight className="size-4" /></Button>
       </footer>
 
-      <div className="hidden sm:block fixed bottom-2 right-4 z-40 text-[10px] text-muted-foreground/50 hover:text-muted-foreground transition-colors">
-        Desenvolvido por <span className="font-semibold">Joyce Masalla</span>
-      </div>
-
       {selected && <ProductModal selection={selected} onClose={() => setSelected(null)} />}
-      {searchOpen && (
-        <SearchModal
-          onClose={() => setSearchOpen(false)}
-          onSelect={(item, category) => {
-            setSearchOpen(false);
-            goCategory(category.id);
-            setTimeout(() => setSelected({ item, category }), 300);
-          }}
-        />
-      )}
     </main>
   );
 }
@@ -412,7 +385,7 @@ function MenuLeaf({ category, number, eager, onSelect }: { category: Category; n
       <div className="menu-scroll-wrap relative min-h-0 flex-1">
         <div ref={updateScrollHint} onScroll={trackScrollHint} className="menu-scroll-area h-full overflow-y-auto px-4 pb-16 pt-3 sm:px-6 sm:pb-14 sm:pt-4">
           {category.subtitle && <p className="mb-3 border-l border-primary pl-3 text-[11px] leading-relaxed text-paper-foreground/80">{category.subtitle}</p>}
-          <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-1">
+          <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
             {category.items.map((item) => <MenuItemRow key={item.id} item={item} categoryId={category.id} onSelect={onSelect} />)}
           </div>
         </div>
@@ -426,8 +399,7 @@ function MenuLeaf({ category, number, eager, onSelect }: { category: Category; n
 
 function MenuItemRow({ item, categoryId, onSelect }: { item: MenuItem; categoryId: string; onSelect: (item: MenuItem) => void }) {
   const basePrice = item.price !== null ? money(item.price) : item.options.length ? `a partir de ${money(Math.min(...item.options.map((option) => option.price)))}` : "Consulte";
-  const categoryDefault = images[categoryId] || artesanaisImage;
-  const thumbnail = getProductImageUrl(item.imageUrl, categoryDefault);
+  const thumbnail = item.imageUrl || images[categoryId] || artesanaisImage;
   return (
     <button type="button" data-menu-item={item.id} data-category={categoryId} onClick={() => onSelect(item)} className="menu-item group grid min-h-20 w-full grid-cols-[4rem_minmax(0,1fr)] items-center gap-3 border-b border-ink/10 py-2.5 text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary sm:grid-cols-[4.5rem_minmax(0,1fr)]">
       <img
@@ -461,14 +433,12 @@ function ClosingLeaf() {
 function ProductModal({ selection, onClose }: { selection: { item: MenuItem; category: Category }; onClose: () => void }) {
   const startY = useRef<number | null>(null);
   const { item, category } = selection;
-  const categoryDefault = images[category.id] || artesanaisImage;
-  const modalImage = getProductImageUrl(item.imageUrl, categoryDefault);
   return (
     <div className="modal-backdrop fixed inset-0 z-50 flex items-end justify-center bg-overlay p-0 sm:items-center sm:p-6" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
       <section role="dialog" aria-modal="true" aria-labelledby="product-name" className="modal-sheet relative max-h-[92dvh] w-full max-w-lg overflow-y-auto overscroll-contain scroll-smooth rounded-t-2xl border border-border bg-card shadow-modal sm:rounded-lg" onTouchStart={(event) => { startY.current = event.touches[0]?.clientY ?? null; }} onTouchEnd={(event) => { const end = event.changedTouches[0]?.clientY; if (startY.current !== null && end !== undefined && end - startY.current > 90) onClose(); startY.current = null; }}>
         <div className="mx-auto mt-2 h-1 w-10 rounded-full bg-muted sm:hidden" />
         <Button aria-label="Fechar detalhes" title="Fechar" variant="outline" size="icon" onClick={onClose} className="absolute right-3 top-3 z-10 size-11 rounded-full bg-background/85 backdrop-blur"><X className="size-4" /></Button>
-        <div className="relative aspect-[16/10] overflow-hidden sm:rounded-t-lg"><img src={modalImage} alt={item.name} width={1200} height={800} loading="eager" decoding="async" className="h-full w-full object-cover" /><div className="image-shade-soft absolute inset-0" /><p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.25em] text-primary">{category.title}</p></div>
+        <div className="relative aspect-[16/10] overflow-hidden sm:rounded-t-lg"><img src={item.imageUrl || images[category.id] || artesanaisImage} alt={item.name} width={1200} height={800} loading="eager" decoding="async" className="h-full w-full object-cover" /><div className="image-shade-soft absolute inset-0" /><p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.25em] text-primary">{category.title}</p></div>
         <div className="p-5 sm:p-7">
           <h2 id="product-name" className="font-display text-3xl text-card-foreground sm:text-4xl">{item.name}</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
@@ -479,76 +449,6 @@ function ProductModal({ selection, onClose }: { selection: { item: MenuItem; cat
           <p className="mt-6 text-center text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Chame o garçom para fazer seu pedido</p>
         </div>
       </section>
-    </div>
-  );
-}
-
-function SearchModal({ onClose, onSelect }: { onClose: () => void; onSelect: (item: MenuItem, category: Category) => void }) {
-  const [query, setQuery] = useState("");
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    inputRef.current?.focus();
-  }, []);
-
-  const normalizedQuery = query.trim().toLowerCase();
-  const results = normalizedQuery.length >= 2 ? menu.flatMap(cat => 
-    cat.items
-      .filter(item => 
-        item.name.toLowerCase().includes(normalizedQuery) || 
-        item.desc.toLowerCase().includes(normalizedQuery) ||
-        cat.title.toLowerCase().includes(normalizedQuery)
-      )
-      .map(item => ({ item, category: cat }))
-  ) : [];
-
-  return (
-    <div className="modal-backdrop fixed inset-0 z-50 flex flex-col bg-background/95 backdrop-blur sm:p-6 sm:items-center sm:justify-center" role="presentation">
-      <div className="flex w-full max-w-lg flex-col h-full sm:h-[80vh] sm:border sm:border-border sm:rounded-xl sm:overflow-hidden sm:shadow-modal bg-card">
-        <div className="flex items-center gap-2 border-b border-border p-4 bg-card shrink-0">
-          <Search className="size-5 text-muted-foreground" />
-          <input 
-            ref={inputRef}
-            type="text" 
-            placeholder="Buscar produtos, categorias..." 
-            className="flex-1 bg-transparent outline-none text-foreground text-base sm:text-sm"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-          <Button variant="ghost" size="icon" className="rounded-full" onClick={onClose}><X className="size-5" /></Button>
-        </div>
-        <div className="flex-1 overflow-y-auto p-4 bg-card">
-          {results.length > 0 ? (
-            <div className="flex flex-col gap-2">
-              {results.map(({ item, category }) => (
-                <button 
-                  key={item.id} 
-                  className="flex flex-col border border-border/50 bg-secondary/30 rounded-lg p-3 text-left hover:bg-secondary/60 transition-colors focus:outline-none focus:ring-1 focus:ring-primary" 
-                  onClick={() => onSelect(item, category)}
-                >
-                  <p className="text-[10px] uppercase tracking-wider text-primary mb-1">{category.title}</p>
-                  <div className="flex justify-between items-start gap-3 w-full">
-                    <div className="min-w-0">
-                      <p className="font-display text-base text-foreground truncate">{item.name}</p>
-                      <p className="text-xs text-muted-foreground line-clamp-2 mt-0.5">{item.desc}</p>
-                    </div>
-                    <span className="text-sm font-bold text-gold-dark shrink-0">
-                      {item.price !== null ? money(item.price) : "Consulte"}
-                    </span>
-                  </div>
-                </button>
-              ))}
-            </div>
-          ) : normalizedQuery.length >= 2 ? (
-            <p className="text-center text-sm text-muted-foreground mt-10">Nenhum produto encontrado para "{query}".</p>
-          ) : (
-            <div className="flex flex-col items-center justify-center h-full text-center text-muted-foreground p-6 gap-3">
-              <Search className="size-8 opacity-20" />
-              <p className="text-sm">Digite pelo menos 2 letras para buscar produtos, bebidas ou sobremesas.</p>
-            </div>
-          )}
-        </div>
-      </div>
     </div>
   );
 }
