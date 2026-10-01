@@ -6,7 +6,7 @@ import type { PointerEvent as ReactPointerEvent, UIEvent as ReactUIEvent } from 
 import artesanaisImage from "@/assets/artesanais.jpg";
 import bagueteImage from "@/assets/baguete.jpg";
 import bannerArtesanais from "@/assets/Banner Hamburgues Artesanais.png";
-import bannerChurrascoHdAsset from "@/assets/banner-churrasco-hd.jpg.asset.json";
+import bannerChurrascoEPorcoes from "@/assets/Banner Churrasco e Porções.png";
 import bannerPizzasDoces from "@/assets/Banner Pizzas Doces.png";
 import bannerPizzasSalgadas from "@/assets/Banner Pizzas Salgadas.png";
 import bannerTradicionais from "@/assets/Banner Hamburgues Tradicionais.png";
@@ -17,7 +17,6 @@ import sobremesasImageAsset from "@/assets/banner-sobremesas.jpg.asset.json";
 import bebidasImage from "@/assets/bebidas.jpg";
 import chapasImage from "@/assets/chapas.jpg";
 import picanhaImage from "@/assets/picanha.jpg";
-import porcoesImage from "@/assets/porcoes.jpg";
 import logoAsset from "@/assets/logoespaco-removebg.png";
 import { Button } from "@/components/ui/button";
 import rawMenu from "@/data/menuData.json";
@@ -60,9 +59,9 @@ const images: Record<string, string> = {
   drinks: drinksImageAsset.url,
   sobremesas: sobremesasImageAsset.url,
   "prato-feito": pratoFeitoImageAsset.url,
-  churrasco: bannerChurrascoHdAsset.url,
+  churrasco: bannerChurrascoEPorcoes,
   refeicoes: refeicoesImageAsset.url,
-  porcoes: porcoesImage,
+  porcoes: bannerChurrascoEPorcoes,
   baguete: bagueteImage,
   chapas: chapasImage,
   "picanha-na-pedra": picanhaImage,
