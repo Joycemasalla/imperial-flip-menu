@@ -5,9 +5,14 @@ import type { PointerEvent as ReactPointerEvent, UIEvent as ReactUIEvent } from 
 
 import artesanaisImage from "@/assets/artesanais.jpg";
 import bagueteImage from "@/assets/baguete.jpg";
+import drinksImageAsset from "@/assets/banner-drinks.jpg.asset.json";
+import pratoFeitoImageAsset from "@/assets/banner-prato-feito.jpg.asset.json";
+import refeicoesImageAsset from "@/assets/banner-refeicoes.jpg.asset.json";
+import sobremesasImageAsset from "@/assets/banner-sobremesas.jpg.asset.json";
 import bebidasImage from "@/assets/bebidas.jpg";
 import chapasImage from "@/assets/chapas.jpg";
 import docesImage from "@/assets/doces.jpg";
+import hamburguerArtesanalAsset from "@/assets/hamburguer-artesanal.png.asset.json";
 import picanhaImage from "@/assets/picanha.jpg";
 import pizzasImage from "@/assets/pizzas.jpg";
 import porcoesImage from "@/assets/porcoes.jpg";
@@ -47,10 +52,15 @@ type DragState = {
 };
 
 const images: Record<string, string> = {
-  artesanais: artesanaisImage,
-  tradicionais: tradicionaisImage,
-  pizzas: pizzasImage,
-  "pizzas-doces": docesImage,
+  tradicionais: "https://res.cloudinary.com/dbes24whl/image/upload/v1756576165/cardapio-digital-images/va7pk7w4oj0xvvu2a2vq.jpg",
+  artesanais: hamburguerArtesanalAsset.url,
+  pizzas: "https://res.cloudinary.com/dbes24whl/image/upload/v1753538290/cardapio-digital-images/hhipxaeezouginxrahjp.jpg",
+  "pizzas-doces": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883176/cardapio-digital-images/umhbmlanibq16s995gsm.jpg",
+  drinks: drinksImageAsset.url,
+  sobremesas: sobremesasImageAsset.url,
+  "prato-feito": pratoFeitoImageAsset.url,
+  churrasco: "https://res.cloudinary.com/dbes24whl/image/upload/v1751898924/cardapio-digital-images/zgfvutvswyvjtvhke43n.jpg",
+  refeicoes: refeicoesImageAsset.url,
   porcoes: porcoesImage,
   baguete: bagueteImage,
   chapas: chapasImage,
@@ -431,7 +441,7 @@ function ProductModal({ selection, onClose }: { selection: { item: MenuItem; cat
       <section role="dialog" aria-modal="true" aria-labelledby="product-name" className="modal-sheet relative max-h-[92dvh] w-full max-w-lg overflow-y-auto overscroll-contain scroll-smooth rounded-t-2xl border border-border bg-card shadow-modal sm:rounded-lg" onTouchStart={(event) => { startY.current = event.touches[0]?.clientY ?? null; }} onTouchEnd={(event) => { const end = event.changedTouches[0]?.clientY; if (startY.current !== null && end !== undefined && end - startY.current > 90) onClose(); startY.current = null; }}>
         <div className="mx-auto mt-2 h-1 w-10 rounded-full bg-muted sm:hidden" />
         <Button aria-label="Fechar detalhes" title="Fechar" variant="outline" size="icon" onClick={onClose} className="absolute right-3 top-3 z-10 size-11 rounded-full bg-background/85 backdrop-blur"><X className="size-4" /></Button>
-        <div className="relative aspect-[16/10] overflow-hidden sm:rounded-t-lg"><img src={item.imageUrl} alt={item.name} width={1200} height={800} loading="eager" decoding="async" className="h-full w-full object-cover" /><div className="image-shade-soft absolute inset-0" /><p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.25em] text-primary">{category.title}</p></div>
+        <div className="relative aspect-[16/10] overflow-hidden sm:rounded-t-lg"><img src={item.imageUrl || images[category.id] || artesanaisImage} alt={item.name} width={1200} height={800} loading="eager" decoding="async" className="h-full w-full object-cover" /><div className="image-shade-soft absolute inset-0" /><p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.25em] text-primary">{category.title}</p></div>
         <div className="p-5 sm:p-7">
           <h2 id="product-name" className="font-display text-3xl text-card-foreground sm:text-4xl">{item.name}</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
