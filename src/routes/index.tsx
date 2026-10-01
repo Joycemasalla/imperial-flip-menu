@@ -5,13 +5,17 @@ import type { PointerEvent as ReactPointerEvent, UIEvent as ReactUIEvent } from 
 
 import artesanaisImage from "@/assets/artesanais.jpg";
 import bagueteImage from "@/assets/baguete.jpg";
+import bannerArtesanaisHdAsset from "@/assets/banner-artesanais-hd.jpg.asset.json";
+import bannerChurrascoHdAsset from "@/assets/banner-churrasco-hd.jpg.asset.json";
+import bannerPizzasDocesHdAsset from "@/assets/banner-pizzas-doces-hd.jpg.asset.json";
+import bannerPizzasHdAsset from "@/assets/banner-pizzas-hd.jpg.asset.json";
+import bannerTradicionaisHdAsset from "@/assets/banner-tradicionais-hd.jpg.asset.json";
 import drinksImageAsset from "@/assets/banner-drinks.jpg.asset.json";
 import pratoFeitoImageAsset from "@/assets/banner-prato-feito.jpg.asset.json";
 import refeicoesImageAsset from "@/assets/banner-refeicoes.jpg.asset.json";
 import sobremesasImageAsset from "@/assets/banner-sobremesas.jpg.asset.json";
 import bebidasImage from "@/assets/bebidas.jpg";
 import chapasImage from "@/assets/chapas.jpg";
-import hamburguerArtesanalAsset from "@/assets/hamburguer-artesanal.png.asset.json";
 import picanhaImage from "@/assets/picanha.jpg";
 import porcoesImage from "@/assets/porcoes.jpg";
 import logoAsset from "@/assets/logoespaco-removebg.png";
