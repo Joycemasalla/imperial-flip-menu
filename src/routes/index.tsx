@@ -5,13 +5,17 @@ import type { PointerEvent as ReactPointerEvent, UIEvent as ReactUIEvent } from 
 
 import artesanaisImage from "@/assets/artesanais.jpg";
 import bagueteImage from "@/assets/baguete.jpg";
+import bannerArtesanaisHdAsset from "@/assets/banner-artesanais-hd.jpg.asset.json";
+import bannerChurrascoHdAsset from "@/assets/banner-churrasco-hd.jpg.asset.json";
+import bannerPizzasDocesHdAsset from "@/assets/banner-pizzas-doces-hd.jpg.asset.json";
+import bannerPizzasHdAsset from "@/assets/banner-pizzas-hd.jpg.asset.json";
+import bannerTradicionaisHdAsset from "@/assets/banner-tradicionais-hd.jpg.asset.json";
 import drinksImageAsset from "@/assets/banner-drinks.jpg.asset.json";
 import pratoFeitoImageAsset from "@/assets/banner-prato-feito.jpg.asset.json";
 import refeicoesImageAsset from "@/assets/banner-refeicoes.jpg.asset.json";
 import sobremesasImageAsset from "@/assets/banner-sobremesas.jpg.asset.json";
 import bebidasImage from "@/assets/bebidas.jpg";
 import chapasImage from "@/assets/chapas.jpg";
-import hamburguerArtesanalAsset from "@/assets/hamburguer-artesanal.png.asset.json";
 import picanhaImage from "@/assets/picanha.jpg";
 import porcoesImage from "@/assets/porcoes.jpg";
 import logoAsset from "@/assets/logoespaco-removebg.png";
@@ -49,14 +53,14 @@ type DragState = {
 };
 
 const images: Record<string, string> = {
-  tradicionais: "https://res.cloudinary.com/dbes24whl/image/upload/v1756576165/cardapio-digital-images/va7pk7w4oj0xvvu2a2vq.jpg",
-  artesanais: hamburguerArtesanalAsset.url,
-  pizzas: "https://res.cloudinary.com/dbes24whl/image/upload/v1753538290/cardapio-digital-images/hhipxaeezouginxrahjp.jpg",
-  "pizzas-doces": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883176/cardapio-digital-images/umhbmlanibq16s995gsm.jpg",
+  tradicionais: bannerTradicionaisHdAsset.url,
+  artesanais: bannerArtesanaisHdAsset.url,
+  pizzas: bannerPizzasHdAsset.url,
+  "pizzas-doces": bannerPizzasDocesHdAsset.url,
   drinks: drinksImageAsset.url,
   sobremesas: sobremesasImageAsset.url,
   "prato-feito": pratoFeitoImageAsset.url,
-  churrasco: "https://res.cloudinary.com/dbes24whl/image/upload/v1751898924/cardapio-digital-images/zgfvutvswyvjtvhke43n.jpg",
+  churrasco: bannerChurrascoHdAsset.url,
   refeicoes: refeicoesImageAsset.url,
   porcoes: porcoesImage,
   baguete: bagueteImage,
@@ -371,8 +375,8 @@ function MenuLeaf({ category, number, eager, onSelect }: { category: Category; n
   const image = images[category.id] ?? artesanaisImage;
   return (
     <article className="book-page menu-leaf relative flex h-full min-h-0 flex-col overflow-hidden">
-      <div className="relative h-36 shrink-0 overflow-hidden sm:h-36 lg:h-40">
-        <img src={image} alt={`Seleção de ${category.title}`} width={1200} height={800} loading={eager ? "eager" : "lazy"} decoding="async" fetchPriority={number === 1 ? "high" : "auto"} className="h-full w-full object-cover" />
+      <div className="relative h-44 shrink-0 overflow-hidden sm:h-48 lg:h-52">
+        <img src={image} alt={`Seleção de ${category.title}`} width={1200} height={800} loading={eager ? "eager" : "lazy"} decoding="async" fetchPriority={number === 1 ? "high" : "auto"} style={{ objectPosition: "right center" }} className="h-full w-full object-cover" />
         <div className="image-shade absolute inset-0" />
         <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 px-5 pb-3 sm:px-7 sm:pb-4">
           <div className="min-w-0">
