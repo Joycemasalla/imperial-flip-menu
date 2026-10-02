@@ -1616,7 +1616,7 @@
         "price": 7,
         "options": [],
         "desc": "Valor por 100g.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790902970/images_pfri7o.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1784,7 +1784,7 @@
           }
         ],
         "desc": "Porção com acompanhamentos.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883112/cardapio-digital-images/nlgbiibolxwims7vjxzd.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1824,7 +1824,7 @@
           }
         ],
         "desc": "Churrasco com acompanhamentos.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752062349/cardapio-digital-images/pwywlu6udipraobxxryz.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1882,7 +1882,7 @@
         "price": null,
         "options": [],
         "desc": "Suco de limão com groselha.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790903573/images_rgn8rp.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1893,7 +1893,7 @@
         "price": null,
         "options": [],
         "desc": "Campari e laranja.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790903653/images_mvdplg.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1904,7 +1904,7 @@
         "price": null,
         "options": [],
         "desc": "Limão, cachaça ou vodka.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790903679/images_jsqorb.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1915,7 +1915,7 @@
         "price": null,
         "options": [],
         "desc": "Morango, leite condensado e vodka.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790903749/images_sy0555.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1926,7 +1926,7 @@
         "price": null,
         "options": [],
         "desc": "Campari e água tônica.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790903832/images_edani8.jpg",
         "serves": null,
         "highlight": false
       }
