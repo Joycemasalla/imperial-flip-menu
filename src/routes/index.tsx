@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Search } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { PointerEvent as ReactPointerEvent } from "react";
 
@@ -8,6 +8,7 @@ import { CoverLeaf } from "@/components/menu/CoverLeaf";
 import { ClosingLeaf } from "@/components/menu/ClosingLeaf";
 import { MenuLeaf } from "@/components/menu/MenuLeaf";
 import { ProductModal } from "@/components/menu/ProductModal";
+import { SearchModal } from "@/components/menu/SearchModal";
 import logoAsset from "@/assets/logoespaco-removebg.png";
 import rawMenu from "@/data/menuData.json";
 import { cn } from "@/lib/utils";
@@ -33,9 +34,11 @@ function MenuBook() {
   const pages = menu;
   const [page, setPage] = useState(0);
   const [selected, setSelected] = useState<{ item: MenuItem; category: Category } | null>(null);
+  const [searchOpen, setSearchOpen] = useState(false);
   const mountRef = useRef<HTMLDivElement>(null);
   const currentLeafRef = useRef<HTMLDivElement>(null);
   const previousLeafRef = useRef<HTMLDivElement>(null);
+  const navScrollRef = useRef<HTMLDivElement>(null);
   const dragRef = useRef<DragState | null>(null);
   const frameRef = useRef<number | null>(null);
   const settleTimerRef = useRef<number | null>(null);
@@ -45,6 +48,13 @@ function MenuBook() {
 
   const desktopRef = useRef(false);
   const widthRef = useRef(1);
+
+  // Auto-scroll da barra de categorias para mostrar a categoria ativa
+  useEffect(() => {
+    if (!navScrollRef.current || !active) return;
+    const btn = navScrollRef.current.querySelector<HTMLElement>(`[data-nav-id="${active.id}"]`);
+    btn?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+  }, [active?.id]);
 
   useEffect(() => {
     const query = window.matchMedia("(min-width: 1024px)");
@@ -253,16 +263,29 @@ function MenuBook() {
             <p className="mt-1 text-[9px] uppercase tracking-[0.28em] text-primary">Cardápio da casa</p>
           </div>
         </div>
-        <p className="hidden max-w-52 text-right text-xs leading-relaxed text-muted-foreground sm:block">
-          Escolha com calma e chame o garçom para pedir.
-        </p>
+        <div className="flex items-center gap-2">
+          <Button
+            aria-label="Buscar no cardápio"
+            title="Buscar"
+            variant="ghost"
+            size="icon"
+            onClick={() => setSearchOpen(true)}
+            className="size-10 rounded-full"
+          >
+            <Search className="size-5" />
+          </Button>
+          <p className="hidden max-w-44 text-right text-xs leading-relaxed text-muted-foreground sm:block">
+            Escolha com calma e chame o garçom para pedir.
+          </p>
+        </div>
       </header>
 
       <nav aria-label="Categorias do cardápio" className="category-rail border-y border-border bg-secondary/70 px-3 py-2 sm:px-6">
-        <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto pb-0.5 scrollbar-none">
+        <div ref={navScrollRef} className="mx-auto flex max-w-6xl gap-2 overflow-x-auto pb-0.5 scrollbar-none">
           {menu.map((category) => (
             <Button
               key={category.id}
+              data-nav-id={category.id}
               variant={active?.id === category.id ? "default" : "ghost"}
               size="sm"
               onClick={() => goCategory(category.id)}
@@ -344,6 +367,13 @@ function MenuBook() {
       </footer>
 
       {selected && <ProductModal selection={selected} onClose={() => setSelected(null)} />}
+      {searchOpen && (
+        <SearchModal
+          menu={menu}
+          onClose={() => setSearchOpen(false)}
+          onSelect={(item, category) => setSelected({ item, category })}
+        />
+      )}
     </main>
   );
 }
