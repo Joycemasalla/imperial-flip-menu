@@ -1,96 +1,5 @@
 [
   {
-    "id": "drinks",
-    "title": "Drinks",
-    "navLabel": "Drinks",
-    "items": [
-      {
-        "id": "pink-lemonade",
-        "name": "Pink Lemonade",
-        "avatar": "PL",
-        "price": null,
-        "options": [],
-        "desc": "Suco de limão com groselha.",
-        "imageUrl": "",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "campari-orange",
-        "name": "Campari Orange",
-        "avatar": "CO",
-        "price": null,
-        "options": [],
-        "desc": "Campari e laranja.",
-        "imageUrl": "",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "caip",
-        "name": "Caipirinha",
-        "avatar": "C",
-        "price": null,
-        "options": [],
-        "desc": "Limão, cachaça ou vodka.",
-        "imageUrl": "",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "caipvodka",
-        "name": "Caipvodka",
-        "avatar": "C",
-        "price": null,
-        "options": [],
-        "desc": "Morango, leite condensado e vodka.",
-        "imageUrl": "",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "campari-tonico",
-        "name": "Campari Tônico",
-        "avatar": "CT",
-        "price": null,
-        "options": [],
-        "desc": "Campari e água tônica.",
-        "imageUrl": "",
-        "serves": null,
-        "highlight": false
-      }
-    ]
-  },
-  {
-    "id": "sobremesas",
-    "title": "Sobremesas",
-    "navLabel": "Sobremesas",
-    "items": [
-      {
-        "id": "brownie",
-        "name": "Brownie",
-        "avatar": "B",
-        "price": 12,
-        "options": [],
-        "desc": "Escolha seu sabor favorito: Doce de Leite, Brigadeiro, Creme ou Creme com Avelã.",
-        "imageUrl": "",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "brownie-com-sorvete",
-        "name": "Brownie com Sorvete",
-        "avatar": "BC",
-        "price": 25,
-        "options": [],
-        "desc": "Brownie quentinho com uma bola de sorvete e calda de chocolate.",
-        "imageUrl": "",
-        "serves": null,
-        "highlight": false
-      }
-    ]
-  },
-  {
     "id": "tradicionais",
     "title": "Hambúrgueres Tradicionais",
     "navLabel": "Tradicionais",
@@ -342,6 +251,513 @@
         "options": [],
         "desc": "Pão brioche, bife de lombo (150g), catupiry empanado, cheddar, tomate, alface, cebola caramelizada e barbecue.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751990046/cardapio-digital-images/ybpsjjskqyaxzpq1sdf9.jpg",
+        "serves": null,
+        "highlight": false
+      }
+    ]
+  },
+  {
+    "id": "pizzas",
+    "title": "Pizzas Salgadas",
+    "navLabel": "Pizzas Salgadas",
+    "subtitle": "Tamanhos: P R$ 42,00 • M R$ 48,00 • G R$ 53,00",
+    "items": [
+      {
+        "id": "pizza-quatro-queijos",
+        "name": "Pizza Quatro Queijos",
+        "avatar": "PQ",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, cheddar, catupiry, parmesão, azeitona e orégano.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753193853/cardapio-digital-images/tj2r9vtk3xapu5da0m5s.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-bacon",
+        "name": "Pizza Bacon",
+        "avatar": "PB",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, bacon, tomate, azeitona e orégano.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381509/cardapio-digital-images/bzeewqoz4giu1w006g9t.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-calabresa",
+        "name": "Pizza Calabresa",
+        "avatar": "PC",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, calabresa, cebola, azeitona e orégano.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883504/cardapio-digital-images/st4bgqj41fhwa23t25o8.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-camarao",
+        "name": "Pizza Camarão",
+        "avatar": "PC",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, camarão, catupiry, alho frito, cebola, azeitona e orégano.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751899100/cardapio-digital-images/nqsziumwawfzvr9wczxi.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-carne-seca",
+        "name": "Pizza Carne Seca",
+        "avatar": "PC",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, carne seca, catupiry, cebola, azeitona e orégano.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883540/cardapio-digital-images/evgagksdzyjfq0he2evk.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-costela",
+        "name": "Pizza Costela",
+        "avatar": "PC",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, costela, catupiry, cebola, azeitona e orégano.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381581/cardapio-digital-images/fth1oejkwavmk8segpvw.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-da-roca",
+        "name": "Pizza Da Roça",
+        "avatar": "PD",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, frango desfiado, milho, bacon, azeitona e orégano.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381719/cardapio-digital-images/bgwz4czc7vlzynaxmbzu.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-presunto",
+        "name": "Pizza Presunto",
+        "avatar": "PP",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, presunto, azeitona e orégano.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753538157/cardapio-digital-images/y0ahb4ijm3vpfa6peall.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-frango-c-catupiry",
+        "name": "Pizza Frango c/ Catupiry",
+        "avatar": "PF",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, frango desfiado, catupiry, azeitona e orégano.",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-lombo",
+        "name": "Pizza Lombo",
+        "avatar": "PL",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, lombo canadense, catupiry, azeitona e orégano.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381793/cardapio-digital-images/kc1ohablbqsivxeo9kyw.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-marguerita",
+        "name": "Pizza Marguerita",
+        "avatar": "PM",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, manjericão, parmesão, tomate, azeitona e orégano.",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-a-moda",
+        "name": "Pizza À Moda",
+        "avatar": "PÀ",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, presunto, calabresa, palmito, milho, catupiry, cebola, azeitona e orégano.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381321/cardapio-digital-images/wr5j7mtyj6b9qjmuxtlc.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-americana",
+        "name": "Pizza Americana",
+        "avatar": "PA",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, cheddar, tomate, pimentão, catupiry, azeitona e orégano.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381422/cardapio-digital-images/aor1ki9pjxdmmbxqoz2o.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-palmito",
+        "name": "Pizza Palmito",
+        "avatar": "PP",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, palmito, catupiry, azeitona e orégano.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753214077/cardapio-digital-images/yw3mqyqtcdmevqcgzxuo.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-portuguesa",
+        "name": "Pizza Portuguesa",
+        "avatar": "PP",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, calabresa, presunto, tomate, pimentão, ovo, cebola, azeitona e orégano.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751990097/cardapio-digital-images/tfpgmmehimkbuz9kv0tb.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-italiana",
+        "name": "Pizza Italiana",
+        "avatar": "PI",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, salaminho, cebola, azeitona e orégano.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753538129/cardapio-digital-images/alipg2ejtddwas7dzg08.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-file-c-fritas",
+        "name": "Pizza Filé c/ Fritas",
+        "avatar": "PF",
+        "price": 100,
+        "options": [],
+        "desc": "Muçarela, contra filé, fritas, cebola, azeitona e orégano.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1785009390/cardapio-digital-images/products/fmpdsmf4dxd85uqlog89.png",
+        "serves": null,
+        "highlight": false
+      }
+    ]
+  },
+  {
+    "id": "pizzas-doces",
+    "title": "Pizzas Doces",
+    "navLabel": "Pizzas Doces",
+    "subtitle": "Tamanhos: P R$ 42,00 • M R$ 48,00 • G R$ 53,00",
+    "items": [
+      {
+        "id": "pizza-prestigio",
+        "name": "Pizza Prestígio",
+        "avatar": "PP",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, brigadeiro e coco.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883176/cardapio-digital-images/umhbmlanibq16s995gsm.jpg",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-banana-c-doce-de-leite",
+        "name": "Pizza Banana c/ Doce de Leite",
+        "avatar": "PB",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, banana, doce de leite e canela.",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-creme-de-avela-c-confete",
+        "name": "Pizza Creme de Avelã c/ Confete",
+        "avatar": "PC",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, creme de avelã e confete.",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "pizza-romeu-e-julieta",
+        "name": "Pizza Romeu e Julieta",
+        "avatar": "PR",
+        "price": null,
+        "options": [
+          {
+            "label": "P",
+            "price": 42
+          },
+          {
+            "label": "M",
+            "price": 48
+          },
+          {
+            "label": "G",
+            "price": 53
+          }
+        ],
+        "desc": "Muçarela, requeijão cremoso e goiabada.",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883286/cardapio-digital-images/vhiimsowmkgifpdjiai6.jpg",
         "serves": null,
         "highlight": false
       }
@@ -995,513 +1411,6 @@
     ]
   },
   {
-    "id": "pizzas",
-    "title": "Pizzas",
-    "navLabel": "Pizzas",
-    "subtitle": "Tamanhos: P R$ 42,00 • M R$ 48,00 • G R$ 53,00",
-    "items": [
-      {
-        "id": "pizza-quatro-queijos",
-        "name": "Pizza Quatro Queijos",
-        "avatar": "PQ",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, cheddar, catupiry, parmesão, azeitona e orégano.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753193853/cardapio-digital-images/tj2r9vtk3xapu5da0m5s.jpg",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-bacon",
-        "name": "Pizza Bacon",
-        "avatar": "PB",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, bacon, tomate, azeitona e orégano.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381509/cardapio-digital-images/bzeewqoz4giu1w006g9t.jpg",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-calabresa",
-        "name": "Pizza Calabresa",
-        "avatar": "PC",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, calabresa, cebola, azeitona e orégano.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883504/cardapio-digital-images/st4bgqj41fhwa23t25o8.jpg",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-camarao",
-        "name": "Pizza Camarão",
-        "avatar": "PC",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, camarão, catupiry, alho frito, cebola, azeitona e orégano.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751899100/cardapio-digital-images/nqsziumwawfzvr9wczxi.jpg",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-carne-seca",
-        "name": "Pizza Carne Seca",
-        "avatar": "PC",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, carne seca, catupiry, cebola, azeitona e orégano.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883540/cardapio-digital-images/evgagksdzyjfq0he2evk.jpg",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-costela",
-        "name": "Pizza Costela",
-        "avatar": "PC",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, costela, catupiry, cebola, azeitona e orégano.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381581/cardapio-digital-images/fth1oejkwavmk8segpvw.jpg",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-da-roca",
-        "name": "Pizza Da Roça",
-        "avatar": "PD",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, frango desfiado, milho, bacon, azeitona e orégano.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381719/cardapio-digital-images/bgwz4czc7vlzynaxmbzu.jpg",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-presunto",
-        "name": "Pizza Presunto",
-        "avatar": "PP",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, presunto, azeitona e orégano.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753538157/cardapio-digital-images/y0ahb4ijm3vpfa6peall.jpg",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-frango-c-catupiry",
-        "name": "Pizza Frango c/ Catupiry",
-        "avatar": "PF",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, frango desfiado, catupiry, azeitona e orégano.",
-        "imageUrl": "",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-lombo",
-        "name": "Pizza Lombo",
-        "avatar": "PL",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, lombo canadense, catupiry, azeitona e orégano.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381793/cardapio-digital-images/kc1ohablbqsivxeo9kyw.jpg",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-marguerita",
-        "name": "Pizza Marguerita",
-        "avatar": "PM",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, manjericão, parmesão, tomate, azeitona e orégano.",
-        "imageUrl": "",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-a-moda",
-        "name": "Pizza À Moda",
-        "avatar": "PÀ",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, presunto, calabresa, palmito, milho, catupiry, cebola, azeitona e orégano.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381321/cardapio-digital-images/wr5j7mtyj6b9qjmuxtlc.jpg",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-americana",
-        "name": "Pizza Americana",
-        "avatar": "PA",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, cheddar, tomate, pimentão, catupiry, azeitona e orégano.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755381422/cardapio-digital-images/aor1ki9pjxdmmbxqoz2o.jpg",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-palmito",
-        "name": "Pizza Palmito",
-        "avatar": "PP",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, palmito, catupiry, azeitona e orégano.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753214077/cardapio-digital-images/yw3mqyqtcdmevqcgzxuo.jpg",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-portuguesa",
-        "name": "Pizza Portuguesa",
-        "avatar": "PP",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, calabresa, presunto, tomate, pimentão, ovo, cebola, azeitona e orégano.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751990097/cardapio-digital-images/tfpgmmehimkbuz9kv0tb.jpg",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-italiana",
-        "name": "Pizza Italiana",
-        "avatar": "PI",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, salaminho, cebola, azeitona e orégano.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753538129/cardapio-digital-images/alipg2ejtddwas7dzg08.jpg",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-file-c-fritas",
-        "name": "Pizza Filé c/ Fritas",
-        "avatar": "PF",
-        "price": 100,
-        "options": [],
-        "desc": "Muçarela, contra filé, fritas, cebola, azeitona e orégano.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1785009390/cardapio-digital-images/products/fmpdsmf4dxd85uqlog89.png",
-        "serves": null,
-        "highlight": false
-      }
-    ]
-  },
-  {
-    "id": "pizzas-doces",
-    "title": "Pizzas Doces",
-    "navLabel": "Doces",
-    "subtitle": "Tamanhos: P R$ 42,00 • M R$ 48,00 • G R$ 53,00",
-    "items": [
-      {
-        "id": "pizza-prestigio",
-        "name": "Pizza Prestígio",
-        "avatar": "PP",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, brigadeiro e coco.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883176/cardapio-digital-images/umhbmlanibq16s995gsm.jpg",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-banana-c-doce-de-leite",
-        "name": "Pizza Banana c/ Doce de Leite",
-        "avatar": "PB",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, banana, doce de leite e canela.",
-        "imageUrl": "",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-creme-de-avela-c-confete",
-        "name": "Pizza Creme de Avelã c/ Confete",
-        "avatar": "PC",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, creme de avelã e confete.",
-        "imageUrl": "",
-        "serves": null,
-        "highlight": false
-      },
-      {
-        "id": "pizza-romeu-e-julieta",
-        "name": "Pizza Romeu e Julieta",
-        "avatar": "PR",
-        "price": null,
-        "options": [
-          {
-            "label": "P",
-            "price": 42
-          },
-          {
-            "label": "M",
-            "price": 48
-          },
-          {
-            "label": "G",
-            "price": 53
-          }
-        ],
-        "desc": "Muçarela, requeijão cremoso e goiabada.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883286/cardapio-digital-images/vhiimsowmkgifpdjiai6.jpg",
-        "serves": null,
-        "highlight": false
-      }
-    ]
-  },
-  {
     "id": "prato-feito",
     "title": "Prato Feito",
     "navLabel": "Prato Feito",
@@ -1616,6 +1525,35 @@
         ],
         "desc": "Picanha, farofa, vinagrete, arroz e batata frita.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1770426296/cardapio-digital-images/products/loxbsl9dkfepwk74mlgv.jpg",
+        "serves": null,
+        "highlight": false
+      }
+    ]
+  },
+  {
+    "id": "sobremesas",
+    "title": "Sobremesas",
+    "navLabel": "Sobremesas",
+    "items": [
+      {
+        "id": "brownie",
+        "name": "Brownie",
+        "avatar": "B",
+        "price": 12,
+        "options": [],
+        "desc": "Escolha seu sabor favorito: Doce de Leite, Brigadeiro, Creme ou Creme com Avelã.",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "brownie-com-sorvete",
+        "name": "Brownie com Sorvete",
+        "avatar": "BC",
+        "price": 25,
+        "options": [],
+        "desc": "Brownie quentinho com uma bola de sorvete e calda de chocolate.",
+        "imageUrl": "",
         "serves": null,
         "highlight": false
       }
@@ -1926,6 +1864,68 @@
           }
         ],
         "desc": "Churrasco com acompanhamentos.",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      }
+    ]
+  },
+  {
+    "id": "drinks",
+    "title": "Drinks",
+    "navLabel": "Drinks",
+    "items": [
+      {
+        "id": "pink-lemonade",
+        "name": "Pink Lemonade",
+        "avatar": "PL",
+        "price": null,
+        "options": [],
+        "desc": "Suco de limão com groselha.",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "campari-orange",
+        "name": "Campari Orange",
+        "avatar": "CO",
+        "price": null,
+        "options": [],
+        "desc": "Campari e laranja.",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "caip",
+        "name": "Caipirinha",
+        "avatar": "C",
+        "price": null,
+        "options": [],
+        "desc": "Limão, cachaça ou vodka.",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "caipvodka",
+        "name": "Caipvodka",
+        "avatar": "C",
+        "price": null,
+        "options": [],
+        "desc": "Morango, leite condensado e vodka.",
+        "imageUrl": "",
+        "serves": null,
+        "highlight": false
+      },
+      {
+        "id": "campari-tonico",
+        "name": "Campari Tônico",
+        "avatar": "CT",
+        "price": null,
+        "options": [],
+        "desc": "Campari e água tônica.",
         "imageUrl": "",
         "serves": null,
         "highlight": false
