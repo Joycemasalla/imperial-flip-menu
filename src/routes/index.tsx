@@ -10,13 +10,12 @@ import bannerChurrascoEPorcoes from "@/assets/Banner Churrasco e Porções.png";
 import bannerPizzasDoces from "@/assets/Banner Pizzas Doces.png";
 import bannerPizzasSalgadas from "@/assets/Banner Pizzas Salgadas.png";
 import bannerTradicionais from "@/assets/Banner Hamburgues Tradicionais.png";
-import drinksImageAsset from "@/assets/banner-drinks.jpg.asset.json";
-import pratoFeitoImageAsset from "@/assets/banner-prato-feito.jpg.asset.json";
-import refeicoesImageAsset from "@/assets/banner-refeicoes.jpg.asset.json";
-import sobremesasImageAsset from "@/assets/banner-sobremesas.jpg.asset.json";
+import bannerDrinks from "@/assets/Banner Drinks.png";
+import bannerPratoFeito from "@/assets/Banner Prato Feito.png";
+import bannerRefeicoes from "@/assets/Banner Refeições.png";
+import bannerSobremesas from "@/assets/Banner Sobremesas.png";
+import bannerPicanha from "@/assets/Banner Picanha.png";
 import bebidasImage from "@/assets/bebidas.jpg";
-import chapasImage from "@/assets/chapas.jpg";
-import picanhaImage from "@/assets/picanha.jpg";
 import logoAsset from "@/assets/logoespaco-removebg.png";
 import { Button } from "@/components/ui/button";
 import rawMenu from "@/data/menuData.json";
@@ -56,15 +55,15 @@ const images: Record<string, string> = {
   artesanais: bannerArtesanais,
   pizzas: bannerPizzasSalgadas,
   "pizzas-doces": bannerPizzasDoces,
-  drinks: drinksImageAsset.url,
-  sobremesas: sobremesasImageAsset.url,
-  "prato-feito": pratoFeitoImageAsset.url,
+  drinks: bannerDrinks,
+  sobremesas: bannerSobremesas,
+  "prato-feito": bannerPratoFeito,
   churrasco: bannerChurrascoEPorcoes,
-  refeicoes: refeicoesImageAsset.url,
+  refeicoes: bannerRefeicoes,
   porcoes: bannerChurrascoEPorcoes,
   baguete: bagueteImage,
-  chapas: chapasImage,
-  "picanha-na-pedra": picanhaImage,
+  chapas: bannerChurrascoEPorcoes,
+  "picanha-na-pedra": bannerPicanha,
   bebidas: bebidasImage,
 };
 
