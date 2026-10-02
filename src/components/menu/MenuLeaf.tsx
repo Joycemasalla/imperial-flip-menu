@@ -1,0 +1,140 @@
+import type { UIEvent as ReactUIEvent } from "react";
+import artesanaisImage from "@/assets/artesanais.jpg";
+import type { MenuItem, Category } from "@/types/menu";
+import { images } from "@/components/menu/images";
+
+const money = (value: number) =>
+  new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(value);
+
+function MenuItemRow({
+  item,
+  categoryId,
+  onSelect,
+}: {
+  item: MenuItem;
+  categoryId: string;
+  onSelect: (item: MenuItem) => void;
+}) {
+  const basePrice =
+    item.price !== null
+      ? money(item.price)
+      : item.options.length
+        ? `a partir de ${money(Math.min(...item.options.map((o) => o.price)))}`
+        : "Consulte";
+  const thumbnail = item.imageUrl || images[categoryId] || artesanaisImage;
+
+  return (
+    <button
+      type="button"
+      data-menu-item={item.id}
+      data-category={categoryId}
+      onClick={() => onSelect(item)}
+      className="menu-item group grid min-h-20 w-full grid-cols-[4rem_minmax(0,1fr)] items-center gap-3 border-b border-ink/10 py-2.5 text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary sm:grid-cols-[4.5rem_minmax(0,1fr)]"
+    >
+      <img
+        src={thumbnail}
+        alt=""
+        width={144}
+        height={144}
+        loading="lazy"
+        decoding="async"
+        draggable={false}
+        className="size-16 shrink-0 rounded-md object-cover sm:size-18"
+      />
+      <div className="min-w-0">
+        <div className="grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-start gap-2">
+          <div className="min-w-0">
+            <h2 className="line-clamp-2 font-display text-base leading-tight text-paper-foreground sm:text-lg">
+              {item.name}
+            </h2>
+            {item.highlight && (
+              <span className="mt-0.5 block text-[8px] uppercase tracking-[0.15em] text-gold-dark">
+                Destaque
+              </span>
+            )}
+          </div>
+          <span className="max-w-24 text-right text-[11px] font-bold leading-tight tabular-nums text-gold-dark sm:max-w-28 sm:text-sm">
+            {basePrice}
+          </span>
+        </div>
+        <p className="mt-0.5 line-clamp-2 text-[11px] leading-relaxed text-paper-foreground/80 sm:text-xs">
+          {item.desc}
+        </p>
+      </div>
+    </button>
+  );
+}
+
+const updateScrollHint = (el: HTMLDivElement | null) => {
+  if (!el) return;
+  el.dataset["hint"] = el.scrollHeight > el.clientHeight + 4 ? "more" : "none";
+};
+
+const trackScrollHint = (event: ReactUIEvent<HTMLDivElement>) => {
+  const el = event.currentTarget;
+  el.dataset["hint"] = el.scrollTop + el.clientHeight >= el.scrollHeight - 4 ? "end" : "more";
+};
+
+export function MenuLeaf({
+  category,
+  number,
+  eager,
+  onSelect,
+}: {
+  category: Category;
+  number: number;
+  eager: boolean;
+  onSelect: (item: MenuItem) => void;
+}) {
+  const image = images[category.id] ?? artesanaisImage;
+
+  return (
+    <article className="book-page menu-leaf relative flex h-full min-h-0 flex-col overflow-hidden">
+      <div className="relative h-44 shrink-0 overflow-hidden sm:h-48 lg:h-52">
+        <img
+          src={image}
+          alt={`Seleção de ${category.title}`}
+          width={1200}
+          height={800}
+          loading={eager ? "eager" : "lazy"}
+          decoding="async"
+          fetchPriority={number === 1 ? "high" : "auto"}
+          style={{ objectPosition: "right center" }}
+          className="h-full w-full object-cover"
+        />
+        <div className="image-shade absolute inset-0" />
+        <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 px-5 pb-3 sm:px-7 sm:pb-4">
+          <div className="min-w-0">
+            <p className="mb-1.5 text-[9px] uppercase tracking-[0.3em] text-primary">Seleção imperial</p>
+            <h1 className="font-display text-2xl leading-tight text-foreground sm:text-4xl">{category.title}</h1>
+          </div>
+          <p className="shrink-0 pb-1 text-[10px] uppercase tracking-[0.18em] text-foreground/75">
+            {category.items.length} opções
+          </p>
+        </div>
+      </div>
+      <div className="menu-scroll-wrap relative min-h-0 flex-1">
+        <div
+          ref={updateScrollHint}
+          onScroll={trackScrollHint}
+          className="menu-scroll-area h-full overflow-y-auto px-4 pb-16 pt-3 sm:px-6 sm:pb-14 sm:pt-4"
+        >
+          {category.subtitle && (
+            <p className="mb-3 border-l border-primary pl-3 text-[11px] leading-relaxed text-paper-foreground/80">
+              {category.subtitle}
+            </p>
+          )}
+          <div className="grid grid-cols-1 gap-x-6">
+            {category.items.map((item) => (
+              <MenuItemRow key={item.id} item={item} categoryId={category.id} onSelect={onSelect} />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="flex shrink-0 items-center justify-between border-t border-ink/10 px-5 py-2 text-[9px] uppercase tracking-[0.18em] text-paper-muted">
+        <span>Toque para ver detalhes</span>
+        <span>{String(number).padStart(2, "0")}</span>
+      </div>
+    </article>
+  );
+}
