@@ -11,7 +11,7 @@ Implement the requested scope now; use internal planning and do not present anot
   - 100% fluido e responsivo no celular (mobile-first): transição de folhear rápida e suave ao toque (swipe), sem travamento ou atraso.
   - No desktop: visualização de livro aberto em duas páginas lado a lado com sombra de lombada e cantos virando.
   - No mobile: página única ajustada à tela com navegação por deslize lateral e setas discretas.
-  - Barra de categorias / sumário rápido: barra superior com botões de cada categoria (Artesanais, Tradicionais, Pizzas, Doces, Porções, Chapas, Baguete, Picanha, Bebidas) para ir direto à página desejada sem precisar folhear tudo.
+  - Barra de categorias / sumário rápido: barra superior com botões de cada categoria (Artesanais, Tradicionais, Pizzas Salgadas, Pizzas Doces, Porções, Chapas, Baguete, Picanha, Bebidas) para ir direto à página desejada sem precisar folhear tudo.
 - **Modal de Detalhes do Produto**:
   - Ao tocar em qualquer item da página, abrir modal elegante com foto em destaque do prato, nome, descrição completa dos ingredientes, indicação de rendimento ("Serve X pessoas", quando aplicável) e preços/variações de tamanho.
   - Fechamento fácil por botão ou gesto de deslizar para baixo.

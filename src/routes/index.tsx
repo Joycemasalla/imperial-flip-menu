@@ -268,7 +268,7 @@ function MenuBook() {
               onClick={() => goCategory(category.id)}
               className={cn("min-h-11 shrink-0 rounded-full px-4", active?.id === category.id && "shadow-gold")}
             >
-              {category.id === "pizzas-doces" ? "Doces" : category.navLabel}
+              {category.id === "pizzas-doces" ? "Pizzas Doces" : category.navLabel}
             </Button>
           ))}
         </div>

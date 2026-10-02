@@ -1201,7 +1201,7 @@
         "price": null,
         "options": [],
         "desc": "Consulte os sabores disponíveis.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790901583/afam-sucos_zugmyx.png",
         "serves": null,
         "highlight": false
       },
@@ -1212,7 +1212,7 @@
         "price": null,
         "options": [],
         "desc": "Consulte o garçom para mais detalhes.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790901630/l-1392627abcf244b794774622d52acab7_rsv5nr.webp",
         "serves": null,
         "highlight": false
       },
@@ -1223,7 +1223,7 @@
         "price": null,
         "options": [],
         "desc": "Consulte o garçom para mais detalhes.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790901673/images_olndwz.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1234,7 +1234,7 @@
         "price": null,
         "options": [],
         "desc": "Consulte o garçom para mais detalhes.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790901693/78905498_1_ne1kcv.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1245,7 +1245,7 @@
         "price": null,
         "options": [],
         "desc": "Consulte o garçom para mais detalhes.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790901724/images_z43rns.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1256,7 +1256,7 @@
         "price": null,
         "options": [],
         "desc": "Consulte o garçom para mais detalhes.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790901768/VF4qT-qqCUAAAAAAAAXZnA_oxndj0.webp",
         "serves": null,
         "highlight": false
       },
@@ -1267,7 +1267,7 @@
         "price": null,
         "options": [],
         "desc": "Consulte o garçom para mais detalhes.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790901971/images_csqyvf.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1289,7 +1289,7 @@
         "price": null,
         "options": [],
         "desc": "Consulte o garçom para mais detalhes.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790901815/206011-800-auto_q4bvvb.webp",
         "serves": null,
         "highlight": false
       },
@@ -1422,7 +1422,7 @@
         "price": 30,
         "options": [],
         "desc": "Arroz, feijão, batata frita e salada.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751986784/cardapio-digital-images/k1yc8ywgpvk3laeln67n.jpg",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790902182/1684d86c-41ab-44f2-a784-95e89a015fc7_wmztrm.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1433,7 +1433,7 @@
         "price": 27,
         "options": [],
         "desc": "Arroz, feijão, farofa, batata frita e salada.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790902161/114e9f16-64cc-4413-beb1-eb5095cb8518_cjc4fj.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1444,7 +1444,7 @@
         "price": 30,
         "options": [],
         "desc": "Arroz, feijão, farofa, batata frita, salada e vinagrete.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790902159/35add027-1ece-4c4c-a1d4-cc02042db9b1_oycqio.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1455,7 +1455,7 @@
         "price": 35,
         "options": [],
         "desc": "Arroz, feijão, farofa, batata frita, salada e vinagrete.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1785010215/cardapio-digital-images/products/xq8modknxodwho6aojnz.png",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790902159/35add027-1ece-4c4c-a1d4-cc02042db9b1_oycqio.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1477,7 +1477,7 @@
         "price": 27,
         "options": [],
         "desc": "Arroz e batata palha ou batata frita.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790902135/1aa88155-ffae-47fb-b13b-b57b70df821e_qhhqhn.jpg",
         "serves": null,
         "highlight": false
       }
@@ -1542,7 +1542,7 @@
         "price": 12,
         "options": [],
         "desc": "Escolha seu sabor favorito: Doce de Leite, Brigadeiro, Creme ou Creme com Avelã.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790902678/d144d087-853b-40a9-b9f8-5462919476dc_y3i4db.png",
         "serves": null,
         "highlight": false
       },
@@ -1553,7 +1553,7 @@
         "price": 25,
         "options": [],
         "desc": "Brownie quentinho com uma bola de sorvete e calda de chocolate.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790902678/d144d087-853b-40a9-b9f8-5462919476dc_y3i4db.png",
         "serves": null,
         "highlight": false
       }
@@ -1572,7 +1572,7 @@
         "price": 7,
         "options": [],
         "desc": "Valor por 100g.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752195085/cardapio-digital-images/djsgrewv2g5dmoayfyry.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1594,7 +1594,7 @@
         "price": 12,
         "options": [],
         "desc": "Valor por 100g.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751898878/cardapio-digital-images/pkwwbvq3u1sobsgvhyzv.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1605,7 +1605,7 @@
         "price": 12,
         "options": [],
         "desc": "Valor por 100g.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751898878/cardapio-digital-images/pkwwbvq3u1sobsgvhyzv.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1627,7 +1627,7 @@
         "price": 5,
         "options": [],
         "desc": "Valor por 100g.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1756577398/cardapio-digital-images/whkc64upshzximitwxwu.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1638,7 +1638,7 @@
         "price": 12,
         "options": [],
         "desc": "Valor por 100g.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751898799/cardapio-digital-images/ulsohgajmesaj3x0y2yo.jpg",
         "serves": null,
         "highlight": false
       }
@@ -1864,7 +1864,7 @@
           }
         ],
         "desc": "Churrasco com acompanhamentos.",
-        "imageUrl": "",
+        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790902970/images_pfri7o.jpg",
         "serves": null,
         "highlight": false
       }
