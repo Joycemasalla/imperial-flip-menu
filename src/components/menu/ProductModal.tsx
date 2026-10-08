@@ -63,7 +63,17 @@ export function ProductModal({
           <p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.25em] text-primary">
             {category.title}
           </p>
-          {item.imageUrl?.includes("_real.jpg") && (
+          {(category.id === "drinks" ||
+            [
+              "mineirinho",
+              "brownie",
+              "brownie-com-sorvete",
+              "contra-file",
+              "contra-file-c-fritas",
+              "contra-file-ou-alcatra",
+              "churrasco-misto",
+            ].includes(item.id) ||
+            item.imageUrl?.includes("_real.jpg")) && (
             <p className="absolute bottom-4 right-4 rounded-md bg-black/60 px-2.5 py-1 text-[9px] uppercase tracking-wider text-white/90 backdrop-blur-md">
               Imagem Ilustrativa
             </p>
