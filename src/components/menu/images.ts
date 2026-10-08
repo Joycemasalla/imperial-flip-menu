@@ -16,6 +16,7 @@ import bannerRefeicoes from "@/assets/Banner Refeições.png";
 import bannerSobremesas from "@/assets/Banner Sobremesas.png";
 import bannerPicanha from "@/assets/Banner Picanha.png";
 import bebidasImage from "@/assets/bebidas.jpg";
+import artesanaisImage from "@/assets/artesanais.jpg";
 
 export const images: Record<string, string> = {
   tradicionais: bannerTradicionais,
@@ -34,3 +35,10 @@ export const images: Record<string, string> = {
   "picanha-na-pedra": bannerPicanha,
   bebidas: bebidasImage,
 };
+
+/** Foto de banner da categoria (com imagem padrão). */
+export const categoryImage = (categoryId: string) => images[categoryId] ?? artesanaisImage;
+
+/** Foto do produto: imagem própria, senão a da categoria. */
+export const itemImage = (item: { imageUrl?: string | null }, categoryId: string) =>
+  item.imageUrl || categoryImage(categoryId);

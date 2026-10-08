@@ -1,9 +1,8 @@
-import artesanaisImage from "@/assets/artesanais.jpg";
 import { Users, X } from "lucide-react";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import type { MenuItem, Category } from "@/types/menu";
-import { images } from "@/components/menu/images";
+import { itemImage } from "@/components/menu/images";
 
 const money = (value: number) =>
   new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(value);
@@ -52,7 +51,7 @@ export function ProductModal({
 
         <div className="relative aspect-[16/10] overflow-hidden sm:rounded-t-lg">
           <img
-            src={item.imageUrl || images[category.id] || artesanaisImage}
+            src={itemImage(item, category.id)}
             alt={item.name}
             width={1200}
             height={800}
