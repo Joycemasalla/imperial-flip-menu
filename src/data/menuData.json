@@ -650,8 +650,13 @@
         "id": "pizza-file-c-fritas",
         "name": "Pizza Filé c/ Fritas",
         "avatar": "PF",
-        "price": 100,
-        "options": [],
+        "price": null,
+        "options": [
+          {
+            "label": "G",
+            "price": 100
+          }
+        ],
         "desc": "Muçarela, contra filé, fritas, cebola, azeitona e orégano.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1785009390/cardapio-digital-images/products/fmpdsmf4dxd85uqlog89.png",
         "serves": null,
@@ -1189,7 +1194,7 @@
         "avatar": "SN",
         "price": null,
         "options": [],
-        "desc": "Consulte os sabores disponíveis.",
+        "desc": "Sabores: laranja ou limão.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752063372/cardapio-digital-images/vowjrenk7zxotstwl2b9.jpg",
         "serves": null,
         "highlight": false
@@ -1200,7 +1205,7 @@
         "avatar": "SD",
         "price": null,
         "options": [],
-        "desc": "Consulte os sabores disponíveis.",
+        "desc": "Sabores: abacaxi, abacaxi com hortelã, morango, graviola ou acerola.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790901583/afam-sucos_zugmyx.png",
         "serves": null,
         "highlight": false
@@ -1675,7 +1680,7 @@
             "price": 150
           }
         ],
-        "desc": "Picanha, mandioca na manteiga e batata frita.",
+        "desc": "Picanha, 200g de mandioca na manteiga e 200g de batata frita.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883064/cardapio-digital-images/swjafvlbjowve2ltm4nd.jpg",
         "serves": null,
         "highlight": false
@@ -1686,7 +1691,7 @@
     "id": "refeicoes",
     "title": "Refeições",
     "navLabel": "Refeições",
-    "subtitle": "Acompanhamentos: arroz, feijão, farofa, salpicão e vinagrete. Tamanhos: 2 pessoas (500g) • 4 pessoas (750g).",
+    "subtitle": "Acompanhamentos: arroz, feijão, farofa, salpicão e vinagrete. Tamanhos: 2 pessoas (500g de carne) • 4 pessoas (750g de carne).",
     "items": [
       {
         "id": "isca-de-frango",
@@ -1695,15 +1700,15 @@
         "price": null,
         "options": [
           {
-            "label": "2 pessoas",
+            "label": "2 pessoas (500g de carne)",
             "price": 70
           },
           {
-            "label": "4 pessoas",
+            "label": "4 pessoas (750g de carne)",
             "price": 130
           }
         ],
-        "desc": "Porção com acompanhamentos.",
+        "desc": "Porção com arroz, feijão, farofa, salpicão e vinagrete.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1772393035/cardapio-digital-images/products/oybodixmx9sxilhbcyep.jpg",
         "serves": null,
         "highlight": false
@@ -1715,15 +1720,15 @@
         "price": null,
         "options": [
           {
-            "label": "2 pessoas",
+            "label": "2 pessoas (500g de carne)",
             "price": 75
           },
           {
-            "label": "4 pessoas",
+            "label": "4 pessoas (750g de carne)",
             "price": 120
           }
         ],
-        "desc": "Porção com acompanhamentos.",
+        "desc": "Porção com arroz, feijão, farofa, salpicão e vinagrete.",
         "imageUrl": "",
         "serves": null,
         "highlight": false
@@ -1735,15 +1740,15 @@
         "price": null,
         "options": [
           {
-            "label": "2 pessoas",
+            "label": "2 pessoas (500g de carne)",
             "price": 90
           },
           {
-            "label": "4 pessoas",
+            "label": "4 pessoas (750g de carne)",
             "price": 170
           }
         ],
-        "desc": "Porção com acompanhamentos.",
+        "desc": "Porção com arroz, feijão, farofa, salpicão e vinagrete.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751986784/cardapio-digital-images/k1yc8ywgpvk3laeln67n.jpg",
         "serves": null,
         "highlight": false
@@ -1755,15 +1760,15 @@
         "price": null,
         "options": [
           {
-            "label": "2 pessoas",
+            "label": "2 pessoas (500g de carne)",
             "price": 115
           },
           {
-            "label": "4 pessoas",
+            "label": "4 pessoas (750g de carne)",
             "price": 200
           }
         ],
-        "desc": "Porção com acompanhamentos.",
+        "desc": "Porção com arroz, feijão, farofa, salpicão e vinagrete.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1755382203/cardapio-digital-images/zzrk1ijyhktl5b4vkbiu.jpg",
         "serves": null,
         "highlight": false
@@ -1775,15 +1780,15 @@
         "price": null,
         "options": [
           {
-            "label": "2 pessoas",
+            "label": "2 pessoas (500g de carne)",
             "price": 110
           },
           {
-            "label": "4 pessoas",
+            "label": "4 pessoas (750g de carne)",
             "price": 200
           }
         ],
-        "desc": "Porção com acompanhamentos.",
+        "desc": "Porção com arroz, feijão, farofa, salpicão e vinagrete.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1753883112/cardapio-digital-images/nlgbiibolxwims7vjxzd.jpg",
         "serves": null,
         "highlight": false
@@ -1795,15 +1800,15 @@
         "price": null,
         "options": [
           {
-            "label": "2 pessoas",
+            "label": "2 pessoas (500g de carne)",
             "price": 120
           },
           {
-            "label": "4 pessoas",
+            "label": "4 pessoas (750g de carne)",
             "price": 220
           }
         ],
-        "desc": "Churrasco com acompanhamentos.",
+        "desc": "Churrasco com arroz, feijão, farofa, salpicão e vinagrete.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1785010215/cardapio-digital-images/products/xq8modknxodwho6aojnz.png",
         "serves": null,
         "highlight": false
@@ -1815,15 +1820,15 @@
         "price": null,
         "options": [
           {
-            "label": "2 pessoas",
+            "label": "2 pessoas (500g de carne)",
             "price": 95
           },
           {
-            "label": "4 pessoas",
+            "label": "4 pessoas (750g de carne)",
             "price": 170
           }
         ],
-        "desc": "Churrasco com acompanhamentos.",
+        "desc": "Churrasco com arroz, feijão, farofa, salpicão e vinagrete.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752062349/cardapio-digital-images/pwywlu6udipraobxxryz.jpg",
         "serves": null,
         "highlight": false
@@ -1835,15 +1840,15 @@
         "price": null,
         "options": [
           {
-            "label": "2 pessoas",
+            "label": "2 pessoas (500g de carne)",
             "price": 95
           },
           {
-            "label": "4 pessoas",
+            "label": "4 pessoas (750g de carne)",
             "price": 170
           }
         ],
-        "desc": "Churrasco com acompanhamentos.",
+        "desc": "Churrasco com arroz, feijão, farofa, salpicão e vinagrete.",
         "imageUrl": "",
         "serves": null,
         "highlight": false
@@ -1855,15 +1860,15 @@
         "price": null,
         "options": [
           {
-            "label": "2 pessoas",
+            "label": "2 pessoas (500g de carne)",
             "price": 70
           },
           {
-            "label": "4 pessoas",
+            "label": "4 pessoas (750g de carne)",
             "price": 120
           }
         ],
-        "desc": "Churrasco com acompanhamentos.",
+        "desc": "Churrasco com arroz, feijão, farofa, salpicão e vinagrete.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790902970/images_pfri7o.jpg",
         "serves": null,
         "highlight": false
@@ -1879,7 +1884,7 @@
         "id": "pink-lemonade",
         "name": "Pink Lemonade",
         "avatar": "PL",
-        "price": null,
+        "price": 15,
         "options": [],
         "desc": "Suco de limão com groselha.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790903573/images_rgn8rp.jpg",
@@ -1890,7 +1895,7 @@
         "id": "campari-orange",
         "name": "Campari Orange",
         "avatar": "CO",
-        "price": null,
+        "price": 20,
         "options": [],
         "desc": "Campari e laranja.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790903653/images_mvdplg.jpg",
@@ -1901,7 +1906,7 @@
         "id": "caip",
         "name": "Caipirinha",
         "avatar": "C",
-        "price": null,
+        "price": 27,
         "options": [],
         "desc": "Limão, cachaça ou vodka.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790903679/images_jsqorb.jpg",
@@ -1912,7 +1917,7 @@
         "id": "caipvodka",
         "name": "Caipvodka",
         "avatar": "C",
-        "price": null,
+        "price": 27,
         "options": [],
         "desc": "Morango, leite condensado e vodka.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790903749/images_sy0555.jpg",
@@ -1923,7 +1928,7 @@
         "id": "campari-tonico",
         "name": "Campari Tônico",
         "avatar": "CT",
-        "price": null,
+        "price": 27,
         "options": [],
         "desc": "Campari e água tônica.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1790903832/images_edani8.jpg",
