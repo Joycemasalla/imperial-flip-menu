@@ -83,9 +83,9 @@ export function ProductModal({
             {item.options.length > 0 ? (
               <div className="space-y-2">
                 {item.options.map((option) => (
-                  <div key={option.label} className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">{option.label}</span>
-                    <strong className="font-display text-xl text-primary">{money(option.price)}</strong>
+                   <div key={option.label} className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3">
+                     <span className="text-sm text-muted-foreground">{option.label}</span>
+                     <strong className="whitespace-nowrap font-display text-xl tabular-nums text-primary">{money(option.price)}</strong>
                   </div>
                 ))}
               </div>

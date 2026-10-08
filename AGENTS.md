@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep menu data in a category/item JSON array and render list/search option prices through the shared ItemPrices component so every variation remains visible and consistent.
