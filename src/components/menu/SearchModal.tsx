@@ -1,8 +1,7 @@
 import { Search, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import artesanaisImage from "@/assets/artesanais.jpg";
 import type { Category, MenuItem } from "@/types/menu";
-import { images } from "@/components/menu/images";
+import { itemImage } from "@/components/menu/images";
 import { ItemPrices } from "@/components/menu/ItemPrices";
 import { Button } from "@/components/ui/button";
 
@@ -92,7 +91,7 @@ export function SearchModal({
         ) : (
           <ul className="mx-auto max-w-lg divide-y divide-border pb-8">
             {results.map(({ item, category }) => {
-              const thumbnail = item.imageUrl || images[category.id] || artesanaisImage;
+              const thumbnail = itemImage(item, category.id);
               return (
                 <li key={`${category.id}-${item.id}`}>
                    <Button

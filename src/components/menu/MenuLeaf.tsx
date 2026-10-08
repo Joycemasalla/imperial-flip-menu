@@ -1,7 +1,6 @@
 import type { UIEvent as ReactUIEvent } from "react";
-import artesanaisImage from "@/assets/artesanais.jpg";
 import type { MenuItem, Category } from "@/types/menu";
-import { images } from "@/components/menu/images";
+import { categoryImage, itemImage } from "@/components/menu/images";
 import { ItemPrices } from "@/components/menu/ItemPrices";
 import { Button } from "@/components/ui/button";
 
@@ -14,7 +13,7 @@ function MenuItemRow({
   categoryId: string;
   onSelect: (item: MenuItem) => void;
 }) {
-  const thumbnail = item.imageUrl || images[categoryId] || artesanaisImage;
+  const thumbnail = itemImage(item, categoryId);
 
   return (
     <Button
@@ -80,7 +79,7 @@ export function MenuLeaf({
   eager: boolean;
   onSelect: (item: MenuItem) => void;
 }) {
-  const image = images[category.id] ?? artesanaisImage;
+  const image = categoryImage(category.id);
 
   return (
     <article className="book-page menu-leaf relative flex h-full min-h-0 flex-col overflow-hidden">
