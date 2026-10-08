@@ -371,7 +371,10 @@ function MenuBook() {
         <SearchModal
           menu={menu}
           onClose={() => setSearchOpen(false)}
-          onSelect={(item, category) => setSelected({ item, category })}
+          onSelect={(item, category) => {
+            goCategory(category.id);
+            setSelected({ item, category });
+          }}
         />
       )}
     </main>
