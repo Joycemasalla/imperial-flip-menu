@@ -15,6 +15,10 @@ function MenuItemRow({
 }) {
   const thumbnail = itemImage(item, categoryId);
 
+  const isStandardPizza = 
+    (categoryId === "pizzas" || categoryId === "pizzas-doces") && 
+    item.options.length === 3;
+
   return (
     <Button
       type="button"
@@ -52,7 +56,7 @@ function MenuItemRow({
           {item.desc}
         </p>
         {item.serves && <p className="mt-1 text-[11px] text-paper-foreground/80">Serve {item.serves}</p>}
-        {item.options.length > 0 && <ItemPrices item={item} paper />}
+        {item.options.length > 0 && !isStandardPizza && <ItemPrices item={item} paper />}
       </div>
     </Button>
   );

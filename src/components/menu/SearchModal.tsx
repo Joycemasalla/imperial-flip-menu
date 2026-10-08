@@ -92,6 +92,10 @@ export function SearchModal({
           <ul className="mx-auto max-w-lg divide-y divide-border pb-8">
             {results.map(({ item, category }) => {
               const thumbnail = itemImage(item, category.id);
+              const isStandardPizza = 
+                (category.id === "pizzas" || category.id === "pizzas-doces") && 
+                item.options.length === 3;
+
               return (
                 <li key={`${category.id}-${item.id}`}>
                    <Button
@@ -123,7 +127,7 @@ export function SearchModal({
                         {item.desc}
                       </p>
                        {item.serves && <p className="mt-1 text-[11px] text-muted-foreground">Serve {item.serves}</p>}
-                       {item.options.length > 0 && <ItemPrices item={item} />}
+                       {item.options.length > 0 && !isStandardPizza && <ItemPrices item={item} />}
                     </div>
                      {item.options.length === 0 && <span className="shrink-0"><ItemPrices item={item} /></span>}
                    </Button>
