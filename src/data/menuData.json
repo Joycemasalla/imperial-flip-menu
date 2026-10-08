@@ -1599,7 +1599,7 @@
         "price": 12,
         "options": [],
         "desc": "Valor por 100g.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751898878/cardapio-digital-images/pkwwbvq3u1sobsgvhyzv.jpg",
+        "imageUrl": "/contra_file_real.jpg",
         "serves": null,
         "highlight": false
       },
@@ -1643,7 +1643,7 @@
         "price": 12,
         "options": [],
         "desc": "Valor por 100g.",
-        "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1751898799/cardapio-digital-images/ulsohgajmesaj3x0y2yo.jpg",
+        "imageUrl": "/churrasco_misto_real.jpg",
         "serves": null,
         "highlight": false
       }
