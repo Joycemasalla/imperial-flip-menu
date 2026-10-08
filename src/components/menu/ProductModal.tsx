@@ -64,7 +64,7 @@ export function ProductModal({
             {category.title}
           </p>
           {item.imageUrl?.includes("_real.jpg") && (
-            <p className="absolute right-3 top-3 rounded-md bg-black/60 px-2.5 py-1 text-[9px] uppercase tracking-wider text-white/90 backdrop-blur-md">
+            <p className="absolute bottom-4 right-4 rounded-md bg-black/60 px-2.5 py-1 text-[9px] uppercase tracking-wider text-white/90 backdrop-blur-md">
               Imagem Ilustrativa
             </p>
           )}
