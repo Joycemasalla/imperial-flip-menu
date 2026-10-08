@@ -1576,7 +1576,7 @@
         "avatar": "PD",
         "price": 7,
         "options": [],
-        "desc": "Valor por 100g.",
+        "desc": "Valor por unidade.",
         "imageUrl": "https://res.cloudinary.com/dbes24whl/image/upload/v1752195085/cardapio-digital-images/djsgrewv2g5dmoayfyry.jpg",
         "serves": null,
         "highlight": false
