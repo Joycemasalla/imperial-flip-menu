@@ -64,6 +64,7 @@ export function ProductModal({
             {category.title}
           </p>
           {(category.id === "drinks" ||
+            category.id === "refeicoes" ||
             [
               "mineirinho",
               "brownie",

@@ -121,6 +121,11 @@ export function MenuLeaf({
               {category.subtitle}
             </p>
           )}
+          {(category.id === "refeicoes" || category.id === "drinks") && (
+            <p className="mb-4 inline-flex items-center rounded-md bg-gold-dark/10 px-2.5 py-1 text-[9px] uppercase tracking-wider text-gold-dark">
+              * As fotos desta seção são ilustrativas
+            </p>
+          )}
           <div className="grid grid-cols-1 gap-x-6">
             {category.items.map((item) => (
               <MenuItemRow key={item.id} item={item} categoryId={category.id} onSelect={onSelect} />
