@@ -57,7 +57,7 @@ export function ProductModal({
             height={800}
             loading="eager"
             decoding="async"
-            className="h-full w-full object-cover"
+            className="h-full w-full bg-muted object-cover"
           />
           <div className="image-shade-soft absolute inset-0" />
           <p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.25em] text-primary">

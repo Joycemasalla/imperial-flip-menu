@@ -36,7 +36,7 @@ function MenuItemRow({
         loading="lazy"
         decoding="async"
         draggable={false}
-        className="size-16 shrink-0 rounded-md object-cover sm:size-18"
+        className="size-16 shrink-0 rounded-md bg-muted object-cover sm:size-18"
       />
       <div className="min-w-0">
         <div className="grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-start gap-2">
@@ -97,7 +97,7 @@ export function MenuLeaf({
           decoding="async"
           fetchPriority={number === 1 ? "high" : "auto"}
           style={{ objectPosition: "right center" }}
-          className="h-full w-full object-cover"
+          className="h-full w-full bg-muted object-cover"
         />
         <div className="image-shade absolute inset-0" />
         <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 px-5 pb-3 sm:px-7 sm:pb-4">

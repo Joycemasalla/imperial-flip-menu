@@ -114,7 +114,7 @@ export function SearchModal({
                       height={56}
                       loading="lazy"
                       decoding="async"
-                      className="size-14 shrink-0 rounded-md object-cover"
+                      className="size-14 shrink-0 rounded-md bg-muted object-cover"
                     />
                     <div className="min-w-0 flex-1">
                       <p className="text-[9px] uppercase tracking-[0.22em] text-primary">
