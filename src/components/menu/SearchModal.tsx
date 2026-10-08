@@ -3,9 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import artesanaisImage from "@/assets/artesanais.jpg";
 import type { Category, MenuItem } from "@/types/menu";
 import { images } from "@/components/menu/images";
-
-const money = (value: number) =>
-  new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(value);
+import { ItemPrices } from "@/components/menu/ItemPrices";
+import { Button } from "@/components/ui/button";
 
 type SearchResult = { item: MenuItem; category: Category };
 
@@ -64,14 +63,16 @@ export function SearchModal({
           autoCorrect="off"
           spellCheck={false}
         />
-        <button
+        <Button
           type="button"
+          variant="ghost"
+          size="icon"
           onClick={onClose}
           aria-label="Fechar busca"
           className="grid size-9 shrink-0 place-items-center rounded-full text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
         >
           <X className="size-5" />
-        </button>
+        </Button>
       </div>
 
       {/* Área de resultados */}
@@ -92,21 +93,16 @@ export function SearchModal({
           <ul className="mx-auto max-w-lg divide-y divide-border pb-8">
             {results.map(({ item, category }) => {
               const thumbnail = item.imageUrl || images[category.id] || artesanaisImage;
-              const basePrice =
-                item.price !== null
-                  ? money(item.price)
-                  : item.options.length
-                    ? `a partir de ${money(Math.min(...item.options.map((o) => o.price)))}`
-                    : "Consulte";
               return (
                 <li key={`${category.id}-${item.id}`}>
-                  <button
+                   <Button
                     type="button"
+                     variant="ghost"
                     onClick={() => {
                       onSelect(item, category);
                       onClose();
                     }}
-                    className="flex w-full items-center gap-3 px-4 py-3 text-left transition-colors hover:bg-accent sm:px-6"
+                     className="flex h-auto w-full items-center gap-3 rounded-none px-4 py-3 text-left transition-colors hover:bg-accent sm:px-6"
                   >
                     <img
                       src={thumbnail}
@@ -121,17 +117,17 @@ export function SearchModal({
                       <p className="text-[9px] uppercase tracking-[0.22em] text-primary">
                         {category.navLabel}
                       </p>
-                      <p className="truncate font-display text-base text-foreground">
+                       <p className="font-display text-base leading-tight text-foreground">
                         {item.name}
                       </p>
                       <p className="line-clamp-1 text-[11px] text-muted-foreground">
                         {item.desc}
                       </p>
+                       {item.serves && <p className="mt-1 text-[11px] text-muted-foreground">Serve {item.serves}</p>}
+                       {item.options.length > 0 && <ItemPrices item={item} />}
                     </div>
-                    <span className="shrink-0 text-sm font-bold text-gold-dark">
-                      {basePrice}
-                    </span>
-                  </button>
+                     {item.options.length === 0 && <span className="shrink-0"><ItemPrices item={item} /></span>}
+                   </Button>
                 </li>
               );
             })}
