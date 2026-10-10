@@ -14,6 +14,7 @@ function MenuItemRow({
   onSelect: (item: MenuItem) => void;
 }) {
   const thumbnail = itemImage(item, categoryId);
+  const showImage = categoryId !== "refeicoes";
 
   const isStandardPizza = 
     (categoryId === "pizzas" || categoryId === "pizzas-doces") && 
@@ -26,18 +27,24 @@ function MenuItemRow({
       data-menu-item={item.id}
       data-category={categoryId}
       onClick={() => onSelect(item)}
-      className="menu-item group grid h-auto min-h-20 w-full grid-cols-[4rem_minmax(0,1fr)] items-center gap-3 rounded-none border-b border-ink/10 px-0 py-2.5 text-left hover:bg-transparent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary sm:grid-cols-[4.5rem_minmax(0,1fr)]"
+      className={`menu-item group grid h-auto min-h-20 w-full items-center gap-3 rounded-none border-b border-ink/10 px-0 py-2.5 text-left hover:bg-transparent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary ${
+        showImage 
+          ? "grid-cols-[4rem_minmax(0,1fr)] sm:grid-cols-[4.5rem_minmax(0,1fr)]"
+          : "grid-cols-1 py-4"
+      }`}
     >
-      <img
-        src={thumbnail}
-        alt=""
-        width={144}
-        height={144}
-        loading="lazy"
-        decoding="async"
-        draggable={false}
-        className="size-16 shrink-0 rounded-md bg-muted object-cover sm:size-18"
-      />
+      {showImage && (
+        <img
+          src={thumbnail}
+          alt=""
+          width={144}
+          height={144}
+          loading="lazy"
+          decoding="async"
+          draggable={false}
+          className="size-16 shrink-0 rounded-md bg-muted object-cover sm:size-18"
+        />
+      )}
       <div className="min-w-0">
         <div className="grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-start gap-2">
           <div className="min-w-0">
@@ -121,7 +128,7 @@ export function MenuLeaf({
               {category.subtitle}
             </p>
           )}
-          {(category.id === "refeicoes" || category.id === "drinks") && (
+          {category.id === "drinks" && (
             <p className="mb-4 inline-flex items-center rounded-md bg-gold-dark/10 px-2.5 py-1 text-[9px] uppercase tracking-wider text-gold-dark">
               * As fotos desta seção são ilustrativas
             </p>

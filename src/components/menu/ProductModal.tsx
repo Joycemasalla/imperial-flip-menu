@@ -49,39 +49,40 @@ export function ProductModal({
           <X className="size-4" />
         </Button>
 
-        <div className="relative aspect-[16/10] overflow-hidden sm:rounded-t-lg">
-          <img
-            src={itemImage(item, category.id)}
-            alt={item.name}
-            width={1200}
-            height={800}
-            loading="eager"
-            decoding="async"
-            className="h-full w-full bg-muted object-cover"
-          />
-          <div className="image-shade-soft absolute inset-0" />
-          <p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.25em] text-primary">
-            {category.title}
-          </p>
-          {(category.id === "drinks" ||
-            category.id === "refeicoes" ||
-            [
-              "mineirinho",
-              "brownie",
-              "brownie-com-sorvete",
-              "contra-file",
-              "contra-file-c-fritas",
-              "contra-file-ou-alcatra",
-              "churrasco-misto",
-            ].includes(item.id) ||
-            item.imageUrl?.includes("_real.jpg")) && (
-            <p className="absolute bottom-4 right-4 rounded-md bg-black/60 px-2.5 py-1 text-[9px] uppercase tracking-wider text-white/90 backdrop-blur-md">
-              Imagem Ilustrativa
+        {category.id !== "refeicoes" && (
+          <div className="relative aspect-[16/10] overflow-hidden sm:rounded-t-lg">
+            <img
+              src={itemImage(item, category.id)}
+              alt={item.name}
+              width={1200}
+              height={800}
+              loading="eager"
+              decoding="async"
+              className="h-full w-full bg-muted object-cover"
+            />
+            <div className="image-shade-soft absolute inset-0" />
+            <p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.25em] text-primary">
+              {category.title}
             </p>
-          )}
-        </div>
+            {(category.id === "drinks" ||
+              [
+                "mineirinho",
+                "brownie",
+                "brownie-com-sorvete",
+                "contra-file",
+                "contra-file-c-fritas",
+                "contra-file-ou-alcatra",
+                "churrasco-misto",
+              ].includes(item.id) ||
+              item.imageUrl?.includes("_real.jpg")) && (
+              <p className="absolute bottom-4 right-4 rounded-md bg-black/60 px-2.5 py-1 text-[9px] uppercase tracking-wider text-white/90 backdrop-blur-md">
+                Imagem Ilustrativa
+              </p>
+            )}
+          </div>
+        )}
 
-        <div className="p-5 sm:p-7">
+        <div className={`p-5 sm:p-7 ${category.id === "refeicoes" ? "pt-12 sm:pt-14" : ""}`}>
           <h2 id="product-name" className="font-display text-3xl text-card-foreground sm:text-4xl">
             {item.name}
           </h2>
