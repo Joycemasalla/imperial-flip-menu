@@ -71,6 +71,12 @@ export const isIllustrativeImage = (item: { id: string; imageUrl?: string | null
       "baguete-de-costela",
       "pernil",
       "linguica",
+      "pizza-bacon",
+      "pizza-lombo",
+      "pizza-americana",
+      "pizza-palmito",
+      "pizza-marguerita",
+      "jilo-frito-especial",
     ].includes(item.id) ||
     Boolean(item.imageUrl?.includes("_real.jpg"))
   );
