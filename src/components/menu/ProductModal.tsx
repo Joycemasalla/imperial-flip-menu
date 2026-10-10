@@ -73,6 +73,22 @@ export function ProductModal({
                 "contra-file-c-fritas",
                 "contra-file-ou-alcatra",
                 "churrasco-misto",
+                "mandioca-frita",
+                "torresmo",
+                "salaminho",
+                "bucho-a-milanesa",
+                "batata-fritas",
+                "batata-c-queijo-e-bacon",
+                "batata-c-queijo-e-calabresa",
+                "batata-c-cheddar-bacon-e-calabresa",
+                "calabresa-acebolada",
+                "torresmo-de-rolo-c-geleia-de-abacaxi",
+                "linguica-c-mandioca",
+                "torresmo-c-mandioca",
+                "escondidinho-de-carne-seca",
+                "baguete-de-costela",
+                "pernil",
+                "linguica",
               ].includes(item.id) ||
               item.imageUrl?.includes("_real.jpg")) && (
               <p className="absolute bottom-4 right-4 rounded-md bg-black/60 px-2.5 py-1 text-[9px] uppercase tracking-wider text-white/90 backdrop-blur-md">
