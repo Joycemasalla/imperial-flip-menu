@@ -2,7 +2,7 @@ import { Users, X } from "lucide-react";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import type { MenuItem, Category } from "@/types/menu";
-import { itemImage } from "@/components/menu/images";
+import { itemImage, isIllustrativeImage } from "@/components/menu/images";
 
 const money = (value: number) =>
   new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(value);
@@ -64,33 +64,7 @@ export function ProductModal({
             <p className="absolute bottom-4 left-5 text-[10px] uppercase tracking-[0.25em] text-primary">
               {category.title}
             </p>
-            {(category.id === "drinks" ||
-              [
-                "mineirinho",
-                "brownie",
-                "brownie-com-sorvete",
-                "contra-file",
-                "contra-file-c-fritas",
-                "contra-file-ou-alcatra",
-                "churrasco-misto",
-                "mandioca-frita",
-                "torresmo",
-                "salaminho",
-                "bucho-a-milanesa",
-                "batata-fritas",
-                "batata-c-queijo-e-bacon",
-                "batata-c-queijo-e-calabresa",
-                "batata-c-cheddar-bacon-e-calabresa",
-                "calabresa-acebolada",
-                "torresmo-de-rolo-c-geleia-de-abacaxi",
-                "linguica-c-mandioca",
-                "torresmo-c-mandioca",
-                "escondidinho-de-carne-seca",
-                "baguete-de-costela",
-                "pernil",
-                "linguica",
-              ].includes(item.id) ||
-              item.imageUrl?.includes("_real.jpg")) && (
+            {isIllustrativeImage(item, category.id) && (
               <p className="absolute bottom-4 right-4 rounded-md bg-black/60 px-2.5 py-1 text-[9px] uppercase tracking-wider text-white/90 backdrop-blur-md">
                 Imagem Ilustrativa
               </p>

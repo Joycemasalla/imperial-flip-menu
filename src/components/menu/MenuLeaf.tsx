@@ -1,6 +1,6 @@
 import type { UIEvent as ReactUIEvent } from "react";
 import type { MenuItem, Category } from "@/types/menu";
-import { categoryImage, itemImage } from "@/components/menu/images";
+import { categoryImage, itemImage, isIllustrativeImage } from "@/components/menu/images";
 import { ItemPrices } from "@/components/menu/ItemPrices";
 import { Button } from "@/components/ui/button";
 
@@ -34,16 +34,23 @@ function MenuItemRow({
       }`}
     >
       {showImage && (
-        <img
-          src={thumbnail}
-          alt=""
-          width={144}
-          height={144}
-          loading="lazy"
-          decoding="async"
-          draggable={false}
-          className="size-16 shrink-0 rounded-md bg-muted object-cover sm:size-18"
-        />
+        <div className="relative size-16 shrink-0 sm:size-18">
+          <img
+            src={thumbnail}
+            alt=""
+            width={144}
+            height={144}
+            loading="lazy"
+            decoding="async"
+            draggable={false}
+            className="h-full w-full rounded-md bg-muted object-cover"
+          />
+          {isIllustrativeImage(item, categoryId) && (
+            <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-[3px] bg-black/60 px-1 py-[2px] text-[6px] uppercase tracking-wider text-white/90 backdrop-blur-md">
+              Ilustrativa
+            </span>
+          )}
+        </div>
       )}
       <div className="min-w-0">
         <div className="grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-start gap-2">

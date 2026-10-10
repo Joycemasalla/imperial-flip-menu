@@ -1,7 +1,7 @@
 import { Search, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import type { Category, MenuItem } from "@/types/menu";
-import { itemImage } from "@/components/menu/images";
+import { itemImage, isIllustrativeImage } from "@/components/menu/images";
 import { ItemPrices } from "@/components/menu/ItemPrices";
 import { Button } from "@/components/ui/button";
 
@@ -107,15 +107,22 @@ export function SearchModal({
                     }}
                      className="flex h-auto w-full items-center gap-3 rounded-none px-4 py-3 text-left transition-colors hover:bg-accent sm:px-6"
                   >
-                    <img
-                      src={thumbnail}
-                      alt=""
-                      width={56}
-                      height={56}
-                      loading="lazy"
-                      decoding="async"
-                      className="size-14 shrink-0 rounded-md bg-muted object-cover"
-                    />
+                    <div className="relative size-14 shrink-0">
+                      <img
+                        src={thumbnail}
+                        alt=""
+                        width={56}
+                        height={56}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full rounded-md bg-muted object-cover"
+                      />
+                      {isIllustrativeImage(item, category.id) && (
+                        <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-[3px] bg-black/60 px-1 py-[2px] text-[5px] uppercase tracking-wider text-white/90 backdrop-blur-md">
+                          Ilustrativa
+                        </span>
+                      )}
+                    </div>
                     <div className="min-w-0 flex-1">
                       <p className="text-[9px] uppercase tracking-[0.22em] text-primary">
                         {category.navLabel}

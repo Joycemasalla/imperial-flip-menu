@@ -42,3 +42,36 @@ export const categoryImage = (categoryId: string) => images[categoryId] ?? artes
 /** Foto do produto: imagem própria, senão a da categoria. */
 export const itemImage = (item: { imageUrl?: string | null }, categoryId: string) =>
   item.imageUrl || categoryImage(categoryId);
+
+/** Verifica se a imagem é ilustrativa para colocar a tag */
+export const isIllustrativeImage = (item: { id: string; imageUrl?: string | null }, categoryId: string) => {
+  return (
+    categoryId === "drinks" ||
+    [
+      "mineirinho",
+      "brownie",
+      "brownie-com-sorvete",
+      "contra-file",
+      "contra-file-c-fritas",
+      "contra-file-ou-alcatra",
+      "churrasco-misto",
+      "mandioca-frita",
+      "torresmo",
+      "salaminho",
+      "bucho-a-milanesa",
+      "batata-fritas",
+      "batata-c-queijo-e-bacon",
+      "batata-c-queijo-e-calabresa",
+      "batata-c-cheddar-bacon-e-calabresa",
+      "calabresa-acebolada",
+      "torresmo-de-rolo-c-geleia-de-abacaxi",
+      "linguica-c-mandioca",
+      "torresmo-c-mandioca",
+      "escondidinho-de-carne-seca",
+      "baguete-de-costela",
+      "pernil",
+      "linguica",
+    ].includes(item.id) ||
+    Boolean(item.imageUrl?.includes("_real.jpg"))
+  );
+};
